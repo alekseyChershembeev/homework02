@@ -1,0 +1,30 @@
+DROP TABLE IF EXISTS genres CASCADE;
+DROP TABLE IF EXISTS books CASCADE;
+DROP TABLE IF EXISTS authors CASCADE;
+DROP TABLE IF EXISTS books_authors CASCADE;
+
+CREATE TABLE genres
+(
+    id         SERIAL PRIMARY KEY,
+    genre_name VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE books
+(
+    id       SERIAL PRIMARY KEY,
+    title    VARCHAR(255) NOT NULL,
+    genre_id INTEGER REFERENCES genres (id)
+);
+
+CREATE TABLE authors
+(
+    id          SERIAL PRIMARY KEY NOT NULL,
+    author_name VARCHAR(255)       NOT NULL
+);
+
+CREATE TABLE books_authors
+(
+    authors_id INTEGER REFERENCES authors (id) ON DELETE CASCADE,
+    books_id   INTEGER REFERENCES books (id) ON DELETE CASCADE,
+    PRIMARY KEY (authors_id, books_id)
+);

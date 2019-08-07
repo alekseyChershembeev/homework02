@@ -12,9 +12,9 @@ import ru.demo.homework02.entity.Author;
 public interface AuthorDAO {
 
     List<String> getAllAuthorsNames();
-    Author getAuthorByName(String name);
-    Author getAuthorById(Long id);
-    Author addNewAuthor(Author author);
+    Optional<Author> getAuthorByName(String name);
+    Optional<Author> getAuthorById(Long id);
+    int addNewAuthor(Author author);
     int deleteAuthor(Author author);
     int deleteAuthorById(Long id);
     int deleteAll();

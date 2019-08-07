@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.JdbcTest;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.context.junit4.SpringRunner;
+import ru.demo.homework02.entity.Author;
 
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -21,8 +22,11 @@ public class AuthorDaoImplTest {
     @Autowired
     private AuthorDaoImpl authorDao;
 
+    private String authorName;
+    private Optional<Author> author;
     @Before
     public void setUp() {
+        authorName = "Л.Толстой";
     }
 
     @After
@@ -46,22 +50,36 @@ public class AuthorDaoImplTest {
 
     @Test
     public void getAuthorByName() {
+
+
+        author = authorDao.getAuthorByName(authorName);
+        System.out.println(author);
     }
 
     @Test
     public void getAuthorById() {
+        author =authorDao.getAuthorById(2L);
+        System.out.println(author);
     }
 
     @Test
     public void addNewAuthor() {
+
+       assertThat(authorDao.addNewAuthor(new Author("Т. Драйзер")))
+       .isEqualTo(1);
+
     }
 
     @Test
     public void deleteAuthor() {
+        assertThat(authorDao.deleteAll())
+                .isEqualTo(6);
     }
 
     @Test
     public void deleteAuthorById() {
+        assertThat(authorDao.deleteAuthorById(2L))
+                .isEqualTo(1);
     }
 
     @Test

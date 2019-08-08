@@ -12,7 +12,20 @@ import lombok.Data;
 public class Book {
 
     private Long id;
-    private List<Author> authors;
+    private String authors;
     private String title;
-    private Genre genre;
+    private String genre;
+
+    public Book(Long id, String authors, String title, String genre) {
+        this.id = id;
+        this.authors = authors;
+        this.title = title;
+        this.genre = genre;
+    }
+
+    public Book(String authors, String title, String genre) {
+        this.authors = authors;
+        this.title = title;
+        this.genre = genre;
+    }
 }

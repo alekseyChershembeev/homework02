@@ -26,7 +26,7 @@ public class AuthorDaoImplTest {
     private Optional<Author> author;
     @Before
     public void setUp() {
-        authorName = "Л.Толстой";
+        authorName = "Р›.РўРѕР»СЃС‚РѕР№";
     }
 
     @After
@@ -41,10 +41,10 @@ public class AuthorDaoImplTest {
 
         assertThat(authors)
                 .hasSize(4)
-                .contains("А.Кристи")
-                .contains("Л.Толстой")
-                .contains("Ф.Достоевский")
-                .contains("В.Пелевин");
+                .contains("Рђ.РљСЂРёСЃС‚Рё")
+                .contains("Р›.РўРѕР»СЃС‚РѕР№")
+                .contains("Р¤.Р”РѕСЃС‚РѕРµРІСЃРєРёР№")
+                .contains("Р’.РџРµР»РµРІРёРЅ");
 
     }
 
@@ -65,7 +65,7 @@ public class AuthorDaoImplTest {
     @Test
     public void addNewAuthor() {
 
-       assertThat(authorDao.addNewAuthor(new Author("Т. Драйзер")))
+       assertThat(authorDao.addNewAuthor(new Author("Рў. Р”СЂР°Р№Р·РµСЂ")))
        .isEqualTo(1);
 
     }

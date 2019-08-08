@@ -1,74 +1,68 @@
-INSERT INTO genres (genre_name) VALUES ('детектив');
-INSERT INTO genres (genre_name) VALUES ('роман');
-INSERT INTO genres (genre_name) VALUES ('драма');
-INSERT INTO genres (genre_name) VALUES ('сатира');
-INSERT INTO genres (genre_name) VALUES ('комедия');
+INSERT INTO genres (genre_name) VALUES ('РґРµС‚РµРєС‚РёРІ');
+INSERT INTO genres (genre_name) VALUES ('СЂРѕРјР°РЅ');
+INSERT INTO genres (genre_name) VALUES ('РґСЂР°РјР°');
+INSERT INTO genres (genre_name) VALUES ('СЃР°С‚РёСЂР°');
+INSERT INTO genres (genre_name) VALUES ('РєРѕРјРµРґРёСЏ');
 
-INSERT INTO authors (author_name) VALUES ('А.Кристи');
-INSERT INTO authors (author_name) VALUES ('Л.Толстой');
-INSERT INTO authors (author_name) VALUES ('Ф.Достоевский');
-INSERT INTO authors (author_name) VALUES ('В.Пелевин');
-
-INSERT INTO books (title, genre_id)
-VALUES ('Восточный экспресс', (SELECT id FROM genres WHERE genre_name = 'детектив'));
+INSERT INTO authors (author_name) VALUES ('Рђ.РљСЂРёСЃС‚Рё');
+INSERT INTO authors (author_name) VALUES ('Р›.РўРѕР»СЃС‚РѕР№');
+INSERT INTO authors (author_name) VALUES ('Р¤.Р”РѕСЃС‚РѕРµРІСЃРєРёР№');
+INSERT INTO authors (author_name) VALUES ('Р’.РџРµР»РµРІРёРЅ');
 
 INSERT INTO books (title, genre_id)
-VALUES ('Война и мир', (SELECT id FROM genres WHERE genre_name = 'роман'));
+VALUES ('Р’РѕСЃС‚РѕС‡РЅС‹Р№ СЌРєСЃРїСЂРµСЃСЃ', (SELECT id FROM genres WHERE genre_name = 'РґРµС‚РµРєС‚РёРІ'));
 
 INSERT INTO books (title, genre_id)
-VALUES ('Преступление и наказание', (SELECT id FROM genres WHERE genre_name = 'драма'));
+VALUES ('Р’РѕР№РЅР° Рё РјРёСЂ', (SELECT id FROM genres WHERE genre_name = 'СЂРѕРјР°РЅ'));
 
 INSERT INTO books (title, genre_id)
-VALUES ('Generation П', (SELECT id FROM genres WHERE genre_name = 'сатира'));
+VALUES ('РџСЂРµСЃС‚СѓРїР»РµРЅРёРµ Рё РЅР°РєР°Р·Р°РЅРёРµ', (SELECT id FROM genres WHERE genre_name = 'РґСЂР°РјР°'));
 
 INSERT INTO books (title, genre_id)
-VALUES ('Идиот', (SELECT id FROM genres WHERE genre_name = 'драма'));
+VALUES ('Generation Рџ', (SELECT id FROM genres WHERE genre_name = 'СЃР°С‚РёСЂР°'));
 
 INSERT INTO books (title, genre_id)
-VALUES ('Война и преступление', (SELECT id FROM genres WHERE genre_name = 'детектив'));
+VALUES ('РРґРёРѕС‚', (SELECT id FROM genres WHERE genre_name = 'РґСЂР°РјР°'));
+
+INSERT INTO books (title, genre_id)
+VALUES ('Р’РѕР№РЅР° Рё РїСЂРµСЃС‚СѓРїР»РµРЅРёРµ', (SELECT id FROM genres WHERE genre_name = 'РґРµС‚РµРєС‚РёРІ'));
 
 INSERT INTO books (title)
-VALUES ('Война и преступление2');
+VALUES ('Р’РѕР№РЅР° Рё РїСЂРµСЃС‚СѓРїР»РµРЅРёРµ2');
 
 
 INSERT INTO books_authors (authors_id, books_id)
 VALUES (
-  (SELECT id FROM authors WHERE author_name = 'А.Кристи'),
-  (SELECT id FROM books WHERE title = 'Восточный экспресс'));
+  (SELECT id FROM authors WHERE author_name = 'Рђ.РљСЂРёСЃС‚Рё'),
+  (SELECT id FROM books WHERE title = 'Р’РѕСЃС‚РѕС‡РЅС‹Р№ СЌРєСЃРїСЂРµСЃСЃ'));
 
 INSERT INTO books_authors (authors_id, books_id)
 VALUES (
-  (SELECT id FROM authors WHERE author_name = 'Л.Толстой'),
-  (SELECT id FROM books WHERE title = 'Война и мир')
+  (SELECT id FROM authors WHERE author_name = 'Р›.РўРѕР»СЃС‚РѕР№'),
+  (SELECT id FROM books WHERE title = 'Р’РѕР№РЅР° Рё РјРёСЂ')
 );
 
 INSERT INTO books_authors (authors_id, books_id)
 VALUES (
-  (SELECT id FROM authors WHERE author_name = 'Ф.Достоевский'),
-  (SELECT id FROM books WHERE title = 'Преступление и наказание')
+  (SELECT id FROM authors WHERE author_name = 'Р¤.Р”РѕСЃС‚РѕРµРІСЃРєРёР№'),
+  (SELECT id FROM books WHERE title = 'РџСЂРµСЃС‚СѓРїР»РµРЅРёРµ Рё РЅР°РєР°Р·Р°РЅРёРµ')
 );
 
 INSERT INTO books_authors (authors_id, books_id)
 VALUES (
-  (SELECT id FROM authors WHERE author_name = 'В.Пелевин'),
-  (SELECT id FROM books WHERE title = 'Generation П')
+  (SELECT id FROM authors WHERE author_name = 'Р’.РџРµР»РµРІРёРЅ'),
+  (SELECT id FROM books WHERE title = 'Generation Рџ')
 );
 
 INSERT INTO books_authors (authors_id, books_id)
 VALUES (
-  (SELECT id FROM authors WHERE author_name = 'Ф.Достоевский'),
-  (SELECT id FROM books WHERE title = 'Война и преступление')
+  (SELECT id FROM authors WHERE author_name = 'Р¤.Р”РѕСЃС‚РѕРµРІСЃРєРёР№'),
+  (SELECT id FROM books WHERE title = 'Р’РѕР№РЅР° Рё РїСЂРµСЃС‚СѓРїР»РµРЅРёРµ')
 );
 
 INSERT INTO books_authors (authors_id, books_id)
 VALUES (
-  (SELECT id FROM authors WHERE author_name = 'Л.Толстой'),
-  (SELECT id FROM books WHERE title = 'Война и преступление')
+  (SELECT id FROM authors WHERE author_name = 'Р›.РўРѕР»СЃС‚РѕР№'),
+  (SELECT id FROM books WHERE title = 'Р’РѕР№РЅР° Рё РїСЂРµСЃС‚СѓРїР»РµРЅРёРµ')
 );
 
-
-# INSERT INTO books_authors (authors_id, books_id)
-# VALUES (
-#            (SELECT id FROM authors WHERE author_name = 'Ф.Достоевский'),
-#            (SELECT id FROM books WHERE title = 'Идиот')
-#        );

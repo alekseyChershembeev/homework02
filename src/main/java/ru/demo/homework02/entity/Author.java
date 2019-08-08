@@ -18,6 +18,9 @@ public class Author {
     private List<Book> books;
     private String name;
 
+    public Author() {
+    }
+
     public Author(String name) {
         this.name = name;
     }

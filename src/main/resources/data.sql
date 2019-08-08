@@ -65,3 +65,10 @@ VALUES (
   (SELECT id FROM authors WHERE author_name = 'Л.Толстой'),
   (SELECT id FROM books WHERE title = 'Война и преступление')
 );
+
+
+# INSERT INTO books_authors (authors_id, books_id)
+# VALUES (
+#            (SELECT id FROM authors WHERE author_name = 'Ф.Достоевский'),
+#            (SELECT id FROM books WHERE title = 'Идиот')
+#        );

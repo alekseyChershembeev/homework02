@@ -1,6 +1,7 @@
 package ru.demo.homework02.dao;
 
 import java.util.List;
+import java.util.*;
 import ru.demo.homework02.entity.Book;
 
 /**
@@ -16,8 +17,8 @@ public interface BookDAO {
     List<Book> getAllBooks();
     List<Book> getBooksByAuthor(AuthorDAO author);
     List<Book> getBooksByTitle(String title);
-    Book getBookById(Long id);
-    Book addNewBook(Book book);
+    Optional<Book> getBookById(Long id);
+    int addNewBook(Book book);
     int updateBookTitleById(Long id, String newTitle);
     int deleteBookById(Long id);
     int deleteAll();

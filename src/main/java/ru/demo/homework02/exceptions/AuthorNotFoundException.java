@@ -1,7 +1,6 @@
 package ru.demo.homework02.exceptions;
 
 
-import java.util.function.Supplier;
 
 public class AuthorNotFoundException extends RuntimeException {
 

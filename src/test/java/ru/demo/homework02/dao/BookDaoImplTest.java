@@ -4,7 +4,6 @@ package ru.demo.homework02.dao;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import java.util.*;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.JdbcTest;
@@ -14,7 +13,6 @@ import ru.demo.homework02.entity.Author;
 import ru.demo.homework02.entity.Book;
 import ru.demo.homework02.entity.Genre;
 
-import static org.hamcrest.MatcherAssert.assertThat;
 
 
 @JdbcTest

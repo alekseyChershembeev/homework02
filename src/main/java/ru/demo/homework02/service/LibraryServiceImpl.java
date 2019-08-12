@@ -20,9 +20,9 @@ import ru.demo.homework02.entity.*;
 @Transactional
 public class LibraryServiceImpl implements LibraryService {
 
-    private BookDAO bookDAO;
-    private AuthorDAO authorDAO;
-    private GenreDAO genreDAO;
+    private final BookDAO bookDAO;
+    private final AuthorDAO authorDAO;
+    private final GenreDAO genreDAO;
 
     @Autowired
     public LibraryServiceImpl(BookDAO bookDAO, AuthorDAO authorDAO, GenreDAO genreDAO) {
@@ -56,7 +56,7 @@ public class LibraryServiceImpl implements LibraryService {
     public List<Book> getBooksByAuthorsName(String name) {
 
         return bookDAO.getAllBooks().stream()
-                .filter((s) -> s.getAuthors().equals(name))
+                .filter((s) -> s.getAuthors().getName().equals(name))
                 .collect(Collectors.toList());
     }
 

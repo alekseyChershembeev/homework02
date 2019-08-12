@@ -20,7 +20,7 @@ import ru.demo.homework02.entity.Author;
 @Repository
 public class AuthorDaoImpl implements AuthorDAO {
 
-    private NamedParameterJdbcOperations namedJDBC;
+    private final NamedParameterJdbcOperations namedJDBC;
 
     @Autowired
     public AuthorDaoImpl(NamedParameterJdbcOperations namedJDBC) {

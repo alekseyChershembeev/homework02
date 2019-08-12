@@ -19,7 +19,7 @@ import java.util.*;
 @Repository
 public class GenreDaoImpl implements GenreDAO {
 
-    private NamedParameterJdbcTemplate namedJdbc;
+    private final NamedParameterJdbcTemplate namedJdbc;
 
     private static final String SQL_GET_ALL_GENRES =
             "SELECT * FROM genres";

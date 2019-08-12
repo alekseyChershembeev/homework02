@@ -1,9 +1,6 @@
 package ru.demo.homework02.entity;
 
-import java.util.*;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
 
 /**
  * Created by Chershembeev_AE

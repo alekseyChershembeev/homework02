@@ -23,7 +23,7 @@ public class AuthorDaoImplTest {
     private AuthorDaoImpl authorDao;
 
     private String authorName;
-    private Optional<Author> author;
+    private Author author;
     @Before
     public void setUp() {
         authorName = "Л.Толстой";
@@ -51,15 +51,12 @@ public class AuthorDaoImplTest {
     @Test
     public void getAuthorByName() {
 
-
-        author = authorDao.getAuthorByName(authorName);
-        System.out.println(author);
+        System.out.println(authorDao.getAuthorByName(authorName).isPresent());
     }
 
     @Test
     public void getAuthorById() {
-        author =authorDao.getAuthorById(2L);
-        System.out.println(author);
+        System.out.println(authorDao.getAuthorById(2L).isPresent());
     }
 
     @Test
@@ -84,5 +81,6 @@ public class AuthorDaoImplTest {
 
     @Test
     public void deleteAll() {
+        assertThat(authorDao.deleteAll()).isEqualTo(6);
     }
 }

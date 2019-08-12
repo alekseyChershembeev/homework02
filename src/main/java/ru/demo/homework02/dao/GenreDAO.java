@@ -12,8 +12,8 @@ import ru.demo.homework02.entity.Genre;
 public interface GenreDAO {
 
     List<Genre> getAllGenres();
-    Genre getGenreByName(String genreName);
-    Genre addGenre(Genre genre);
+    Optional<Genre> getGenreByName(String genreName);
+    int addGenre(Genre genre);
     int deleteGenre(Genre genre);
     int deleteAll();
 }

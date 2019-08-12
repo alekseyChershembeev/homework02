@@ -15,7 +15,6 @@ import lombok.RequiredArgsConstructor;
 public class Author {
 
     private Long id;
-    private List<Book> books;
     private String name;
 
     public Author() {
@@ -30,14 +29,5 @@ public class Author {
         this.name = name;
     }
 
-    public Author(Long id, List<Book> books, String name) {
-        this.id = id;
-        this.books = books;
-        this.name = name;
-    }
 
-    public Author(List<Book> books, String name) {
-        this.books = books;
-        this.name = name;
-    }
 }

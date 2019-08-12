@@ -10,6 +10,9 @@ import ru.demo.homework02.entity.Genre;
  */
 
 public class GenreDaoImpl implements GenreDAO{
+
+
+
     @Override
     public List<Genre> getAllGenres() {
         return null;

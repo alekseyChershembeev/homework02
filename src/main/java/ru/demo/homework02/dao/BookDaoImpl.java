@@ -1,13 +1,20 @@
 package ru.demo.homework02.dao;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 import ru.demo.homework02.entity.Author;
 import ru.demo.homework02.entity.Book;
+import ru.demo.homework02.entity.Genre;
 
 /**
  * Created by Chershembeev_AE
@@ -40,12 +47,28 @@ public class BookDaoImpl implements BookDAO {
                     + "LEFT OUTER JOIN books_authors ON books.id = books_authors.books_id "
                     + "LEFT OUTER JOIN authors ON books_authors.authors_id = authors.id "
                     + "WHERE books.title=:title";
-    private static final String SQL_GET_BOOKS_BY_TITLE = "";
-    private static final String SQL_GET_BOOKS_BY_ID = "";
-    private static final String SQL_ADD_NEW_BOOK = "";
-    private static final String SQL_UPDATE_BOOK_TITLE_BY_ID = "";
-    private static final String SQL_DELETE_BOOK_BY_ID = "";
-    private static final String SQL_DELETE_ALL = "";
+    private static final String SQL_GET_BOOKS_BY_ID =
+            "SELECT books.id, books.title, genres.id , genres.genre_name, authors.id , authors.author_name "
+                    + "FROM books "
+                    + "LEFT OUTER JOIN genres  ON books.genre_id = genres.id "
+                    + "LEFT OUTER JOIN books_authors ON books.id = books_authors.books_id "
+                    + "LEFT OUTER JOIN authors ON books_authors.authors_id = authors.id "
+                    + "WHERE books.id=:id";
+    private static final String SQL_INSERT_NEW_BOOK =
+            "INSERT INTO books (title, genre_id)" +
+                    "VALUES (:title, :id)";
+    private static final String SQL_INSERT_INTO_BOOK_AUTHORS =
+            "INSERT INTO books_authors (authors_id, books_id)" +
+                    "VALUES (:authors_id, :books_id)";
+    private static final String SQL_UPDATE_BOOK_TITLE_BY_ID =
+            "UPDATE books SET title =:title " +
+                    "WHERE id =:id";
+    private static final String SQL_DELETE_BOOK_BY_ID =
+            "DELETE FROM books WHERE id = :id";
+    private static final String SQL_DELETE_BOOKS_AUTHORS =
+            "DELETE FROM books_authors";
+    private static final String SQL_DELETE_BOOKS =
+            "DELETE FROM books";
 
     @Override
     public List<String> getAllTitles() {
@@ -57,58 +80,94 @@ public class BookDaoImpl implements BookDAO {
     @Override
     public List<Book> getAllBooks() {
         return namedJdbc.query(SQL_GET_ALL_BOOKS,
-                (rs, rw) -> new Book(
-                        rs.getLong("id"),
-                        rs.getString("author_name"),
-                        rs.getString("title"),
-                        rs.getString("genre_name")));
+                (rs, rw) -> getBook(rs));
     }
 
     @Override
     public List<Book> getBooksByAuthor(Author author) {
 
-        return namedJdbc.query(SQL_GET_BOOKS_BY_AUTHOR,
+        return namedJdbc.query(SQL_GET_BOOKS_BY_ID,
                 new MapSqlParameterSource("id", author.getId()),
-                (rs, rw) -> (new Book(
-                        rs.getLong("id"),
-                        rs.getString("author_name"),
-                        rs.getString("title"),
-                        rs.getString("genre_name"))));
+                (rs, rw) -> (getBook(rs)));
     }
 
     @Override
     public List<Book> getBooksByTitle(String title) {
         return namedJdbc.query(SQL_GET_BOOKS_BY_AUTHOR,
                 new MapSqlParameterSource("title", title),
-                (rs, rw) -> (new Book(
-                        rs.getLong("id"),
-                        rs.getString("author_name"),
-                        rs.getString("title"),
-                        rs.getString("genre_name"))));
+                (rs, rw) -> (getBook(rs)));
+
     }
 
     @Override
     public Optional<Book> getBookById(Long id) {
-        return null;
+        return namedJdbc.queryForObject(SQL_GET_BOOKS_BY_ID,
+                new MapSqlParameterSource("id", id),
+                (rs, rw) -> Optional.of(getBook(rs)));
+
     }
+
 
     @Override
     public int addNewBook(Book book) {
-        return 0;
+        KeyHolder keyHolder = new GeneratedKeyHolder();
+
+        int status = 0;
+
+        status += namedJdbc.update(SQL_INSERT_NEW_BOOK,
+                new MapSqlParameterSource()
+                        .addValue("title", book.getTitle())
+                        .addValue("id", book.getGenre().getId()),
+                keyHolder, new String[]{"id"}
+
+        );
+        Long bookId = Objects.requireNonNull(keyHolder.getKey()).longValue();
+        status += namedJdbc.update(SQL_INSERT_INTO_BOOK_AUTHORS,
+                new MapSqlParameterSource()
+                        .addValue("authors_id", book.getAuthors().getId())
+                        .addValue("books_id", bookId));
+        if (status == 2)
+            return 1;
+        else return 0;
     }
 
     @Override
     public int updateBookTitleById(Long id, String newTitle) {
-        return 0;
+
+        return namedJdbc.update(SQL_UPDATE_BOOK_TITLE_BY_ID,
+                new MapSqlParameterSource()
+                        .addValue("id", id)
+                        .addValue("title", newTitle));
     }
 
     @Override
     public int deleteBookById(Long id) {
-        return 0;
+        return namedJdbc.update(
+                SQL_DELETE_BOOK_BY_ID,
+                new MapSqlParameterSource()
+                        .addValue("id", id)
+        );
     }
 
     @Override
     public int deleteAll() {
-        return 0;
+        namedJdbc.getJdbcOperations()
+                .update(SQL_DELETE_BOOKS);
+        return namedJdbc.getJdbcOperations()
+                .update(SQL_DELETE_BOOKS_AUTHORS);
+    }
+
+    private Book getBook(ResultSet rs) throws SQLException {
+        return new Book(
+                rs.getLong("id"),
+                new Author(
+                        rs.getLong("authors.id"),
+                        rs.getString("author_name")),
+
+                rs.getString("title"),
+                new Genre(
+                        rs.getLong("genres.id"),
+                        rs.getString("genre_name"))
+        );
     }
 }

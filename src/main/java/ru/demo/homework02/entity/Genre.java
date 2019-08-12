@@ -11,4 +11,13 @@ import lombok.Data;
 public class Genre {
     private Long id;
     private String genreName;
+
+    public Genre(String genreName) {
+        this.genreName = genreName;
+    }
+
+    public Genre(Long id, String genreName) {
+        this.id = id;
+        this.genreName = genreName;
+    }
 }

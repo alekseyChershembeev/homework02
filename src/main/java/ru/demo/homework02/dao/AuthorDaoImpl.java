@@ -4,6 +4,7 @@ package ru.demo.homework02.dao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.stereotype.Repository;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 
@@ -69,8 +70,10 @@ public class AuthorDaoImpl implements AuthorDAO {
     @Override
     public int addNewAuthor(Author author) {
                 return namedJDBC.update(SQL_ADD_NEW_AUTHOR,
-                new BeanPropertySqlParameterSource(author)
-                );
+                new BeanPropertySqlParameterSource(author),
+                        new GeneratedKeyHolder(),
+                        new String[] { "id" });
+
     }
 
     @Override

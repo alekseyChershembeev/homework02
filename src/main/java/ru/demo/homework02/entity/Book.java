@@ -1,6 +1,5 @@
 package ru.demo.homework02.entity;
 
-import java.util.*;
 import lombok.Data;
 
 /**
@@ -12,18 +11,21 @@ import lombok.Data;
 public class Book {
 
     private Long id;
-    private String authors;
+    private Author authors;
     private String title;
-    private String genre;
+    private Genre genre;
 
-    public Book(Long id, String authors, String title, String genre) {
+    public Book() {
+    }
+
+    public Book(Long id, Author authors, String title, Genre genre) {
         this.id = id;
         this.authors = authors;
         this.title = title;
         this.genre = genre;
     }
 
-    public Book(String authors, String title, String genre) {
+    public Book(Author authors, String title, Genre genre) {
         this.authors = authors;
         this.title = title;
         this.genre = genre;

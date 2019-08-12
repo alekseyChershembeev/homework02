@@ -18,7 +18,7 @@ CREATE TABLE books
 
 CREATE TABLE authors
 (
-    id          SERIAL PRIMARY KEY NOT NULL,
+    id          SERIAL PRIMARY KEY,
     author_name VARCHAR(255)       NOT NULL
 );
 

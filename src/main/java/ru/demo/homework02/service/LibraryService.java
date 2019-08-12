@@ -1,9 +1,10 @@
 package ru.demo.homework02.service;
 
-import java.awt.print.Book;
+
 import java.util.*;
-import ru.demo.homework02.dao.AuthorDAO;
-import ru.demo.homework02.dao.GenreDAO;
+import ru.demo.homework02.entity.Author;
+import ru.demo.homework02.entity.Book;
+import ru.demo.homework02.entity.Genre;
 
 /**
  * Created by Chershembeev_AE
@@ -18,14 +19,14 @@ public interface LibraryService {
     List<String> getAllGenres();
     List<Book> getBooksByAuthorsName(String name);
 
-    boolean addNewGenre(GenreDAO genre);
+    boolean addNewGenre(Genre genre);
     boolean addNewBook(Book book);
-    boolean addNewAuthor(AuthorDAO author);
+    boolean addNewAuthor(Author author);
 
     boolean updateBookTitleById(Long id, String newTitle);
 
     boolean deleteBookById(Long id);
     boolean deleteAuthorById(Long id);
     boolean deleteGenre(String genreName);
-    void deleteAll();
+    boolean deleteAll();
 }

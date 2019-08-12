@@ -14,6 +14,8 @@ import ru.demo.homework02.entity.Author;
 import ru.demo.homework02.entity.Book;
 import ru.demo.homework02.entity.Genre;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+
 
 @JdbcTest
 @RunWith(SpringRunner.class)
@@ -96,6 +98,7 @@ public class BookDaoImplTest {
 
     @Test
     public void deleteAll() {
+
 
         System.out.println(bookDAO.getAllTitles());
         System.out.println(bookDAO.deleteAll());

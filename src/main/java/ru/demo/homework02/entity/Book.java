@@ -1,5 +1,6 @@
 package ru.demo.homework02.entity;
 
+import java.util.Objects;
 import lombok.Data;
 
 /**
@@ -29,5 +30,31 @@ public class Book {
         this.authors = authors;
         this.title = title;
         this.genre = genre;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return Objects.equals(id, book.id) &&
+                Objects.equals(authors, book.authors) &&
+                Objects.equals(title, book.title) &&
+                Objects.equals(genre, book.genre);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, authors, title, genre);
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", authors=" + authors +
+                ", title='" + title + '\'' +
+                ", genre=" + genre +
+                '}';
     }
 }

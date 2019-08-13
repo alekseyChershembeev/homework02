@@ -4,11 +4,18 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
+import org.springframework.shell.standard.ShellOption;
+import org.springframework.shell.table.AutoSizeConstraints;
+import org.springframework.shell.table.SimpleHorizontalAligner;
+import org.springframework.shell.table.TableBuilder;
+import org.springframework.shell.table.TableModel;
 import org.springframework.shell.table.TableModelBuilder;
 import ru.demo.homework02.entity.Author;
 import ru.demo.homework02.entity.Book;
 import ru.demo.homework02.entity.Genre;
 import ru.demo.homework02.service.LibraryServiceImpl;
+
+import static org.springframework.shell.table.CellMatchers.table;
 
 /**
  * Created by Chershembeev_AE
@@ -23,31 +30,35 @@ public class LibraryShellImpl implements LibraryShell {
     @Autowired
     public LibraryShellImpl(LibraryServiceImpl libraryService) {
         this.libraryService = libraryService;
+
     }
 
     @Override
     @ShellMethod(value = "show all books", key = "all-books")
     public List<Book> getAllBooks() {
-        return null;
+        return libraryService.getAllBooks();
     }
 
     @Override
     @ShellMethod(value = "show all Authors names", key = "all-names")
     public List<String> getAllAuthorsNames() {
-        return null;
+        return libraryService.getAllAuthorsNames();
     }
 
     @Override
     @ShellMethod(value = "show all genres", key = "all-genres")
     public List<String> getAllGenres() {
-        return null;
+        return libraryService.getAllGenres();
     }
 
     @Override
     @ShellMethod(value = "show all books by Author name", key = "all-books-name")
-    public List<Book> getBooksByAuthorsName(String name) {
-        return null;
+    public String getBooksByAuthorsName(@ShellOption(help = "author name") String name) {
+
+        return getTableFromList(libraryService.getBooksByAuthorsName(name));
+//        return name;
     }
+
 
     @Override
     @ShellMethod(value = "add new Genre", key = "add-genre")
@@ -102,13 +113,26 @@ public class LibraryShellImpl implements LibraryShell {
     public String getTableFromList(List<Book> books) {
         TableModelBuilder<String> modelBuilder = new TableModelBuilder<>();
         modelBuilder.addRow()
-                .addValue("Book_id")
-                .addValue("Author")
+                .addValue("Book id")
+                .addValue("Author(s)")
                 .addValue("Title")
                 .addValue("Genre");
+        books.forEach(book -> {
 
+            modelBuilder.addRow()
+                    .addValue(String.valueOf(book.getId()))
+                    .addValue(book.getAuthors().getName())
+                    .addValue(book.getTitle())
+                    .addValue(book.getGenre().getGenreName());
+        });
+        TableModel model = modelBuilder.build();
 
+        return new TableBuilder(model)
+                .on(table())
+                .addSizer(new AutoSizeConstraints())
+                .addAligner(SimpleHorizontalAligner.left)
+                .build()
+                .render(400);
 
-        return null;
     }
 }

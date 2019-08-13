@@ -32,7 +32,6 @@ public class BookDaoImpl implements BookDAO {
 
     private static final String SQL_GET_ALL_TITLES =
             "SELECT title FROM books";
-
     private static final String SQL_GET_ALL_BOOKS =
             "SELECT books.id, books.title, genres.id , genres.genre_name, authors.id , authors.author_name "
                     + "FROM books "
@@ -69,12 +68,12 @@ public class BookDaoImpl implements BookDAO {
     private static final String SQL_DELETE_BOOKS =
             "DELETE FROM books";
 
+
     @Override
     public List<String> getAllTitles() {
         return namedJdbc.getJdbcOperations()
                 .queryForList(SQL_GET_ALL_TITLES, String.class);
     }
-
 
     @Override
     public List<Book> getAllBooks() {

@@ -1,5 +1,6 @@
 package ru.demo.homework02.service;
 
+import java.util.stream.Collectors;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -16,7 +17,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.*;
+import java.util.stream.*;
 import ru.demo.homework02.dao.AuthorDaoImpl;
 import ru.demo.homework02.dao.BookDaoImpl;
 import ru.demo.homework02.dao.GenreDaoImpl;
@@ -82,7 +83,8 @@ public class LibraryServiceImplTest {
 
     @Test
     public void getAllBooks() {
-        libraryService.getAllBooks();
+
+        System.out.println(libraryService.getAllBooks());
         verify(bookDao).getAllBooks();
 
     }
@@ -111,7 +113,19 @@ public class LibraryServiceImplTest {
     @Test
     public void getBooksByAuthorsName() {
 
-        libraryService.getBooksByAuthorsName(TEST_AUTHOR);
+//        libraryService.getBooksByAuthorsName(TEST_AUTHOR);
+
+        List<Book> books = new ArrayList<>();
+        books.add(book);
+        books.add(null);
+        books.add(new Book());
+
+        books.stream()
+                .flatMap(Stream::ofNullable)
+                .filter((s) -> s.getAuthors() != null)
+                .filter((s) -> s.getAuthors().getName() != null)
+                .filter(s2 -> s2.getAuthors().getName().equals(TEST_AUTHOR))
+                .collect(Collectors.toList()).forEach(System.out::println);
     }
 
     @Test
@@ -131,6 +145,6 @@ public class LibraryServiceImplTest {
 
     @Test
     public void updateBookTitleById() {
-        libraryService.updateBookTitleById(3L,TEST_TiTLE2);
+        libraryService.updateBookTitleById(3L, TEST_TiTLE2);
     }
 }

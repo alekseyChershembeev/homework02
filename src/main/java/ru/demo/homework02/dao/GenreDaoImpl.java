@@ -24,7 +24,8 @@ public class GenreDaoImpl implements GenreDAO {
     private static final String SQL_GET_ALL_GENRES =
             "SELECT * FROM genres";
     private static final String SQL_GET_GENRE_BY_NAME =
-            "SELECT * FROM genres WHERE genre_name =:genre_name";
+            "SELECT * FROM genres " +
+                    "WHERE genre_name =:genre_name";
     private static final String SQL_DELETE_GENRE =
             "DELETE FROM genres WHERE id =:id";
     private static final String SQL_ADD_GENRE =

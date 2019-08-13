@@ -16,7 +16,7 @@ public interface LibraryShell {
     List<Book> getAllBooks();
     List<String> getAllAuthorsNames();
     List<String> getAllGenres();
-    List<Book> getBooksByAuthorsName(String name);
+    String getBooksByAuthorsName(String name);
 
     boolean addNewGenre(Genre genre);
     boolean addNewBook(Book book);

@@ -1,10 +1,13 @@
 package ru.demo.homework02.dao;
 
 
+import java.util.Collections;
+import java.util.Objects;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 
@@ -35,6 +38,7 @@ public class AuthorDaoImpl implements AuthorDAO {
     private static final String SQL_DELETE_AUTHOR = "DELETE FROM authors WHERE author_name=:name";
     private static final String SQL_DELETE_AUTHOR_BY_ID = "delete from authors where id=:id";
     private static final String SQL_DELETE_ALL = "DELETE FROM books_authors";
+
 
     @Override
     public List<String> getAllAuthorsNames() {
@@ -69,29 +73,46 @@ public class AuthorDaoImpl implements AuthorDAO {
     //возвр 1 если успех
     @Override
     public int addNewAuthor(Author author) {
-                return namedJDBC.update(SQL_ADD_NEW_AUTHOR,
+        return namedJDBC.update(SQL_ADD_NEW_AUTHOR,
                 new BeanPropertySqlParameterSource(author),
-                        new GeneratedKeyHolder(),
-                        new String[] { "id" });
+                new GeneratedKeyHolder(),
+                new String[]{"id"});
 
     }
 
     @Override
     public int deleteAuthor(Author author) {
         return namedJDBC.update(SQL_DELETE_AUTHOR,
-                new MapSqlParameterSource("id",author.getId()));
+                new MapSqlParameterSource("id", author.getId()));
     }
 
     @Override
     public int deleteAuthorById(Long id) {
         return namedJDBC.update(SQL_DELETE_AUTHOR_BY_ID,
-                new MapSqlParameterSource("id",id));
+                new MapSqlParameterSource("id", id));
     }
 
     @Override
     public int deleteAll() {
         return namedJDBC.getJdbcOperations().update(SQL_DELETE_ALL);
     }
+
+
+    @Override
+    public Author addAuthorObject(Author author) {
+        KeyHolder keyHolder = new GeneratedKeyHolder();
+
+        namedJDBC.update(SQL_ADD_NEW_AUTHOR,
+                new MapSqlParameterSource()
+                        .addValue("name", author.getName()),
+                keyHolder,
+                new String[]{"id"});
+
+        author.setId(Objects.requireNonNull(keyHolder.getKey()).longValue());
+        return author;
+
+    }
+
 }
 
 

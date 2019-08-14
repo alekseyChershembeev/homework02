@@ -73,7 +73,10 @@ public class LibraryServiceImpl implements LibraryService {
     }
 
     @Override
+    @Transactional()
     public boolean addNewBook(Book book) {
+        book.setAuthors(authorDAO.addAuthorObject(book.getAuthors()));
+        book.setGenre(genreDAO.addGenreObject(book.getGenre()));
         return bookDAO.addNewBook(book) == 1;
     }
 

@@ -6,20 +6,20 @@ DROP TABLE IF EXISTS books_authors CASCADE;
 CREATE TABLE genres
 (
     id         SERIAL PRIMARY KEY,
-    genre_name VARCHAR(255) UNIQUE NOT NULL
+    genre_name VARCHAR(255) UNIQUE
 );
 
 CREATE TABLE books
 (
     id       SERIAL PRIMARY KEY,
-    title    VARCHAR(255) NOT NULL,
+    title    VARCHAR(255) ,
     genre_id INTEGER REFERENCES genres (id)
 );
 
 CREATE TABLE authors
 (
     id          SERIAL PRIMARY KEY,
-    author_name VARCHAR(255)       NOT NULL
+    author_name VARCHAR(255)
 );
 
 CREATE TABLE books_authors

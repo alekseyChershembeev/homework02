@@ -18,5 +18,6 @@ public interface AuthorDAO {
     int deleteAuthor(Author author);
     int deleteAuthorById(Long id);
     int deleteAll();
+    Author addAuthorObject(Author author);
 
 }

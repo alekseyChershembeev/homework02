@@ -13,6 +13,7 @@ public interface GenreDAO {
 
     List<Genre> getAllGenres();
     Optional<Genre> getGenreByName(String genreName);
+    Genre addGenreObject(Genre genre);
     int addGenre(Genre genre);
     int deleteGenre(Genre genre);
     int deleteAll();

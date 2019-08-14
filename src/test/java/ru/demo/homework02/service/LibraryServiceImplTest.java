@@ -1,6 +1,5 @@
 package ru.demo.homework02.service;
 
-import java.util.stream.Collectors;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -8,16 +7,11 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.test.context.junit4.SpringRunner;
 
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.stream.*;
 import ru.demo.homework02.dao.AuthorDaoImpl;
 import ru.demo.homework02.dao.BookDaoImpl;
 import ru.demo.homework02.dao.GenreDaoImpl;
@@ -26,7 +20,6 @@ import ru.demo.homework02.entity.Book;
 import ru.demo.homework02.entity.Genre;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.reset;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -119,13 +112,7 @@ public class LibraryServiceImplTest {
         books.add(book);
         books.add(null);
         books.add(new Book());
-
-//        books.stream()
-//                .flatMap(Stream::ofNullable)
-//                .filter((s) -> s.getAuthors() != null)
-//                .filter((s) -> s.getAuthors().getName() != null)
-//                .filter(s2 -> s2.getAuthors().getName().equals(TEST_AUTHOR))
-//                .collect(Collectors.toList()).forEach(System.out::println);
+        ;
     }
 
     @Test

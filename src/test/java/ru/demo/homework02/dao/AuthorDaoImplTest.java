@@ -27,6 +27,8 @@ public class AuthorDaoImplTest {
     @Before
     public void setUp() {
         authorName = "Л.Толстой";
+        author = new Author();
+        author.setName(authorName);
     }
 
     @After
@@ -82,5 +84,12 @@ public class AuthorDaoImplTest {
     @Test
     public void deleteAll() {
         assertThat(authorDao.deleteAll()).isEqualTo(6);
+    }
+
+    @Test
+    public void addNewAuthorObject() {
+
+        System.out.println(authorDao.addAuthorObject(author));
+        System.out.println(authorDao.addAuthorObject(author));
     }
 }

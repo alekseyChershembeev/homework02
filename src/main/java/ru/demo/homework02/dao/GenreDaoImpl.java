@@ -6,6 +6,7 @@ import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 import ru.demo.homework02.entity.Genre;
 import java.util.*;
@@ -70,7 +71,7 @@ public class GenreDaoImpl implements GenreDAO {
         return namedJdbc.update(SQL_ADD_GENRE,
                 new BeanPropertySqlParameterSource(genre),
                 new GeneratedKeyHolder(),
-                new String[] { "id" });
+                new String[]{"id"});
     }
 
     @Override
@@ -90,4 +91,20 @@ public class GenreDaoImpl implements GenreDAO {
         return namedJdbc.getJdbcOperations()
                 .update(SQL_DELETE_ALL);
     }
+
+    @Override
+    public Genre addGenreObject(Genre genre) {
+
+        KeyHolder keyHolder = new GeneratedKeyHolder();
+        namedJdbc.update(SQL_ADD_GENRE,
+                new MapSqlParameterSource()
+                        .addValue("genreName",
+                                genre.getGenreName()),
+                keyHolder,
+                new String[]{"id"});
+        genre.setId(Objects.requireNonNull(keyHolder.getKey()).longValue());
+        return genre;
+    }
+
+
 }

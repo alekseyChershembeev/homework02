@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
@@ -54,10 +55,10 @@ public class BookDaoImpl implements BookDAO {
                     + "WHERE books.id=:id";
     private static final String SQL_INSERT_NEW_BOOK =
             "INSERT INTO books (title, genre_id)" +
-                    "VALUES (:title, :id)";
+                    "VALUES (:title, :genre_id)";
     private static final String SQL_INSERT_INTO_BOOK_AUTHORS =
             "INSERT INTO books_authors (authors_id, books_id)" +
-                    "VALUES (:authors_id, :books_id)";
+                    "VALUES (:a_id, :b_id)";
     private static final String SQL_UPDATE_BOOK_TITLE_BY_ID =
             "UPDATE books SET title =:title " +
                     "WHERE id =:id";
@@ -115,18 +116,19 @@ public class BookDaoImpl implements BookDAO {
         status += namedJdbc.update(SQL_INSERT_NEW_BOOK,
                 new MapSqlParameterSource()
                         .addValue("title", book.getTitle())
-                        .addValue("id", book.getGenre().getId()),
+                        .addValue("genre_id", book.getGenre().getId()),
                 keyHolder, new String[]{"id"}
 
         );
         Long bookId = Objects.requireNonNull(keyHolder.getKey()).longValue();
         status += namedJdbc.update(SQL_INSERT_INTO_BOOK_AUTHORS,
                 new MapSqlParameterSource()
-                        .addValue("authors_id", book.getAuthors().getId())
-                        .addValue("books_id", bookId));
+                        .addValue("a_id", book.getAuthors().getId())
+                        .addValue("b_id", bookId));
         if (status == 2)
             return 1;
-        else return 0;
+        else
+            return 0;
     }
 
     @Override

@@ -24,7 +24,7 @@ public class GenreDaoImplTest {
     @Before
     public void setUp() {
         genre = new Genre();
-        genre.setId(6L);
+//        genre.setId(6L);
         genre.setGenreName("фантастика");
 
     }
@@ -56,5 +56,10 @@ public class GenreDaoImplTest {
     @Test
     public void deleteAll() {
         System.out.println(genreDao.deleteAll());
+    }
+
+    @Test
+    public void addGenreObject() {
+        System.out.println(genreDao.addGenreObject(genre));
     }
 }

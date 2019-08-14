@@ -34,6 +34,9 @@ public class LibraryShellImplTest {
     private Shell shell;
 
     @Autowired
+    private LibraryShell libraryShell;
+
+    @Autowired
     private BookDaoImpl bookDao;
 
     @Autowired
@@ -49,14 +52,14 @@ public class LibraryShellImplTest {
 
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
 //        genreDao.deleteAll();
 //        authorDao.deleteAll();
 //        bookDao.deleteAll();
     }
 
     @After
-    public void tearDown() throws Exception {
+    public void tearDown() {
     }
 
     @Test
@@ -75,12 +78,13 @@ public class LibraryShellImplTest {
 
     @Test
     public void getAllAuthorsNames() {
-        bookDao.addNewBook(book);
+        libraryShell.addNewBook("Фантастика","Гарри Поттер", "Дж.Роулинг");
 
         Object ob =
-                shell.evaluate(()->"all-names");
+                shell.evaluate(()->"all-name");
 
-        System.out.println(ob.toString());
+//        System.out.println();
+
     }
 
     @Test

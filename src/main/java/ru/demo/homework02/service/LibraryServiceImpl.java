@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import javax.validation.constraints.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -25,6 +26,13 @@ public class LibraryServiceImpl implements LibraryService {
     private final AuthorDAO authorDAO;
     private final GenreDAO genreDAO;
 
+    /**
+     * Instantiates a new Library service.
+     *
+     * @param bookDAO   the book dao
+     * @param authorDAO the author dao
+     * @param genreDAO  the genre dao
+     */
     @Autowired
     public LibraryServiceImpl(BookDAO bookDAO, AuthorDAO authorDAO, GenreDAO genreDAO) {
         this.bookDAO = bookDAO;
@@ -52,6 +60,7 @@ public class LibraryServiceImpl implements LibraryService {
                 .collect(Collectors.toList());
     }
 
+    @NotNull
     @Override
     @Transactional(readOnly = true)
     public List<Book> getBooksByAuthorsName(String name) {
@@ -63,15 +72,16 @@ public class LibraryServiceImpl implements LibraryService {
                 .filter(s2 -> s2.getAuthors().getName().equals(name))
                 .collect(Collectors.toList());
 
-
     }
 
+    @NotNull
     @Override
     public boolean addNewGenre(Genre genre) {
         return genreDAO.addGenre(genre) == 1;
 
     }
 
+    @NotNull
     @Override
     @Transactional()
     public boolean addNewBook(Book book) {
@@ -80,6 +90,7 @@ public class LibraryServiceImpl implements LibraryService {
         return bookDAO.addNewBook(book) == 1;
     }
 
+    @NotNull
     @Override
     public boolean addNewAuthor(Author author) {
         return authorDAO.addNewAuthor(author) == 1;
@@ -100,6 +111,7 @@ public class LibraryServiceImpl implements LibraryService {
         return authorDAO.deleteAuthorById(id) == 1;
     }
 
+    @NotNull
     @Override
     public boolean deleteGenre(String genreName) {
 

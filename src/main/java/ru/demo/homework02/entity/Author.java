@@ -14,13 +14,27 @@ public class Author {
     private Long id;
     private String name;
 
+    /**
+     * Instantiates a new Author.
+     */
     public Author() {
     }
 
+    /**
+     * Instantiates a new Author.
+     *
+     * @param name the name
+     */
     public Author(String name) {
         this.name = name;
     }
 
+    /**
+     * Instantiates a new Author.
+     *
+     * @param id   the id
+     * @param name the name
+     */
     public Author(Long id, String name) {
         this.id = id;
         this.name = name;

@@ -12,13 +12,27 @@ public class Genre {
     private Long id;
     private String genreName;
 
+    /**
+     * Instantiates a new Genre.
+     *
+     * @param genreName the genre name
+     */
     public Genre(String genreName) {
         this.genreName = genreName;
     }
 
+    /**
+     * Instantiates a new Genre.
+     */
     public Genre() {
     }
 
+    /**
+     * Instantiates a new Genre.
+     *
+     * @param id        the id
+     * @param genreName the genre name
+     */
     public Genre(Long id, String genreName) {
         this.id = id;
         this.genreName = genreName;

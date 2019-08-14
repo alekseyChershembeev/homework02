@@ -22,10 +22,10 @@ public interface LibraryShell {
     String addNewBook(String genre, String title, String author);
     String addNewAuthor(String author);
 
-    String updateBookTitleById(Long id, String newTitle);
+    String updateBookTitleById(String id, String newTitle);
 
-    String deleteBookById(Long id);
-    String deleteAuthorById(Long id);
+    String deleteBookById(String id);
+    String deleteAuthorById(String id);
     String deleteGenre(String genreName);
     String deleteAll();
 

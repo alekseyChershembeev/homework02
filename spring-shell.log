@@ -47,3 +47,31 @@
 1565786344935:add-book sagg ashfh ashfh
 1565786353310:all-books
 1565786818978:add-book asggas sagsaha ahhah
+1565789179369:all-books
+1565789238697:deleteboook 7
+1565789256638:delete-book 7
+1565789278613:all-books
+1565789490186:add genre "роман"
+1565789507527:add-genre "роман"
+1565789822228:lk
+1565792089037:add-genre роман
+1565793071958:add-author А.Кристи
+1565793102703:delete-author А.Кристи
+1565793190269:delete-author 1
+1565793275190:add-genre драма
+1565793307422:add-author й
+1565793441571:add book a a a
+1565793447872:add-book a a a
+1565794474181:add-genre драма
+1565794482198:add-genre 123
+1565794510975:add-book фыап фыпыфвп впфып
+1565794546310:delte-book 1000
+1565794555612:delete-book 10000
+1565794565170:delete-book asghhh
+1565795004831:delete-book afadf
+1565795015685:delete-book asgg
+1565796072874:delete-book 123
+1565796079978:delete-book afsdag
+1565796154748:update-book asfasf asffa
+1565796177772:update-book  1342 adfadf
+1565796214809:delete-genre safga

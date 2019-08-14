@@ -27,6 +27,11 @@ public class LibraryShellImpl implements LibraryShell {
 
     private LibraryServiceImpl libraryService;
 
+    /**
+     * Instantiates a new Library shell.
+     *
+     * @param libraryService the library service
+     */
     @Autowired
     public LibraryShellImpl(LibraryServiceImpl libraryService) {
         this.libraryService = libraryService;
@@ -99,10 +104,13 @@ public class LibraryShellImpl implements LibraryShell {
 
     @Override
     @ShellMethod(value = "update Book by id", key = "update-book")
-    public String updateBookTitleById(@ShellOption(help = "id") Long id,
+    public String updateBookTitleById(@ShellOption(help = "id") String id,
                                       @ShellOption(help = "title") String newTitle) {
-        final boolean isUpdate = libraryService
-                .updateBookTitleById(id, newTitle);
+        boolean isUpdate = id.matches("\\d+");
+
+        if (isUpdate)
+            isUpdate = libraryService
+                    .updateBookTitleById(Long.valueOf(id), newTitle);
 
         if (isUpdate)
             return "Book was update successfully";
@@ -112,9 +120,13 @@ public class LibraryShellImpl implements LibraryShell {
 
     @Override
     @ShellMethod(value = "delete Book by id", key = "delete-book")
-    public String deleteBookById(@ShellOption(help = "id") Long id) {
-        final boolean isDelete = libraryService
-                .deleteBookById(id);
+    public String deleteBookById(@ShellOption(help = "id") String id) {
+
+        boolean isDelete = id.matches("\\d+");
+
+        if (isDelete)
+            isDelete = libraryService
+                    .deleteBookById(Long.valueOf(id));
 
         if (isDelete)
             return "Book was delete successfully";
@@ -124,9 +136,13 @@ public class LibraryShellImpl implements LibraryShell {
 
     @Override
     @ShellMethod(value = "delete Author by id", key = "delete-author")
-    public String deleteAuthorById(@ShellOption(help = "id") Long id) {
-        final boolean isDelete = libraryService
-                .deleteAuthorById(id);
+    public String deleteAuthorById(@ShellOption(help = "id") String id) {
+
+        boolean isDelete = id.matches("\\d+");
+
+        if (isDelete)
+            isDelete = libraryService
+                    .deleteAuthorById(Long.valueOf(id));
 
         if (isDelete)
             return "Author was delete successfully";
@@ -169,14 +185,12 @@ public class LibraryShellImpl implements LibraryShell {
                 .addValue("Author(s)")
                 .addValue("Title")
                 .addValue("Genre");
-        books.forEach(book -> {
 
-            modelBuilder.addRow()
-                    .addValue(String.valueOf(book.getId()))
-                    .addValue(book.getAuthors().getName())
-                    .addValue(book.getTitle() + " ")
-                    .addValue(book.getGenre().getGenreName());
-        });
+        books.forEach(book -> modelBuilder.addRow()
+                .addValue(String.valueOf(book.getId()))
+                .addValue(book.getAuthors().getName())
+                .addValue(book.getTitle() + " ")
+                .addValue(book.getGenre().getGenreName()));
         TableModel model = modelBuilder.build();
 
         return new TableBuilder(model)

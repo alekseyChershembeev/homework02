@@ -16,9 +16,20 @@ public class Book {
     private String title;
     private Genre genre;
 
+    /**
+     * Instantiates a new Book.
+     */
     public Book() {
     }
 
+    /**
+     * Instantiates a new Book.
+     *
+     * @param id      the id
+     * @param authors the authors
+     * @param title   the title
+     * @param genre   the genre
+     */
     public Book(Long id, Author authors, String title, Genre genre) {
         this.id = id;
         this.authors = authors;
@@ -26,6 +37,13 @@ public class Book {
         this.genre = genre;
     }
 
+    /**
+     * Instantiates a new Book.
+     *
+     * @param authors the authors
+     * @param title   the title
+     * @param genre   the genre
+     */
     public Book(Author authors, String title, Genre genre) {
         this.authors = authors;
         this.title = title;

@@ -1,9 +1,9 @@
 package ru.demo.homework02.dao;
 
 
-import java.util.Collections;
 import java.util.Objects;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
@@ -25,6 +25,11 @@ public class AuthorDaoImpl implements AuthorDAO {
 
     private final NamedParameterJdbcOperations namedJDBC;
 
+    /**
+     * Instantiates a new Author dao.
+     *
+     * @param namedJDBC the named jdbc
+     */
     @Autowired
     public AuthorDaoImpl(NamedParameterJdbcOperations namedJDBC) {
         this.namedJDBC = namedJDBC;
@@ -50,51 +55,76 @@ public class AuthorDaoImpl implements AuthorDAO {
     @Override
     public Optional<Author> getAuthorByName(String name) {
 
-        return namedJDBC.queryForObject(SQL_AUTHOR_BY_NAME,
-                new MapSqlParameterSource("name", name),
-                (rs, rowNum) -> Optional.of(new Author(
-                        rs.getLong("id"),
-                        rs.getString("author_name")
-                )));
+        try {
+            return namedJDBC.queryForObject(SQL_AUTHOR_BY_NAME,
+                    new MapSqlParameterSource("name", name),
+                    (rs, rowNum) -> Optional.of(new Author(
+                            rs.getLong("id"),
+                            rs.getString("author_name")
+                    )));
+        } catch (DataAccessException e) {
+            return Optional.empty();
+        }
     }
 
 
     @Override
     public Optional<Author> getAuthorById(Long id) {
 
-        return namedJDBC.queryForObject(SQL_GET_AUTHOR_BY_ID,
-                new MapSqlParameterSource("id", id),
-                (rs, rowNum) -> Optional.of(new Author(
-                        rs.getLong("id"),
-                        rs.getString("author_name")
-                )));
+        try {
+            return namedJDBC.queryForObject(SQL_GET_AUTHOR_BY_ID,
+                    new MapSqlParameterSource("id", id),
+                    (rs, rowNum) -> Optional.of(new Author(
+                            rs.getLong("id"),
+                            rs.getString("author_name")
+                    )));
+        }
+        catch (DataAccessException e) {
+            return Optional.empty();
+        }
     }
 
     //возвр 1 если успех
     @Override
     public int addNewAuthor(Author author) {
-        return namedJDBC.update(SQL_ADD_NEW_AUTHOR,
-                new BeanPropertySqlParameterSource(author),
-                new GeneratedKeyHolder(),
-                new String[]{"id"});
+        try {
+            return namedJDBC.update(SQL_ADD_NEW_AUTHOR,
+                    new BeanPropertySqlParameterSource(author),
+                    new GeneratedKeyHolder(),
+                    new String[]{"id"});
+        } catch (DataAccessException e) {
+            return 0;
+        }
 
     }
 
     @Override
     public int deleteAuthor(Author author) {
-        return namedJDBC.update(SQL_DELETE_AUTHOR,
-                new MapSqlParameterSource("id", author.getId()));
+        try {
+            return namedJDBC.update(SQL_DELETE_AUTHOR,
+                    new MapSqlParameterSource("id", author.getId()));
+        } catch (DataAccessException e) {
+            return 0;
+        }
     }
 
     @Override
     public int deleteAuthorById(Long id) {
-        return namedJDBC.update(SQL_DELETE_AUTHOR_BY_ID,
-                new MapSqlParameterSource("id", id));
+        try {
+            return namedJDBC.update(SQL_DELETE_AUTHOR_BY_ID,
+                    new MapSqlParameterSource("id", id));
+        } catch (DataAccessException e) {
+            return 0;
+        }
     }
 
     @Override
     public int deleteAll() {
-        return namedJDBC.getJdbcOperations().update(SQL_DELETE_ALL);
+        try {
+            return namedJDBC.getJdbcOperations().update(SQL_DELETE_ALL);
+        } catch (DataAccessException e) {
+            return 0;
+        }
     }
 
 
@@ -102,11 +132,15 @@ public class AuthorDaoImpl implements AuthorDAO {
     public Author addAuthorObject(Author author) {
         KeyHolder keyHolder = new GeneratedKeyHolder();
 
-        namedJDBC.update(SQL_ADD_NEW_AUTHOR,
-                new MapSqlParameterSource()
-                        .addValue("name", author.getName()),
-                keyHolder,
-                new String[]{"id"});
+        try {
+            namedJDBC.update(SQL_ADD_NEW_AUTHOR,
+                    new MapSqlParameterSource()
+                            .addValue("name", author.getName()),
+                    keyHolder,
+                    new String[]{"id"});
+        } catch (DataAccessException e) {
+            return null;
+        }
 
         author.setId(Objects.requireNonNull(keyHolder.getKey()).longValue());
         return author;

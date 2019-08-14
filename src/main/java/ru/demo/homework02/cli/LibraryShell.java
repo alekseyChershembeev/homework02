@@ -18,16 +18,16 @@ public interface LibraryShell {
     List<String> getAllGenres();
     String getBooksByAuthorsName(String name);
 
-    boolean addNewGenre(Genre genre);
-    boolean addNewBook(Book book);
-    boolean addNewAuthor(Author author);
+    String addNewGenre(String genre);
+    String addNewBook(String genre, String title, String author);
+    String addNewAuthor(String author);
 
-    boolean updateBookTitleById(Long id, String newTitle);
+    String updateBookTitleById(Long id, String newTitle);
 
-    boolean deleteBookById(Long id);
-    boolean deleteAuthorById(Long id);
-    boolean deleteGenre(String genreName);
-    boolean deleteAll();
+    String deleteBookById(Long id);
+    String deleteAuthorById(Long id);
+    String deleteGenre(String genreName);
+    String deleteAll();
 
     String getTableFromList(List<Book>list);
 }

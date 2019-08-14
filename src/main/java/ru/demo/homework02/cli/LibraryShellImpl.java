@@ -54,58 +54,110 @@ public class LibraryShellImpl implements LibraryShell {
     @Override
     @ShellMethod(value = "show all books by Author name", key = "all-books-name")
     public String getBooksByAuthorsName(@ShellOption(help = "author name") String name) {
-
         return getTableFromList(libraryService.getBooksByAuthorsName(name));
-//        return name;
     }
 
 
     @Override
     @ShellMethod(value = "add new Genre", key = "add-genre")
-    public boolean addNewGenre(Genre genre) {
-        return false;
+    public String addNewGenre(@ShellOption(help = "add new Genre") String genre) {
+        if (libraryService.addNewGenre(new Genre(genre)))
+            return "New Genre was added successfully";
+        else
+            return "Genre already exist ";
     }
 
     @Override
     @ShellMethod(value = "add new Book", key = "add-book")
-    public boolean addNewBook(Book book) {
-        return false;
+    public String addNewBook(@ShellOption(help = "genre") String genre,
+                             @ShellOption(help = "title") String title,
+                             @ShellOption(help = "author") String author) {
+        final boolean isAddBook = libraryService
+                .addNewBook(new Book(
+                        new Author(author),
+                        title,
+                        new Genre(genre)
+                ));
+
+        if (isAddBook)
+            return "New Book was added successfully";
+        else
+            return "Book already exist ";
     }
 
     @Override
     @ShellMethod(value = "add new Author", key = "add-author")
-    public boolean addNewAuthor(Author author) {
-        return false;
+    public String addNewAuthor(String author) {
+        final boolean isAddBook = libraryService
+                .addNewAuthor(new Author(author));
+
+        if (isAddBook)
+            return "New Author was added successfully";
+        else
+            return "Author already exist ";
     }
 
     @Override
     @ShellMethod(value = "update Book by id", key = "update-book")
-    public boolean updateBookTitleById(Long id, String newTitle) {
-        return false;
+    public String updateBookTitleById(@ShellOption(help = "id") Long id,
+                                      @ShellOption(help = "title") String newTitle) {
+        final boolean isUpdate = libraryService
+                .updateBookTitleById(id, newTitle);
+
+        if (isUpdate)
+            return "Book was update successfully";
+        else
+            return "Book doesn't exist";
     }
 
     @Override
     @ShellMethod(value = "delete Book by id", key = "delete-book")
-    public boolean deleteBookById(Long id) {
-        return false;
+    public String deleteBookById(@ShellOption(help = "id") Long id) {
+        final boolean isDelete = libraryService
+                .deleteBookById(id);
+
+        if (isDelete)
+            return "Book was delete successfully";
+        else
+            return "Book doesn't exist";
     }
 
     @Override
     @ShellMethod(value = "delete Author by id", key = "delete-author")
-    public boolean deleteAuthorById(Long id) {
-        return false;
+    public String deleteAuthorById(@ShellOption(help = "id") Long id) {
+        final boolean isDelete = libraryService
+                .deleteAuthorById(id);
+
+        if (isDelete)
+            return "Author was delete successfully";
+        else
+            return "Author doesn't exist";
     }
 
     @Override
     @ShellMethod(value = "delete Genre by genreName", key = "delete-genre")
-    public boolean deleteGenre(String genreName) {
-        return false;
+    public String deleteGenre(@ShellOption(help = "genreName") String genreName) {
+        final boolean isDelete = libraryService
+                .deleteGenre(genreName);
+
+        if (isDelete)
+            return "Genre was delete successfully";
+        else
+            return "Genre doesn't exist";
     }
 
     @Override
     @ShellMethod(value = "delete all", key = "delete-all")
-    public boolean deleteAll() {
-        return false;
+    public String deleteAll() {
+
+        final boolean isDelete = libraryService
+                .deleteAll();
+
+        if (isDelete)
+            return "Delete all was successfully";
+        else
+            return "Delete all wasn't successfully";
+
     }
 
     @Override
@@ -122,7 +174,7 @@ public class LibraryShellImpl implements LibraryShell {
             modelBuilder.addRow()
                     .addValue(String.valueOf(book.getId()))
                     .addValue(book.getAuthors().getName())
-                    .addValue(book.getTitle())
+                    .addValue(book.getTitle() + " ")
                     .addValue(book.getGenre().getGenreName());
         });
         TableModel model = modelBuilder.build();

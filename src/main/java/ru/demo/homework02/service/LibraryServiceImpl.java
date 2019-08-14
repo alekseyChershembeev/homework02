@@ -3,6 +3,7 @@ package ru.demo.homework02.service;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -56,8 +57,13 @@ public class LibraryServiceImpl implements LibraryService {
     public List<Book> getBooksByAuthorsName(String name) {
 
         return bookDAO.getAllBooks().stream()
-                .filter((s) -> s.getAuthors().getName().equals(name))
+                .flatMap(Stream::ofNullable)
+                .filter((s) -> s.getAuthors() != null)
+                .filter((s) -> s.getAuthors().getName() != null)
+                .filter(s2 -> s2.getAuthors().getName().equals(name))
                 .collect(Collectors.toList());
+
+
     }
 
     @Override

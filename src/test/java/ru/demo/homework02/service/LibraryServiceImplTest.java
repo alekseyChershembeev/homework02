@@ -113,19 +113,19 @@ public class LibraryServiceImplTest {
     @Test
     public void getBooksByAuthorsName() {
 
-//        libraryService.getBooksByAuthorsName(TEST_AUTHOR);
+        libraryService.getBooksByAuthorsName(TEST_AUTHOR);
 
         List<Book> books = new ArrayList<>();
         books.add(book);
         books.add(null);
         books.add(new Book());
 
-        books.stream()
-                .flatMap(Stream::ofNullable)
-                .filter((s) -> s.getAuthors() != null)
-                .filter((s) -> s.getAuthors().getName() != null)
-                .filter(s2 -> s2.getAuthors().getName().equals(TEST_AUTHOR))
-                .collect(Collectors.toList()).forEach(System.out::println);
+//        books.stream()
+//                .flatMap(Stream::ofNullable)
+//                .filter((s) -> s.getAuthors() != null)
+//                .filter((s) -> s.getAuthors().getName() != null)
+//                .filter(s2 -> s2.getAuthors().getName().equals(TEST_AUTHOR))
+//                .collect(Collectors.toList()).forEach(System.out::println);
     }
 
     @Test

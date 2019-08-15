@@ -2,6 +2,9 @@ package ru.demo.homework02.dao;
 
 
 import java.util.Objects;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
@@ -25,63 +28,68 @@ import ru.demo.homework02.entity.Author;
 @Transactional
 public class AuthorDaoImpl implements AuthorDAO {
 
-    private final NamedParameterJdbcOperations namedJDBC;
+    @PersistenceContext
+    private EntityManager em;
 
-    /**
-     * Instantiates a new Author dao.
-     *
-     * @param namedJDBC the named jdbc
-     */
-    @Autowired
-    public AuthorDaoImpl(NamedParameterJdbcOperations namedJDBC) {
-        this.namedJDBC = namedJDBC;
-    }
-
-
-    private static final String SQL_GET_ALL_AUTHORS_NAMES = "SELECT author_name FROM authors";
-    private static final String SQL_AUTHOR_BY_NAME = "SELECT * FROM authors WHERE author_name = :name";
-    private static final String SQL_GET_AUTHOR_BY_ID = "SELECT * FROM authors WHERE id= :id";
-    private static final String SQL_ADD_NEW_AUTHOR = "INSERT INTO authors (author_name) VALUES (:name)";
-    private static final String SQL_DELETE_AUTHOR = "DELETE FROM authors WHERE author_name=:name";
-    private static final String SQL_DELETE_AUTHOR_BY_ID = "delete from authors where id=:id";
-    private static final String SQL_DELETE_ALL = "DELETE FROM books_authors";
+//    /**
+//     * Instantiates a new Author dao.
+//     *
+//     * @param namedJDBC the named jdbc
+//     */
+//
+//
+//    private static final String SQL_GET_ALL_AUTHORS_NAMES = "SELECT author_name FROM authors";
+//    private static final String SQL_AUTHOR_BY_NAME = "SELECT * FROM authors WHERE author_name = :name";
+//    private static final String SQL_GET_AUTHOR_BY_ID = "SELECT * FROM authors WHERE id= :id";
+//    private static final String SQL_ADD_NEW_AUTHOR = "INSERT INTO authors (author_name) VALUES (:name)";
+//    private static final String SQL_DELETE_AUTHOR = "DELETE FROM authors WHERE author_name=:name";
+//    private static final String SQL_DELETE_AUTHOR_BY_ID = "delete from authors where id=:id";
+//    private static final String SQL_DELETE_ALL = "DELETE FROM books_authors";
 
 
     @Override
     public List<String> getAllAuthorsNames() {
-        return namedJDBC
-                .getJdbcOperations()
-                .queryForList(SQL_GET_ALL_AUTHORS_NAMES, String.class);
+//        return namedJDBC
+//                .getJdbcOperations()
+//                .queryForList(SQL_GET_ALL_AUTHORS_NAMES, String.class);
+        TypedQuery<String> query = em.createQuery("SELECT a.name FROM Author a", String.class);
+        return query.getResultList();
     }
 
     @Override
     public Optional<Author> getAuthorByName(String name) {
 
         try {
-            return namedJDBC.queryForObject(SQL_AUTHOR_BY_NAME,
-                    new MapSqlParameterSource("name", name),
-                    (rs, rowNum) -> Optional.of(new Author(
-                            rs.getLong("id"),
-                            rs.getString("author_name")
-                    )));
+//            return namedJDBC.queryForObject(SQL_AUTHOR_BY_NAME,
+//                    new MapSqlParameterSource("name", name),
+//                    (rs, rowNum) -> Optional.of(new Author(
+//                            rs.getLong("id"),
+//                            rs.getString("author_name")
+//                    )));
+            TypedQuery<Author> query = em.createQuery("SELECT a FROM Author a WHERE a.name =:name", Author.class);
+            query.setParameter("name", name);
+            return Optional.ofNullable(query.getSingleResult());
         } catch (DataAccessException e) {
             return Optional.empty();
         }
-    }
 
+    }
 
     @Override
     public Optional<Author> getAuthorById(Long id) {
 
         try {
-            return namedJDBC.queryForObject(SQL_GET_AUTHOR_BY_ID,
-                    new MapSqlParameterSource("id", id),
-                    (rs, rowNum) -> Optional.of(new Author(
-                            rs.getLong("id"),
-                            rs.getString("author_name")
-                    )));
-        }
-        catch (DataAccessException e) {
+//            return namedJDBC.queryForObject(SQL_GET_AUTHOR_BY_ID,
+//                    new MapSqlParameterSource("id", id),
+//                    (rs, rowNum) -> Optional.of(new Author(
+//                            rs.getLong("id"),
+//                            rs.getString("author_name")
+//                    )));
+
+            TypedQuery<Author> query = em.createQuery("SELECT a FROM Author a WHERE a.id =:id", Author.class);
+            query.setParameter("id", id);
+            return Optional.ofNullable(query.getSingleResult());
+        } catch (DataAccessException e) {
             return Optional.empty();
         }
     }
@@ -90,10 +98,12 @@ public class AuthorDaoImpl implements AuthorDAO {
     @Override
     public int addNewAuthor(Author author) {
         try {
-            return namedJDBC.update(SQL_ADD_NEW_AUTHOR,
-                    new BeanPropertySqlParameterSource(author),
-                    new GeneratedKeyHolder(),
-                    new String[]{"id"});
+//            return namedJDBC.update(SQL_ADD_NEW_AUTHOR,
+//                    new BeanPropertySqlParameterSource(author),
+//                    new GeneratedKeyHolder(),
+//                    new String[]{"id"});
+            em.persist(author);
+            return 1;
         } catch (DataAccessException e) {
             return 0;
         }
@@ -103,8 +113,10 @@ public class AuthorDaoImpl implements AuthorDAO {
     @Override
     public int deleteAuthor(Author author) {
         try {
-            return namedJDBC.update(SQL_DELETE_AUTHOR,
-                    new MapSqlParameterSource("id", author.getId()));
+//            return namedJDBC.update(SQL_DELETE_AUTHOR,
+//                    new MapSqlParameterSource("id", author.getId()));
+            em.remove(author);
+            return 1;
         } catch (DataAccessException e) {
             return 0;
         }
@@ -113,8 +125,15 @@ public class AuthorDaoImpl implements AuthorDAO {
     @Override
     public int deleteAuthorById(Long id) {
         try {
-            return namedJDBC.update(SQL_DELETE_AUTHOR_BY_ID,
-                    new MapSqlParameterSource("id", id));
+//            return namedJDBC.update(SQL_DELETE_AUTHOR_BY_ID,
+//                    new MapSqlParameterSource("id", id));
+            Author author = em.find(Author.class, id);
+            if (author != null) {
+                em.remove(author);
+                return 1;
+            }
+            return 0;
+
         } catch (DataAccessException e) {
             return 0;
         }
@@ -123,7 +142,9 @@ public class AuthorDaoImpl implements AuthorDAO {
     @Override
     public int deleteAll() {
         try {
-            return namedJDBC.getJdbcOperations().update(SQL_DELETE_ALL);
+//            return namedJDBC.getJdbcOperations().update(SQL_DELETE_ALL);
+            em.createQuery("DELETE FROM Author").executeUpdate();
+            return 1;
         } catch (DataAccessException e) {
             return 0;
         }
@@ -132,20 +153,23 @@ public class AuthorDaoImpl implements AuthorDAO {
 
     @Override
     public Author addAuthorObject(Author author) {
-        KeyHolder keyHolder = new GeneratedKeyHolder();
+//        KeyHolder keyHolder = new GeneratedKeyHolder();
 
         try {
-            namedJDBC.update(SQL_ADD_NEW_AUTHOR,
-                    new MapSqlParameterSource()
-                            .addValue("name", author.getName()),
-                    keyHolder,
-                    new String[]{"id"});
+            em.persist(author);
+            return author;
+//            namedJDBC.update(SQL_ADD_NEW_AUTHOR,
+//                    new MapSqlParameterSource()
+//                            .addValue("name", author.getName()),
+//                    keyHolder,
+//                    new String[]{"id"});
+
         } catch (DataAccessException e) {
             return null;
         }
 
-        author.setId(Objects.requireNonNull(keyHolder.getKey()).longValue());
-        return author;
+//        author.setId(Objects.requireNonNull(keyHolder.getKey()).longValue());
+//        return author;
 
     }
 

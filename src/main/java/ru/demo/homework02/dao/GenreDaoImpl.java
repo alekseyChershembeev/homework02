@@ -1,6 +1,9 @@
 package ru.demo.homework02.dao;
 
 import java.util.List;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
@@ -22,45 +25,49 @@ import java.util.*;
 @Transactional
 public class GenreDaoImpl implements GenreDAO {
 
-    private final NamedParameterJdbcTemplate namedJdbc;
+//    private final NamedParameterJdbcTemplate namedJdbc;
 
-    private static final String SQL_GET_ALL_GENRES =
-            "SELECT * FROM genres";
-    private static final String SQL_GET_GENRE_BY_NAME =
-            "SELECT * FROM genres " +
-                    "WHERE genre_name =:genre_name";
-    private static final String SQL_DELETE_GENRE =
-            "DELETE FROM genres WHERE id =:id";
-    private static final String SQL_ADD_GENRE =
-            "INSERT INTO genres (genre_name) VALUES (:genreName);";
-    private static final String SQL_DELETE_GENRE_ID =
-            "UPDATE books SET genre_id = null WHERE genre_id = :id";
-    private static final String SQL_DELETE_NULL_GENRE_ID =
-            "UPDATE books SET genre_id = null";
-    private static final String SQL_DELETE_ALL =
-            "DELETE FROM genres";
+//    private static final String SQL_GET_ALL_GENRES =
+//            "SELECT * FROM genres";
+//    private static final String SQL_GET_GENRE_BY_NAME =
+//            "SELECT * FROM genres " +
+//                    "WHERE genre_name =:genre_name";
+//    private static final String SQL_DELETE_GENRE =
+//            "DELETE FROM genres WHERE id =:id";
+//    private static final String SQL_ADD_GENRE =
+//            "INSERT INTO genres (genre_name) VALUES (:genreName);";
+//    private static final String SQL_DELETE_GENRE_ID =
+//            "UPDATE books SET genre_id = null WHERE genre_id = :id";
+//    private static final String SQL_DELETE_NULL_GENRE_ID =
+//            "UPDATE books SET genre_id = null";
+//    private static final String SQL_DELETE_ALL =
+//            "DELETE FROM genres";
 
 
-    /**
-     * Instantiates a new Genre dao.
-     *
-     * @param namedJdbc the named jdbc
-     */
-    @Autowired
-    public GenreDaoImpl(NamedParameterJdbcTemplate namedJdbc) {
-        this.namedJdbc = namedJdbc;
-    }
+//    /**
+//     * Instantiates a new Genre dao.
+//     *
+//     * @param namedJdbc the named jdbc
+//     */
+//    @Autowired
+//    public GenreDaoImpl(NamedParameterJdbcTemplate namedJdbc) {
+//        this.namedJdbc = namedJdbc;
+//    }
+
+    @PersistenceContext
+    private EntityManager em;
 
 
     @Override
     public List<Genre> getAllGenres() {
         try {
-            return namedJdbc.query(SQL_GET_ALL_GENRES,
-                    (rs, rw) -> new Genre(
-                            rs.getLong("id"),
-                            rs.getString("genre_name")
-                    )
-            );
+//            return namedJdbc.query(SQL_GET_ALL_GENRES,
+//                    (rs, rw) -> new Genre(
+//                            rs.getLong("id"),
+//                            rs.getString("genre_name")
+//                    )
+//            );
+            return em.createQuery("SELECT g FROM Genre g", Genre.class).getResultList();
         } catch (DataAccessException e) {
             return null;
         }
@@ -69,12 +76,20 @@ public class GenreDaoImpl implements GenreDAO {
     @Override
     public Optional<Genre> getGenreByName(String genreName) {
         try {
-            return namedJdbc.queryForObject(SQL_GET_GENRE_BY_NAME,
-                    new MapSqlParameterSource("genre_name", genreName),
-                    (rs, rowNum) -> Optional.of(new Genre(
-                            rs.getLong("id"),
-                            rs.getString("genre_name")
-                    )));
+//            return namedJdbc.queryForObject(SQL_GET_GENRE_BY_NAME,
+//                    new MapSqlParameterSource("genre_name", genreName),
+//                    (rs, rowNum) -> Optional.of(new Genre(
+//                            rs.getLong("id"),
+//                            rs.getString("genre_name")
+//                    )));
+
+                                        //SELECT c FROM Country c WHERE c.name = :name
+            TypedQuery<Genre> query = em
+                    .createQuery("SELECT g FROM Genre g WHERE g.genreName = :name", Genre.class);
+            query.setParameter("name", genreName);
+
+            return Optional.ofNullable(query.getSingleResult());
+
         } catch (DataAccessException e) {
             return Optional.empty();
         }
@@ -84,10 +99,12 @@ public class GenreDaoImpl implements GenreDAO {
     public int addGenre(Genre genre) {
 
         try {
-            return namedJdbc.update(SQL_ADD_GENRE,
-                    new BeanPropertySqlParameterSource(genre),
-                    new GeneratedKeyHolder(),
-                    new String[]{"id"});
+//            return namedJdbc.update(SQL_ADD_GENRE,
+//                    new BeanPropertySqlParameterSource(genre),
+//                    new GeneratedKeyHolder(),
+//                    new String[]{"id"});
+            em.persist(genre);
+                return 1;
         } catch (DataAccessException e) {
             return 0;
         }
@@ -96,12 +113,15 @@ public class GenreDaoImpl implements GenreDAO {
     @Override
     public int deleteGenre(Genre genre) {
         try {
-            namedJdbc.update(SQL_DELETE_GENRE_ID,
-                    new MapSqlParameterSource()
-                            .addValue("id", genre.getId()));
-            return namedJdbc.update(SQL_DELETE_GENRE,
-                    new MapSqlParameterSource()
-                            .addValue("id", genre.getId()));
+//            namedJdbc.update(SQL_DELETE_GENRE_ID,
+//                    new MapSqlParameterSource()
+//                            .addValue("id", genre.getId()));
+//            return namedJdbc.update(SQL_DELETE_GENRE,
+//                    new MapSqlParameterSource()
+//                            .addValue("id", genre.getId()));
+
+            em.remove(genre);
+            return 1;
         } catch (DataAccessException e) {
             return 0;
         }
@@ -110,10 +130,12 @@ public class GenreDaoImpl implements GenreDAO {
     @Override
     public int deleteAll() {
         try {
-            namedJdbc.getJdbcOperations()
-                    .update(SQL_DELETE_NULL_GENRE_ID);
-            return namedJdbc.getJdbcOperations()
-                    .update(SQL_DELETE_ALL);
+//            namedJdbc.getJdbcOperations()
+//                    .update(SQL_DELETE_NULL_GENRE_ID);
+//            return namedJdbc.getJdbcOperations()
+//                    .update(SQL_DELETE_ALL);
+            em.createQuery("DELETE FROM Genre").executeUpdate();
+            return 1;
         } catch (DataAccessException e) {
             return 0;
         }
@@ -122,19 +144,21 @@ public class GenreDaoImpl implements GenreDAO {
     @Override
     public Genre addGenreObject(Genre genre) {
 
-        KeyHolder keyHolder = new GeneratedKeyHolder();
+//        KeyHolder keyHolder = new GeneratedKeyHolder();
         try {
-            namedJdbc.update(SQL_ADD_GENRE,
-                    new MapSqlParameterSource()
-                            .addValue("genreName",
-                                    genre.getGenreName()),
-                    keyHolder,
-                    new String[]{"id"});
+//            namedJdbc.update(SQL_ADD_GENRE,
+//                    new MapSqlParameterSource()
+//                            .addValue("genreName",
+//                                    genre.getGenreName()),
+//                    keyHolder,
+//                    new String[]{"id"});
+             em.persist(genre);
+             return genre;
         } catch (DataAccessException e) {
             return null;
         }
-        genre.setId(Objects.requireNonNull(keyHolder.getKey()).longValue());
-        return genre;
+//        genre.setId(Objects.requireNonNull(keyHolder.getKey()).longValue());
+//        return genre;
     }
 
 

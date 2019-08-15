@@ -7,7 +7,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.JdbcTest;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.context.annotation.Import;
+import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit4.SpringRunner;
 import ru.demo.homework02.entity.Author;
 import ru.demo.homework02.entity.Book;
@@ -15,14 +17,14 @@ import ru.demo.homework02.entity.Genre;
 
 
 
-@JdbcTest
+@DataJpaTest
 @RunWith(SpringRunner.class)
-@Import(BookDaoImpl.class)
+@Import({BookDaoImpl.class})
+@DirtiesContext
 public class BookDaoImplTest {
 
     @Autowired
     BookDaoImpl bookDAO;
-
 
 
     private Author author;
@@ -75,6 +77,8 @@ public class BookDaoImplTest {
     @Test
     public void getBookById() {
         System.out.println(bookDAO.getBookById(2L));
+
+
     }
 
     @Test

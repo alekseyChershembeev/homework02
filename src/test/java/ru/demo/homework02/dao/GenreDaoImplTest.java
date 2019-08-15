@@ -5,15 +5,17 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.jdbc.JdbcTest;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.context.annotation.Import;
+import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit4.SpringRunner;
 import ru.demo.homework02.entity.Genre;
 
 
-@JdbcTest
+@DataJpaTest
 @RunWith(SpringRunner.class)
 @Import(GenreDaoImpl.class)
+@DirtiesContext
 public class GenreDaoImplTest {
 
     @Autowired
@@ -26,6 +28,8 @@ public class GenreDaoImplTest {
         genre = new Genre();
 //        genre.setId(6L);
         genre.setGenreName("фантастика");
+        genreDao.addGenreObject(genre);
+        genreDao.addGenreObject(new Genre("драма"));
 
     }
 
@@ -40,6 +44,8 @@ public class GenreDaoImplTest {
 
     @Test
     public void getGenreByName() {
+
+        System.out.println(genreDao.getGenreByName("фантастика"));
         System.out.println(genreDao.getGenreByName("драма"));
     }
 

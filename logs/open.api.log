@@ -37,3 +37,69 @@
 2019-08-14 17:40:12 ERROR LoggingAspect:32 - Exception from class org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint
 2019-08-14 17:40:12 ERROR LoggingAspect:33 - Method call : addNewBook
 2019-08-14 17:40:12 ERROR LoggingAspect:34 - With args : [a, a, a]
+2019-08-15 15:24:56 INFO  LoggingAspect:26 - Method call : getAllAuthorsNames
+2019-08-15 15:24:56 INFO  LoggingAspect:27 - With args : []
+2019-08-15 15:24:56 INFO  LoggingAspect:26 - Method call : getAllAuthorsNames
+2019-08-15 15:24:56 INFO  LoggingAspect:27 - With args : []
+2019-08-15 15:24:56 INFO  LoggingAspect:26 - Method call : getAllAuthorsNames
+2019-08-15 15:24:56 INFO  LoggingAspect:27 - With args : []
+2019-08-15 15:24:56 ERROR LoggingAspect:33 - Exception from class org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint
+2019-08-15 15:24:56 ERROR LoggingAspect:34 - Method call : getAllAuthorsNames
+2019-08-15 15:24:56 ERROR LoggingAspect:35 - With args : []
+2019-08-15 15:24:56 ERROR LoggingAspect:33 - Exception from class org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint
+2019-08-15 15:24:56 ERROR LoggingAspect:34 - Method call : getAllAuthorsNames
+2019-08-15 15:24:56 ERROR LoggingAspect:35 - With args : []
+2019-08-15 15:24:56 ERROR LoggingAspect:33 - Exception from class org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint
+2019-08-15 15:24:56 ERROR LoggingAspect:34 - Method call : getAllAuthorsNames
+2019-08-15 15:24:56 ERROR LoggingAspect:35 - With args : []
+2019-08-15 15:25:32 INFO  LoggingAspect:26 - Method call : addNewAuthor
+2019-08-15 15:25:32 INFO  LoggingAspect:27 - With args : [aaaaa]
+2019-08-15 15:25:33 INFO  LoggingAspect:26 - Method call : addNewAuthor
+2019-08-15 15:25:33 INFO  LoggingAspect:27 - With args : [Author(id=null, name=aaaaa)]
+2019-08-15 15:25:33 INFO  LoggingAspect:26 - Method call : addNewAuthor
+2019-08-15 15:25:33 INFO  LoggingAspect:27 - With args : [Author(id=null, name=aaaaa)]
+2019-08-15 15:25:33 ERROR LoggingAspect:33 - Exception from class org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint
+2019-08-15 15:25:33 ERROR LoggingAspect:34 - Method call : addNewAuthor
+2019-08-15 15:25:33 ERROR LoggingAspect:35 - With args : [Author(id=null, name=aaaaa)]
+2019-08-15 15:25:33 ERROR LoggingAspect:33 - Exception from class org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint
+2019-08-15 15:25:33 ERROR LoggingAspect:34 - Method call : addNewAuthor
+2019-08-15 15:25:33 ERROR LoggingAspect:35 - With args : [Author(id=null, name=aaaaa)]
+2019-08-15 15:25:33 ERROR LoggingAspect:33 - Exception from class org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint
+2019-08-15 15:25:33 ERROR LoggingAspect:34 - Method call : addNewAuthor
+2019-08-15 15:25:33 ERROR LoggingAspect:35 - With args : [aaaaa]
+2019-08-15 16:51:21 INFO  LoggingAspect:26 - Method call : getAllAuthorsNames
+2019-08-15 16:51:21 INFO  LoggingAspect:27 - With args : []
+2019-08-15 16:51:21 INFO  LoggingAspect:26 - Method call : getAllAuthorsNames
+2019-08-15 16:51:21 INFO  LoggingAspect:27 - With args : []
+2019-08-15 16:51:21 INFO  LoggingAspect:26 - Method call : getAllAuthorsNames
+2019-08-15 16:51:21 INFO  LoggingAspect:27 - With args : []
+2019-08-15 16:51:22 ERROR LoggingAspect:33 - Exception from class org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint
+2019-08-15 16:51:22 ERROR LoggingAspect:34 - Method call : getAllAuthorsNames
+2019-08-15 16:51:22 ERROR LoggingAspect:35 - With args : []
+2019-08-15 16:51:22 ERROR LoggingAspect:33 - Exception from class org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint
+2019-08-15 16:51:22 ERROR LoggingAspect:34 - Method call : getAllAuthorsNames
+2019-08-15 16:51:22 ERROR LoggingAspect:35 - With args : []
+2019-08-15 16:51:22 ERROR LoggingAspect:33 - Exception from class org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint
+2019-08-15 16:51:22 ERROR LoggingAspect:34 - Method call : getAllAuthorsNames
+2019-08-15 16:51:22 ERROR LoggingAspect:35 - With args : []
+2019-08-15 16:51:33 INFO  LoggingAspect:26 - Method call : getAllGenres
+2019-08-15 16:51:33 INFO  LoggingAspect:27 - With args : []
+2019-08-15 16:51:33 INFO  LoggingAspect:26 - Method call : getAllGenres
+2019-08-15 16:51:33 INFO  LoggingAspect:27 - With args : []
+2019-08-15 16:51:33 INFO  LoggingAspect:26 - Method call : getAllGenres
+2019-08-15 16:51:33 INFO  LoggingAspect:27 - With args : []
+2019-08-15 16:51:44 INFO  LoggingAspect:26 - Method call : addNewAuthor
+2019-08-15 16:51:44 INFO  LoggingAspect:27 - With args : [aaa]
+2019-08-15 16:51:44 INFO  LoggingAspect:26 - Method call : addNewAuthor
+2019-08-15 16:51:44 INFO  LoggingAspect:27 - With args : [Author(id=null, name=aaa)]
+2019-08-15 16:51:44 INFO  LoggingAspect:26 - Method call : addNewAuthor
+2019-08-15 16:51:44 INFO  LoggingAspect:27 - With args : [Author(id=null, name=aaa)]
+2019-08-15 16:51:44 ERROR LoggingAspect:33 - Exception from class org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint
+2019-08-15 16:51:44 ERROR LoggingAspect:34 - Method call : addNewAuthor
+2019-08-15 16:51:44 ERROR LoggingAspect:35 - With args : [Author(id=null, name=aaa)]
+2019-08-15 16:51:44 ERROR LoggingAspect:33 - Exception from class org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint
+2019-08-15 16:51:44 ERROR LoggingAspect:34 - Method call : addNewAuthor
+2019-08-15 16:51:44 ERROR LoggingAspect:35 - With args : [Author(id=null, name=aaa)]
+2019-08-15 16:51:44 ERROR LoggingAspect:33 - Exception from class org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint
+2019-08-15 16:51:44 ERROR LoggingAspect:34 - Method call : addNewAuthor
+2019-08-15 16:51:44 ERROR LoggingAspect:35 - With args : [aaa]

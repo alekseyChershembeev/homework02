@@ -13,6 +13,7 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 import ru.demo.homework02.entity.Author;
 import ru.demo.homework02.entity.Book;
 import ru.demo.homework02.entity.Genre;
@@ -23,6 +24,7 @@ import ru.demo.homework02.entity.Genre;
  * Time: 11:06.
  */
 @Repository
+@Transactional
 public class BookDaoImpl implements BookDAO {
 
     private final NamedParameterJdbcOperations namedJdbc;

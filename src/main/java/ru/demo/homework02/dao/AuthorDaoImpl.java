@@ -13,6 +13,7 @@ import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 
 import java.util.Optional;
 import java.util.List;
+import org.springframework.transaction.annotation.Transactional;
 import ru.demo.homework02.entity.Author;
 
 /**
@@ -21,6 +22,7 @@ import ru.demo.homework02.entity.Author;
  * Time: 11:06.
  */
 @Repository
+@Transactional
 public class AuthorDaoImpl implements AuthorDAO {
 
     private final NamedParameterJdbcOperations namedJDBC;

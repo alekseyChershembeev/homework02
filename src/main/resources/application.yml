@@ -1,8 +1,0 @@
-spring:
-  datasource:
-      driverClassName: com.mysql.cj.jdbc.Driver
-#      driverClassName: com.mysql.jdbc.Driver
-      url: jdbc:mysql://192.168.103.134:3306/library?useUnicode=yes&characterEncoding=UTF-8
-      userName: root
-      password: Buster
-      initialization-mode: always

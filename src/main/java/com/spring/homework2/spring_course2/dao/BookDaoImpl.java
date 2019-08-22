@@ -1,14 +1,13 @@
 package com.spring.homework2.spring_course2.dao;
 
-import com.spring.homework2.spring_course2.entity.Author;
 import com.spring.homework2.spring_course2.entity.Book;
+import com.spring.homework2.spring_course2.exceptions.BookException;
 import java.util.List;
-import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
-import javax.persistence.Table;
 import javax.persistence.TypedQuery;
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -18,50 +17,76 @@ import org.springframework.transaction.annotation.Transactional;
  * Time: 19:10.
  */
 
-@Transactional
 @Repository
 public class BookDaoImpl implements BookDAO {
+
+    private static final Logger LOGGER = Logger.getLogger(BookDaoImpl.class.getName());
 
     @PersistenceContext
     private EntityManager em;
 
     @Override
     public long create(Book book) {
-        em.persist(book);
+        try {
+            em.persist(book);
+        } catch (RuntimeException e) {
+            LOGGER.error(e.getMessage() + "\n" +new BookException("created"));
+            return 0;
+        }
         return book.getBookId();
     }
 
     @Override
-    public void update(Book book) {
+    public boolean update(Book book) {
 
-        Book currentBook = em.find(Book.class, book.getBookId());
-        if (currentBook!=null)
-        {
+        Book currentBook;
+        try {
+            currentBook = em.find(Book.class, book.getBookId());
             currentBook.setBookAuthor(book.getBookAuthor());
             currentBook.setBookName(book.getBookName());
             currentBook.setBookGenre(book.getBookGenre());
-
+            return true;
+        } catch (RuntimeException e) {
+            LOGGER.error(e.getMessage() + "\n" + new BookException("getById"));
+            return false;
         }
+
     }
 
     @Override
     public Book getById(long id) {
-        TypedQuery<Book> query = em.createQuery("SELECT b FROM Book b WHERE bookId = :id", Book.class);
-        query.setParameter("id", id);
-        return query.getSingleResult();
+        try {
+            TypedQuery<Book> query = em.createQuery("SELECT b FROM Book b WHERE bookId = :id", Book.class);
+            query.setParameter("id", id);
+            return query.getSingleResult();
+        } catch (RuntimeException e) {
+            LOGGER.error(e.getMessage() + "\n" + new BookException("getById"));
+            return null;
+        }
 
     }
 
     @Override
     public List<Book> getAll() {
         TypedQuery<Book> query = em.createQuery("SELECT b FROM Book b", Book.class);
-        return query.getResultList();
+        try {
+            return query.getResultList();
+        } catch (RuntimeException e) {
+            LOGGER.error(e.getMessage() + "\n" + new BookException("getAll"));
+            return null;
+        }
     }
 
     @Override
-    public void delete(long id) {
+    public boolean delete(long id) {
         Query query = em.createQuery("DELETE FROM Book WHERE bookId = :id");
         query.setParameter("id", id);
-        query.executeUpdate();
+        try {
+            query.executeUpdate();
+            return true;
+        } catch (RuntimeException e) {
+            LOGGER.error(e.getMessage() + "\n" + new BookException("delete ")+ id);
+            return false;
+        }
     }
 }

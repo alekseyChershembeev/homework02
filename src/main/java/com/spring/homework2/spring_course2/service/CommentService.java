@@ -10,9 +10,9 @@ import java.util.List;
  */
 
 public interface CommentService {
-    void create(Comment comment);
+    boolean create(Comment comment);
 
     List<Comment> getByBookId(long id);
 
-    void delete(long id);
+    boolean delete(long id);
 }

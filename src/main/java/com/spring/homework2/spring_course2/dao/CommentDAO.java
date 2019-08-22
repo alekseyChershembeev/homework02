@@ -11,7 +11,7 @@ import java.util.List;
 
 public interface CommentDAO {
 
-    void create(Comment comment);
+    boolean create(Comment comment);
 
     List<Comment> getCommentsByBookId(long id);
 

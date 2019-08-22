@@ -40,7 +40,7 @@ public class CommentShell {
     public void addNewComment(
             @ShellOption(help = "bookId") String bookId,
             @ShellOption(help = "comment") String comment) {
-        long id = 0;
+        long id;
         if (bookId.matches("\\d+")) {
             id = Long.parseLong(bookId);
 
@@ -63,9 +63,8 @@ public class CommentShell {
         boolean isDelete = id.matches("\\d+");
 
 
-        if (isDelete) {
-            commentService
-                    .delete(longId);
+        if (commentService
+                .delete(longId)) {
             return "Comment was delete successfully";
         } else
             return "Comment doesn't exist";

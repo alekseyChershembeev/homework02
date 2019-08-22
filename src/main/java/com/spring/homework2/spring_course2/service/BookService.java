@@ -14,13 +14,13 @@ public interface BookService {
 
     long create(Book book);
 
-    void update(Book book);
+    boolean update(Book book);
 
     Book getById(long id);
 
     List<Book> getAll();
 
-    void delete(long id);
+    boolean delete(long id);
 
 //    List<Book> getBooksByAuthorsName(Author author);
 }

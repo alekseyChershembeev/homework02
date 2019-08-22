@@ -19,6 +19,11 @@ public class CommentServiceImpl implements CommentService {
     private CommentDAO commentDAO;
 
 
+    /**
+     * Instantiates a new Comment service.
+     *
+     * @param commentDAO the comment dao
+     */
     @Autowired
     public CommentServiceImpl(CommentDAO commentDAO) {
         this.commentDAO = commentDAO;

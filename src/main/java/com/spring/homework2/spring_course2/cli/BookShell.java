@@ -19,6 +19,11 @@ import org.springframework.shell.standard.ShellOption;
 
 public class BookShell {
 
+    /**
+     * Instantiates a new Book shell.
+     *
+     * @param bookService the book service
+     */
     @Autowired
     public BookShell(BookService bookService) {
         this.bookService = bookService;
@@ -26,6 +31,11 @@ public class BookShell {
 
     private BookService bookService;
 
+    /**
+     * Gets all books names.
+     *
+     * @return the all books names
+     */
     @ShellMethod(value = "show all Books names", key = "all-books")
     public List<Book> getAllBooksNames() {
         return bookService.getAll();
@@ -41,6 +51,15 @@ public class BookShell {
 //    }
 
 
+    /**
+     * Add new book string.
+     *
+     * @param genre          the genre
+     * @param name           the name
+     * @param authorName     the author name
+     * @param authorLastName the author last name
+     * @return the string
+     */
     @ShellMethod(value = "add new Book", key = "add-book")
     public String addNewBook(@ShellOption(help = "genre") String genre,
                              @ShellOption(help = "title") String name,
@@ -59,6 +78,16 @@ public class BookShell {
             return "Book already exist ";
     }
 
+    /**
+     * Update book by id string.
+     *
+     * @param id             the id
+     * @param nameBook       the name book
+     * @param authorName     the author name
+     * @param authorLastName the author last name
+     * @param genre          the genre
+     * @return the string
+     */
     @ShellMethod(value = "update Book", key = "update-book")
     public String updateBookById(@ShellOption(help = "id") String id,
                                  @ShellOption(help = "title") String nameBook,
@@ -85,6 +114,12 @@ public class BookShell {
             return "Book doesn't exist";
     }
 
+    /**
+     * Delete book by id string.
+     *
+     * @param id the id
+     * @return the string
+     */
     @ShellMethod(value = "delete Book by id", key = "delete-book")
     public String deleteBookById(@ShellOption(help = "id") String id) {
 

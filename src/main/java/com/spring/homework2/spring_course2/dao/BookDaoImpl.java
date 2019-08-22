@@ -16,7 +16,6 @@ import org.springframework.transaction.annotation.Transactional;
  * Date: 19.08.2019
  * Time: 19:10.
  */
-
 @Repository
 public class BookDaoImpl implements BookDAO {
 

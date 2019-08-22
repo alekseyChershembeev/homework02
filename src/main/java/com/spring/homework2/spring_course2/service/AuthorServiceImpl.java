@@ -18,6 +18,11 @@ public class AuthorServiceImpl implements AuthorService {
 
     private AuthorDAO authorDAO;
 
+    /**
+     * Instantiates a new Author service.
+     *
+     * @param authorDAO the author dao
+     */
     @Autowired
     public AuthorServiceImpl(AuthorDAO authorDAO) {
         this.authorDAO = authorDAO;

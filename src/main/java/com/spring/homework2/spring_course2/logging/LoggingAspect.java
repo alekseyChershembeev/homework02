@@ -13,13 +13,17 @@ import org.springframework.stereotype.Component;
  * Date: 24.07.2019
  * Time: 17:53.
  */
-
 @Aspect
 @Component
 public class LoggingAspect {
 
     private static final Logger LOGGER = Logger.getLogger(LoggingAspect.class.getName());
 
+    /**
+     * Log before.
+     *
+     * @param joinPoint the join point
+     */
     @Before("within(com.spring.homework2.spring_course2..*)")
     public void logBefore(JoinPoint joinPoint) {
         LOGGER.info("Method : " + joinPoint.getSignature().getName());

@@ -42,6 +42,12 @@ public class Comment {
     private Book book;
 
 
+    /**
+     * Instantiates a new Comment.
+     *
+     * @param commentText the comment text
+     * @param id          the id
+     */
     public Comment(String commentText, long id) {
         this.commentText = commentText;
         this.book = new Book();

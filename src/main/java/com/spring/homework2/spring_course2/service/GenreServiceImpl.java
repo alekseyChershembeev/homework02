@@ -18,6 +18,11 @@ public class GenreServiceImpl implements GenreService {
 
     private GenreDAO genreDAO;
 
+    /**
+     * Instantiates a new Genre service.
+     *
+     * @param genreDAO the genre dao
+     */
     @Autowired
     public GenreServiceImpl(GenreDAO genreDAO) {
         this.genreDAO = genreDAO;

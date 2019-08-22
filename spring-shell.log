@@ -113,3 +113,17 @@
 1566477096876:delete-genre 123
 1566477560791:update-genre 123 aaa
 1566477803165:delete-genre 12452345
+1566480930324:delete-genre 1
+1566480970437:add book aa aa aa aa
+1566480979266:add-book aa aa aa aa
+1566480986018:delete-genre 1
+1566481439715:add-book aa aaa aa aa
+1566481453818:delete-genre 1
+1566481472678:all-book
+1566481480545:all-books
+1566481615250:delete-book 1
+1566481704622:add-book aa aa aa aa
+1566481713205:update-genre 1 bb
+1566481719799:show all genres
+1566481723999:all-genres
+1566481730832:all-books

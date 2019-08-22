@@ -21,6 +21,11 @@ public class BookServiceImpl implements BookService {
 
     private BookDAO bookDAO;
 
+    /**
+     * Instantiates a new Book service.
+     *
+     * @param bookDAO the book dao
+     */
     @Autowired
     public BookServiceImpl(BookDAO bookDAO) {
         this.bookDAO = bookDAO;

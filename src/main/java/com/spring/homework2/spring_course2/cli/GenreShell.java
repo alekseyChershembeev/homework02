@@ -19,17 +19,33 @@ public class GenreShell {
 
     private GenreService genreService;
 
+    /**
+     * Instantiates a new Genre shell.
+     *
+     * @param genreService the genre service
+     */
     @Autowired
     public GenreShell(GenreService genreService) {
         this.genreService = genreService;
     }
 
 
+    /**
+     * Gets all genres.
+     *
+     * @return the all genres
+     */
     @ShellMethod(value = "show all genres", key = "all-genres")
     public List<Genre> getAllGenres() {
         return genreService.getAll();
     }
 
+    /**
+     * Delete genre by id string.
+     *
+     * @param id the id
+     * @return the string
+     */
     @Transactional
     @ShellMethod(value = "delete Genre by id", key = "delete-genre")
     public String deleteGenreById(@ShellOption(help = "id") String id) {
@@ -42,6 +58,13 @@ public class GenreShell {
         return "Genre doesn't exist";
     }
 
+    /**
+     * Update genre by id string.
+     *
+     * @param id        the id
+     * @param genreName the genre name
+     * @return the string
+     */
     @Transactional
     @ShellMethod(value = "update Genre", key = "update-genre")
     public String updateGenreById(@ShellOption(help = "id") String id,

@@ -31,6 +31,12 @@ public class Author {
     @Column(name = "authorLastName")
     private String authorLastName;
 
+    /**
+     * Instantiates a new Author.
+     *
+     * @param authorName     the author name
+     * @param authorLastName the author last name
+     */
     public Author(String authorName, String authorLastName) {
         this.authorName = authorName;
         this.authorLastName = authorLastName;

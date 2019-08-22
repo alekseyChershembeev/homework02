@@ -29,6 +29,11 @@ public class AuthorDaoImpl implements AuthorDAO {
     @PersistenceContext
     private final EntityManager em;
 
+    /**
+     * Instantiates a new Author dao.
+     *
+     * @param em the em
+     */
     @Autowired
     public AuthorDaoImpl(EntityManager em) {
         this.em = em;

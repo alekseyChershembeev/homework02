@@ -39,6 +39,13 @@ public class Book {
     private Genre bookGenre;
 
 
+    /**
+     * Instantiates a new Book.
+     *
+     * @param bookName   the book name
+     * @param bookAuthor the book author
+     * @param bookGenre  the book genre
+     */
     public Book(String bookName, Author bookAuthor, Genre bookGenre) {
         this.bookName = bookName;
         this.bookAuthor = bookAuthor;

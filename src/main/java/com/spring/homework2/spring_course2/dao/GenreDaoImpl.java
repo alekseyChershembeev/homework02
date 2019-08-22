@@ -25,6 +25,11 @@ public class GenreDaoImpl implements GenreDAO {
     @PersistenceContext
     private final EntityManager em;
 
+    /**
+     * Instantiates a new Genre dao.
+     *
+     * @param em the em
+     */
     @Autowired
     public GenreDaoImpl(EntityManager em) {
         this.em = em;

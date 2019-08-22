@@ -14,10 +14,14 @@ import org.springframework.transaction.annotation.Transactional;
  * Date: 20.08.2019
  * Time: 15:38.
  */
-
 @ShellComponent
 public class AuthorShell {
 
+    /**
+     * Instantiates a new Author shell.
+     *
+     * @param authorService the author service
+     */
     @Autowired
     public AuthorShell(AuthorService authorService) {
         this.authorService = authorService;
@@ -25,11 +29,23 @@ public class AuthorShell {
 
     private AuthorService authorService;
 
+    /**
+     * Gets all authors names.
+     *
+     * @return the all authors names
+     */
     @ShellMethod(value = "show all Authors names", key = "all-authors")
     public List<Author> getAllAuthorsNames() {
         return authorService.getAll();
     }
 
+    /**
+     * Add new author string.
+     *
+     * @param authorName     the author name
+     * @param authorLastName the author last name
+     * @return the string
+     */
     @ShellMethod(value = "add new Author", key = "add-author")
     public String addNewAuthor(@ShellOption(help = "author name") String authorName,
                                @ShellOption(help = "author last name") String authorLastName) {
@@ -41,6 +57,12 @@ public class AuthorShell {
             return "Author already exist ";
     }
 
+    /**
+     * Delete author by id string.
+     *
+     * @param id the id
+     * @return the string
+     */
     @Transactional
     @ShellMethod(value = "delete Author by id", key = "delete-author")
     public String deleteAuthorById(@ShellOption(help = "id") String id) {
@@ -53,6 +75,14 @@ public class AuthorShell {
             return "Author doesn't exist";
     }
 
+    /**
+     * Update author by id string.
+     *
+     * @param id       the id
+     * @param name     the name
+     * @param lastName the last name
+     * @return the string
+     */
     @ShellMethod(value = "update Author by id", key = "update-author")
 
     public String updateAuthorById(@ShellOption(help = "id") String id,
@@ -74,6 +104,12 @@ public class AuthorShell {
     }
 
 
+    /**
+     * Gets author by id.
+     *
+     * @param id the id
+     * @return the author by id
+     */
     @ShellMethod(value = "get Author by id", key = "get-author")
     public String getAuthorById(@ShellOption(help = "id") String id) {
 

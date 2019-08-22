@@ -24,6 +24,11 @@ public class CommentDaoImpl implements CommentDAO {
 
     private EntityManager em;
 
+    /**
+     * Instantiates a new Comment dao.
+     *
+     * @param em the em
+     */
     @Autowired
     public CommentDaoImpl(EntityManager em) {
         this.em = em;

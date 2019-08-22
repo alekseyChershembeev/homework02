@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Created by Chershembeev_AE
@@ -15,6 +16,7 @@ import org.springframework.stereotype.Service;
  * Time: 15:41.
  */
 @Service
+@Transactional(readOnly = true)
 public class BookServiceImpl implements BookService {
 
     private BookDAO bookDAO;
@@ -24,15 +26,16 @@ public class BookServiceImpl implements BookService {
         this.bookDAO = bookDAO;
     }
 
+    @Transactional()
     @Override
     public long create(Book book) {
         return bookDAO.create(book);
     }
 
+    @Transactional()
     @Override
-    public void update(Book book) {
-        bookDAO.update(book);
-
+    public boolean update(Book book) {
+        return bookDAO.update(book);
     }
 
     @Override
@@ -45,10 +48,12 @@ public class BookServiceImpl implements BookService {
         return bookDAO.getAll();
     }
 
+    @Transactional()
     @Override
-    public void delete(long id) {
-        bookDAO.delete(id);
-    }
+    public boolean delete(long id) {
+
+        return bookDAO.delete(id);
+
 
 //    @Override
 //    public List<Book> getBooksByAuthorsName(Author author) {
@@ -62,4 +67,5 @@ public class BookServiceImpl implements BookService {
 //                .filter(s2 -> s2.getBookAuthor().getAuthorLastName().equals(author.getAuthorLastName()))
 //                .collect(Collectors.toList());
 //    }
+    }
 }

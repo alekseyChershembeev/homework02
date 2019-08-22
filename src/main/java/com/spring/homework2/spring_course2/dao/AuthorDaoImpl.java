@@ -2,11 +2,14 @@ package com.spring.homework2.spring_course2.dao;
 
 
 import com.spring.homework2.spring_course2.entity.Author;
+import com.spring.homework2.spring_course2.exceptions.AuthorException;
+import com.spring.homework2.spring_course2.exceptions.BookException;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Repository;
@@ -18,8 +21,10 @@ import org.springframework.transaction.annotation.Transactional;
  * Time: 17:45.
  */
 @Repository
-@Transactional
+
 public class AuthorDaoImpl implements AuthorDAO {
+
+    private static final Logger LOGGER = Logger.getLogger(AuthorDaoImpl.class.getName());
 
     @PersistenceContext
     private final EntityManager em;
@@ -32,18 +37,28 @@ public class AuthorDaoImpl implements AuthorDAO {
 
     @Override
     public long create(Author author) {
-        em.persist(author);
-        return author.getAuthorId();
+        try {
+            em.persist(author);
+            return author.getAuthorId();
+        } catch (RuntimeException e) {
+            LOGGER.error(new AuthorException(e.getMessage() + "\n" + "created " + author.toString()));
+            return 0;
+        }
     }
 
     @Override
-//    @Modifying(clearAutomatically = true)
-    public void update(Author author) {
-        Author currentAuthor = em.find(Author.class, author.getAuthorId());
-        if (currentAuthor!=null)
-        {
-            currentAuthor.setAuthorName(author.getAuthorName());
-            currentAuthor.setAuthorLastName(author.getAuthorLastName());
+    public boolean update(Author author) {
+        Author currentAuthor;
+        try {
+            currentAuthor = em.find(Author.class, author.getAuthorId());
+            if (currentAuthor != null) {
+                currentAuthor.setAuthorName(author.getAuthorName());
+                currentAuthor.setAuthorLastName(author.getAuthorLastName());
+                return true;
+            }
+        } catch (RuntimeException e) {
+            LOGGER.error(new AuthorException("update ") + author.toString());
+            return false;
         }
 
 
@@ -57,7 +72,7 @@ public class AuthorDaoImpl implements AuthorDAO {
 //        query.setParameter("lastName", author.getAuthorLastName());
 //        query.executeUpdate();
 
-
+        return false;
     }
 
     @Override
@@ -65,19 +80,36 @@ public class AuthorDaoImpl implements AuthorDAO {
 
         TypedQuery<Author> query = em.createQuery("SELECT a from Author a where id = :id", Author.class);
         query.setParameter("id", id);
-        return query.getSingleResult();
+        try {
+            return query.getSingleResult();
+        } catch (RuntimeException e) {
+            LOGGER.error(e.getMessage() + "\n" + new AuthorException("update ") + "" + id);
+            return null;
+        }
     }
 
     @Override
     public List<Author> getAll() {
         TypedQuery<Author> query = em.createQuery("SELECT a from Author a", Author.class);
-        return query.getResultList();
+        try {
+            return query.getResultList();
+        } catch (RuntimeException e) {
+            LOGGER.error(e.getMessage() + "\n" + new AuthorException("getAll "));
+            return null;
+        }
     }
 
     @Override
-    public void delete(long id) {
-        Query query = em.createQuery("DELETE from Author where id = :id");
-        query.setParameter("id", id);
-        query.executeUpdate();
+    public boolean delete(long id) {
+
+        try {
+            Query query = em.createQuery("DELETE from Author where id = :id");
+            query.setParameter("id", id);
+            query.executeUpdate();
+            return true;
+        } catch (RuntimeException e) {
+            LOGGER.error(e.getMessage() + "\n" + new AuthorException("delete " + id));
+            return false;
+        }
     }
 }

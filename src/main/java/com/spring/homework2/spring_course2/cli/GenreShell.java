@@ -34,17 +34,12 @@ public class GenreShell {
     @ShellMethod(value = "delete Genre by id", key = "delete-genre")
     public String deleteGenreById(@ShellOption(help = "id") String id) {
 
-        final long longId = Long.parseLong(id);
-
-        boolean isDelete = id.matches("\\d+") &&
-                (genreService.getById(longId).getGenreId() == longId);
-
-        if (isDelete) {
-            genreService
-                    .delete(longId);
-            return "Genre was delete successfully";
-        } else
-            return "Genre doesn't exist";
+        if (id.matches("\\d+")) {
+            if (genreService
+                    .delete(Long.parseLong(id)))
+                return "Genre was delete successfully";
+        }
+        return "Genre doesn't exist";
     }
 
     @Transactional
@@ -55,17 +50,15 @@ public class GenreShell {
         if (id.matches("\\d+"))
             longId = Long.parseLong(id);
 
-        boolean isDelete =
-                (genreService.getById(longId).getGenreId() == longId);
-
-        if (isDelete && longId != 0) {
+        Genre genre = genreService.getById(longId);
+        if (genre != null) {
             genreService
                     .update(new Genre(longId, genreName));
 
             return "Genre was update successfully";
         } else
             return "Genre doesn't exist";
-    }
 
+    }
 
 }

@@ -70,8 +70,8 @@ public class BookShell {
             longId = Long.parseLong(id);
 
         Book book = bookService.getById(longId);
-        boolean isDelete =
-                (book.getBookId() == longId);
+        boolean isDelete;
+        isDelete = (book != null && book.getBookId() == longId);
 
         if (isDelete && longId != 0) {
 
@@ -88,19 +88,23 @@ public class BookShell {
     @ShellMethod(value = "delete Book by id", key = "delete-book")
     public String deleteBookById(@ShellOption(help = "id") String id) {
 
-        boolean isDelete = id.matches("\\d+");
+        long longId = 0;
+        if (id.matches("\\d+"))
+            longId = Long.parseLong(id);
 
-        if (isDelete)
+        Book book = bookService.getById(longId);
+        boolean isDelete;
+        isDelete = (book != null && book.getBookId() == longId);
+
+        if (isDelete) {
             bookService
                     .delete(Long.parseLong(id));
 
-        if (isDelete)
             return "Book was delete successfully";
+        }
         else
             return "Book doesn't exist";
     }
-
-
 
 
 }

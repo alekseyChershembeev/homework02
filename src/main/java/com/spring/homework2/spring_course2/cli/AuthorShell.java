@@ -45,15 +45,9 @@ public class AuthorShell {
     @ShellMethod(value = "delete Author by id", key = "delete-author")
     public String deleteAuthorById(@ShellOption(help = "id") String id) {
 
-        final long longId = Long.parseLong(id);
-
-        boolean isDelete = id.matches("\\d+") &&
-                (authorService.getById(longId).getAuthorId() == longId);
-
-
-        if (isDelete) {
+        if (id.matches("\\d+")) {
             authorService
-                    .delete(longId);
+                    .delete(Long.parseLong(id));
             return "Author was delete successfully";
         } else
             return "Author doesn't exist";

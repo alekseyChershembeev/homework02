@@ -82,3 +82,34 @@
 1565877104305:add-author aaa
 1566224349637:all-genres
 1566387347561:all-books
+1566466330893:add-book aa aa aa aa
+1566466338600:all-books
+1566466350776:delete-book 2
+1566466369268:all-books
+1566466819786:add-book aa aa aa aa
+1566466829244:delete-book 2
+1566467567066:update-book 123 aa aa aa aa
+1566467715931:upadte-book 123 aaa aa aa a
+1566467728986:update-book 123 aa aa aa aa
+1566467932722:update-book 123 aa aa aaa a
+1566468042233:update-book 123 aaa aaa aaa a
+1566468121638:update-book 123 aa aaa a aa
+1566468344041:update-book 123 aa aa aa aa
+1566468798081:update-book 123 aaa aaa aa a
+1566468879874:book-update 123 aaa aa a a
+1566468900609:update-book 123 a aa a a
+1566470015905:delete-book 12345
+1566475715731:delete-author 1
+1566476861206:update-book a aa a a a
+1566476881710:book-update 23 as aa aa aa
+1566476892741:update-book 23 as aa aa aa
+1566476919960:delete-book 123 bb bb bb bb
+1566476927494:delete-book 123
+1566476948989:all-books
+1566476980141:show-comments
+1566476995216:show-comments 123
+1566477027855:delete-comment 123
+1566477083206:all-genres
+1566477096876:delete-genre 123
+1566477560791:update-genre 123 aaa
+1566477803165:delete-genre 12452345

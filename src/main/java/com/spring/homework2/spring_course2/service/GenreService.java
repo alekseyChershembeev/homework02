@@ -13,11 +13,11 @@ public interface GenreService {
 
     long create(Genre genre);
 
-    void update(Genre genre);
+    boolean update(Genre genre);
 
     Genre getById(long id);
 
     List<Genre> getAll();
 
-    void delete(long id);
+    boolean delete(long id);
 }

@@ -5,6 +5,7 @@ import com.spring.homework2.spring_course2.entity.Comment;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Created by Chershembeev_AE
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Service;
  * Time: 15:41.
  */
 @Service
+@Transactional(readOnly=true)
 public class CommentServiceImpl implements CommentService {
 
     private CommentDAO commentDAO;
@@ -22,9 +24,10 @@ public class CommentServiceImpl implements CommentService {
         this.commentDAO = commentDAO;
     }
 
+    @Transactional()
     @Override
-    public void create(Comment comment) {
-        commentDAO.create(comment);
+    public boolean create(Comment comment) {
+        return commentDAO.create(comment);
     }
 
     @Override
@@ -32,8 +35,9 @@ public class CommentServiceImpl implements CommentService {
         return commentDAO.getCommentsByBookId(id);
     }
 
+    @Transactional()
     @Override
-    public void delete(long id) {
-        commentDAO.delete(id);
+    public boolean delete(long id) {
+        return commentDAO.delete(id);
     }
 }

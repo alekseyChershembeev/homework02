@@ -1,10 +1,13 @@
 package com.spring.homework2.spring_course2.dao;
 
 import com.spring.homework2.spring_course2.entity.Comment;
+import com.spring.homework2.spring_course2.exceptions.BookException;
+import com.spring.homework2.spring_course2.exceptions.CommentException;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,8 +18,9 @@ import org.springframework.transaction.annotation.Transactional;
  * Time: 19:10.
  */
 @Repository
-@Transactional
 public class CommentDaoImpl implements CommentDAO {
+
+    private static final Logger LOGGER = Logger.getLogger(CommentDaoImpl.class.getName());
 
     private EntityManager em;
 
@@ -26,8 +30,14 @@ public class CommentDaoImpl implements CommentDAO {
     }
 
     @Override
-    public void create(Comment comment) {
-        em.persist(comment);
+    public boolean create(Comment comment) {
+        try {
+            em.persist(comment);
+            return true;
+        } catch (RuntimeException ex) {
+            LOGGER.error(ex.getMessage() + "\n" + new CommentException("create ") + comment.toString());
+            return false;
+        }
 
     }
 
@@ -37,19 +47,27 @@ public class CommentDaoImpl implements CommentDAO {
                 , Comment.class);
         query.setParameter("id", id);
 
-        return query.getResultList();
+        try {
+            return query.getResultList();
+        } catch (RuntimeException ex) {
+            LOGGER.error(ex.getMessage() + "\n" + new CommentException("getCommentsByBookId ") + id);
+            return null;
+        }
     }
 
+    @Transactional
     @Override
     public boolean delete(long id) {
-//        Query query = em.createQuery("DELETE from Comment where commentId = :id");
-//        query.setParameter("id", id);
-//        query.executeUpdate();
 
-        Comment comment = em.find(Comment.class, id);
-        if (comment != null) {
-            em.remove(comment);
-            return true;
+        try {
+            Comment comment = em.find(Comment.class, id);
+            if (comment != null) {
+                em.remove(comment);
+                return true;
+            }
+        } catch (RuntimeException ex) {
+            LOGGER.error(ex.getMessage() + "\n" + new CommentException("delete ") + id);
+            return false;
         }
         return false;
 

@@ -26,11 +26,11 @@ public class LoggingAspect {
         LOGGER.info("With args : " + Arrays.toString(joinPoint.getArgs()));
     }
 
-    @AfterThrowing("within(com.spring.homework2.spring_course2..*)")
-    public void exception(JoinPoint joinPoint) {
-
-        LOGGER.error("Exception from " + joinPoint.getClass());
-        LOGGER.error("Method call : " + joinPoint.getSignature().getName());
-        LOGGER.error("With args : " + Arrays.toString(joinPoint.getArgs()));
-    }
+//    @AfterThrowing("within(com.spring.homework2.spring_course2..*)")
+//    public void exception(JoinPoint joinPoint) {
+//
+//        LOGGER.error("Exception from " + joinPoint.getClass());
+//        LOGGER.error("Method call : " + joinPoint.getSignature().getName());
+//        LOGGER.error("With args : " + Arrays.toString(joinPoint.getArgs()));
+//    }
 }

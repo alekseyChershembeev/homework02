@@ -13,11 +13,11 @@ public interface AuthorDAO {
 
     long create(Author author);
 
-    void update(Author author);
+    boolean update(Author author);
 
     Author getById(long id);
 
     List<Author> getAll();
 
-    void delete(long id);
+    boolean delete(long id);
 }

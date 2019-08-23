@@ -68,11 +68,11 @@ public class AuthorShell {
     public String deleteAuthorById(@ShellOption(help = "id") String id) {
 
         if (id.matches("\\d+")) {
-            authorService
-                    .delete(Long.parseLong(id));
-            return "Author was delete successfully";
-        } else
-            return "Author doesn't exist";
+            if (authorService
+                    .delete(Long.parseLong(id)))
+                return "Author was delete successfully";
+        }
+        return "Author doesn't exist";
     }
 
     /**

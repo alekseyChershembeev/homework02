@@ -110,8 +110,8 @@ public class AuthorDaoImpl implements AuthorDAO {
         try {
             Query query = em.createQuery("DELETE from Author where id = :id");
             query.setParameter("id", id);
-            query.executeUpdate();
-            return true;
+            int i = query.executeUpdate();
+            return i > 0;
         } catch (RuntimeException e) {
             LOGGER.error(e.getMessage() + "\n" + new AuthorException("delete " + id));
             return false;

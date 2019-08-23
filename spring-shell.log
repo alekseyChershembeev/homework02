@@ -127,3 +127,16 @@
 1566481719799:show all genres
 1566481723999:all-genres
 1566481730832:all-books
+1566482996590:delete-author 1
+1566483055062:delete-author
+1566483058350:delete-author 1
+1566483316513:delete-comment 1
+1566483335486:add-book aa aa aa aa
+1566483342550:add-comment 1 aa
+1566483380381:show-comments
+1566483384217:show-comments 1
+1566483501385:add-comment 1 aa
+1566483573455:show-comments 1
+1566483644287:add-comment 123 aaa
+1566483670647:all-books
+1566486880169:delete-author 1

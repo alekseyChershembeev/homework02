@@ -124,3 +124,382 @@
 2019-08-21 14:35:47 INFO  LoggingAspect:26 - With args : []
 2019-08-21 14:35:47 INFO  LoggingAspect:25 - Method : getAll
 2019-08-21 14:35:47 INFO  LoggingAspect:26 - With args : []
+2019-08-22 12:31:49 INFO  LoggingAspect:25 - Method : getAllBooksNames
+2019-08-22 12:31:49 INFO  LoggingAspect:26 - With args : []
+2019-08-22 12:31:49 INFO  LoggingAspect:25 - Method : getAll
+2019-08-22 12:31:49 INFO  LoggingAspect:26 - With args : []
+2019-08-22 12:31:49 INFO  LoggingAspect:25 - Method : getAll
+2019-08-22 12:31:49 INFO  LoggingAspect:26 - With args : []
+2019-08-22 12:32:10 INFO  LoggingAspect:25 - Method : addNewBook
+2019-08-22 12:32:10 INFO  LoggingAspect:26 - With args : [aa, aa, aa, aa]
+2019-08-22 12:32:10 INFO  LoggingAspect:25 - Method : create
+2019-08-22 12:32:10 INFO  LoggingAspect:26 - With args : [Book(bookId=0, bookName=aa, bookAuthor=Author(authorId=0, authorName=aa, authorLastName=aa), bookGenre=Genre(genreId=0, genreName=aa))]
+2019-08-22 12:32:10 INFO  LoggingAspect:25 - Method : create
+2019-08-22 12:32:10 INFO  LoggingAspect:26 - With args : [Book(bookId=0, bookName=aa, bookAuthor=Author(authorId=0, authorName=aa, authorLastName=aa), bookGenre=Genre(genreId=0, genreName=aa))]
+2019-08-22 12:32:18 INFO  LoggingAspect:25 - Method : getAllBooksNames
+2019-08-22 12:32:18 INFO  LoggingAspect:26 - With args : []
+2019-08-22 12:32:18 INFO  LoggingAspect:25 - Method : getAll
+2019-08-22 12:32:18 INFO  LoggingAspect:26 - With args : []
+2019-08-22 12:32:18 INFO  LoggingAspect:25 - Method : getAll
+2019-08-22 12:32:18 INFO  LoggingAspect:26 - With args : []
+2019-08-22 12:32:30 INFO  LoggingAspect:25 - Method : deleteBookById
+2019-08-22 12:32:30 INFO  LoggingAspect:26 - With args : [2]
+2019-08-22 12:32:30 INFO  LoggingAspect:25 - Method : delete
+2019-08-22 12:32:30 INFO  LoggingAspect:26 - With args : [2]
+2019-08-22 12:32:30 INFO  LoggingAspect:25 - Method : delete
+2019-08-22 12:32:30 INFO  LoggingAspect:26 - With args : [2]
+2019-08-22 12:32:49 INFO  LoggingAspect:25 - Method : getAllBooksNames
+2019-08-22 12:32:49 INFO  LoggingAspect:26 - With args : []
+2019-08-22 12:32:49 INFO  LoggingAspect:25 - Method : getAll
+2019-08-22 12:32:49 INFO  LoggingAspect:26 - With args : []
+2019-08-22 12:32:49 INFO  LoggingAspect:25 - Method : getAll
+2019-08-22 12:32:49 INFO  LoggingAspect:26 - With args : []
+2019-08-22 12:40:19 INFO  LoggingAspect:25 - Method : addNewBook
+2019-08-22 12:40:19 INFO  LoggingAspect:26 - With args : [aa, aa, aa, aa]
+2019-08-22 12:40:19 INFO  LoggingAspect:25 - Method : create
+2019-08-22 12:40:19 INFO  LoggingAspect:26 - With args : [Book(bookId=0, bookName=aa, bookAuthor=Author(authorId=0, authorName=aa, authorLastName=aa), bookGenre=Genre(genreId=0, genreName=aa))]
+2019-08-22 12:40:19 INFO  LoggingAspect:25 - Method : create
+2019-08-22 12:40:19 INFO  LoggingAspect:26 - With args : [Book(bookId=0, bookName=aa, bookAuthor=Author(authorId=0, authorName=aa, authorLastName=aa), bookGenre=Genre(genreId=0, genreName=aa))]
+2019-08-22 12:40:29 INFO  LoggingAspect:25 - Method : deleteBookById
+2019-08-22 12:40:29 INFO  LoggingAspect:26 - With args : [2]
+2019-08-22 12:40:29 INFO  LoggingAspect:25 - Method : delete
+2019-08-22 12:40:29 INFO  LoggingAspect:26 - With args : [2]
+2019-08-22 12:40:29 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 12:40:29 INFO  LoggingAspect:26 - With args : [2]
+2019-08-22 12:40:29 ERROR LoggingAspect:32 - Exception from class org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint
+2019-08-22 12:40:29 ERROR LoggingAspect:33 - Method call : getById
+2019-08-22 12:40:29 ERROR LoggingAspect:34 - With args : [2]
+2019-08-22 12:40:29 ERROR LoggingAspect:32 - Exception from class org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint
+2019-08-22 12:40:29 ERROR LoggingAspect:33 - Method call : delete
+2019-08-22 12:40:29 ERROR LoggingAspect:34 - With args : [2]
+2019-08-22 12:40:29 ERROR LoggingAspect:32 - Exception from class org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint
+2019-08-22 12:40:29 ERROR LoggingAspect:33 - Method call : deleteBookById
+2019-08-22 12:40:29 ERROR LoggingAspect:34 - With args : [2]
+2019-08-22 12:52:47 INFO  LoggingAspect:25 - Method : updateBookById
+2019-08-22 12:52:47 INFO  LoggingAspect:26 - With args : [123, aa, aa, aa, aa]
+2019-08-22 12:52:47 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 12:52:47 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 12:52:47 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 12:52:47 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 12:52:47 ERROR LoggingAspect:32 - Exception from class org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint
+2019-08-22 12:52:47 ERROR LoggingAspect:33 - Method call : getById
+2019-08-22 12:52:47 ERROR LoggingAspect:34 - With args : [123]
+2019-08-22 12:52:47 ERROR LoggingAspect:32 - Exception from class org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint
+2019-08-22 12:52:47 ERROR LoggingAspect:33 - Method call : getById
+2019-08-22 12:52:47 ERROR LoggingAspect:34 - With args : [123]
+2019-08-22 12:52:47 ERROR LoggingAspect:32 - Exception from class org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint
+2019-08-22 12:52:47 ERROR LoggingAspect:33 - Method call : updateBookById
+2019-08-22 12:52:47 ERROR LoggingAspect:34 - With args : [123, aa, aa, aa, aa]
+2019-08-22 12:55:29 INFO  LoggingAspect:25 - Method : updateBookById
+2019-08-22 12:55:29 INFO  LoggingAspect:26 - With args : [123, aa, aa, aa, aa]
+2019-08-22 12:55:29 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 12:55:29 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 12:55:29 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 12:55:29 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 12:58:52 INFO  LoggingAspect:25 - Method : updateBookById
+2019-08-22 12:58:52 INFO  LoggingAspect:26 - With args : [123, aa, aa, aaa, a]
+2019-08-22 12:58:52 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 12:58:52 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 12:58:52 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 12:58:52 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 12:58:52 ERROR BookDaoImpl:68 - com.spring.homework2.spring_course2.exceptions.BookException: Book not getById
+2019-08-22 13:00:42 INFO  LoggingAspect:25 - Method : updateBookById
+2019-08-22 13:00:42 INFO  LoggingAspect:26 - With args : [123, aaa, aaa, aaa, a]
+2019-08-22 13:00:42 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 13:00:42 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 13:00:42 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 13:00:42 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 13:00:42 ERROR BookDaoImpl:68 - com.spring.homework2.spring_course2.exceptions.BookException: Book not getById
+2019-08-22 13:02:01 INFO  LoggingAspect:25 - Method : updateBookById
+2019-08-22 13:02:01 INFO  LoggingAspect:26 - With args : [123, aa, aaa, a, aa]
+2019-08-22 13:02:01 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 13:02:01 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 13:02:01 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 13:02:01 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 13:02:01 ERROR BookDaoImpl:68 - com.spring.homework2.spring_course2.exceptions.BookException: Book not getById
+2019-08-22 13:05:44 INFO  LoggingAspect:25 - Method : updateBookById
+2019-08-22 13:05:44 INFO  LoggingAspect:26 - With args : [123, aa, aa, aa, aa]
+2019-08-22 13:05:44 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 13:05:44 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 13:05:44 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 13:05:44 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 13:05:44 ERROR BookDaoImpl:68 - com.spring.homework2.spring_course2.exceptions.BookException: Book not getById
+2019-08-22 13:13:18 INFO  LoggingAspect:25 - Method : updateBookById
+2019-08-22 13:13:18 INFO  LoggingAspect:26 - With args : [123, aaa, aaa, aa, a]
+2019-08-22 13:13:18 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 13:13:18 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 13:13:18 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 13:13:18 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 13:13:18 ERROR BookDaoImpl:68 - com.spring.homework2.spring_course2.exceptions.BookException: Book not getById
+2019-08-22 13:15:00 INFO  LoggingAspect:25 - Method : updateBookById
+2019-08-22 13:15:00 INFO  LoggingAspect:26 - With args : [123, a, aa, a, a]
+2019-08-22 13:15:00 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 13:15:00 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 13:15:00 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 13:15:00 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 13:15:00 ERROR BookDaoImpl:68 - com.spring.homework2.spring_course2.exceptions.BookException: Book not getById
+2019-08-22 13:33:35 INFO  LoggingAspect:25 - Method : deleteBookById
+2019-08-22 13:33:35 INFO  LoggingAspect:26 - With args : [12345]
+2019-08-22 13:33:35 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 13:33:35 INFO  LoggingAspect:26 - With args : [12345]
+2019-08-22 13:33:38 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 13:33:38 INFO  LoggingAspect:26 - With args : [12345]
+2019-08-22 13:33:54 ERROR BookDaoImpl:68 - com.spring.homework2.spring_course2.exceptions.BookException: Book not found from getById
+2019-08-22 15:08:35 INFO  LoggingAspect:25 - Method : deleteAuthorById
+2019-08-22 15:08:35 INFO  LoggingAspect:26 - With args : [1]
+2019-08-22 15:08:35 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 15:08:35 INFO  LoggingAspect:26 - With args : [1]
+2019-08-22 15:08:35 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 15:08:35 INFO  LoggingAspect:26 - With args : [1]
+2019-08-22 15:08:36 ERROR AuthorDaoImpl:83 - No entity found for query
+com.spring.homework2.spring_course2.exceptions.AuthorException: Author not found fromupdate 1
+2019-08-22 15:27:41 INFO  LoggingAspect:25 - Method : updateBookById
+2019-08-22 15:27:41 INFO  LoggingAspect:26 - With args : [a, aa, a, a, a]
+2019-08-22 15:27:41 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 15:27:41 INFO  LoggingAspect:26 - With args : [0]
+2019-08-22 15:27:41 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 15:27:41 INFO  LoggingAspect:26 - With args : [0]
+2019-08-22 15:27:41 ERROR BookDaoImpl:63 - No entity found for query
+com.spring.homework2.spring_course2.exceptions.BookException: Book not found from getById
+2019-08-22 15:28:12 INFO  LoggingAspect:25 - Method : updateBookById
+2019-08-22 15:28:12 INFO  LoggingAspect:26 - With args : [23, as, aa, aa, aa]
+2019-08-22 15:28:12 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 15:28:12 INFO  LoggingAspect:26 - With args : [23]
+2019-08-22 15:28:12 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 15:28:12 INFO  LoggingAspect:26 - With args : [23]
+2019-08-22 15:28:12 ERROR BookDaoImpl:63 - No entity found for query
+com.spring.homework2.spring_course2.exceptions.BookException: Book not found from getById
+2019-08-22 15:28:47 INFO  LoggingAspect:25 - Method : deleteBookById
+2019-08-22 15:28:47 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 15:28:47 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 15:28:47 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 15:28:47 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 15:28:47 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 15:28:47 ERROR BookDaoImpl:63 - No entity found for query
+com.spring.homework2.spring_course2.exceptions.BookException: Book not found from getById
+2019-08-22 15:29:08 INFO  LoggingAspect:25 - Method : getAllBooksNames
+2019-08-22 15:29:08 INFO  LoggingAspect:26 - With args : []
+2019-08-22 15:29:08 INFO  LoggingAspect:25 - Method : getAll
+2019-08-22 15:29:08 INFO  LoggingAspect:26 - With args : []
+2019-08-22 15:29:08 INFO  LoggingAspect:25 - Method : getAll
+2019-08-22 15:29:08 INFO  LoggingAspect:26 - With args : []
+2019-08-22 15:29:55 INFO  LoggingAspect:25 - Method : getComments
+2019-08-22 15:29:55 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 15:29:55 INFO  LoggingAspect:25 - Method : getByBookId
+2019-08-22 15:29:55 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 15:29:55 INFO  LoggingAspect:25 - Method : getCommentsByBookId
+2019-08-22 15:29:55 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 15:30:27 INFO  LoggingAspect:25 - Method : deleteComment
+2019-08-22 15:30:27 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 15:30:27 INFO  LoggingAspect:25 - Method : delete
+2019-08-22 15:30:27 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 15:30:27 INFO  LoggingAspect:25 - Method : delete
+2019-08-22 15:30:27 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 15:31:04 INFO  LoggingAspect:25 - Method : deleteComment
+2019-08-22 15:31:04 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 15:31:04 INFO  LoggingAspect:25 - Method : delete
+2019-08-22 15:31:04 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 15:31:04 INFO  LoggingAspect:25 - Method : delete
+2019-08-22 15:31:04 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 15:31:23 INFO  LoggingAspect:25 - Method : getAllGenres
+2019-08-22 15:31:23 INFO  LoggingAspect:26 - With args : []
+2019-08-22 15:31:23 INFO  LoggingAspect:25 - Method : getAll
+2019-08-22 15:31:23 INFO  LoggingAspect:26 - With args : []
+2019-08-22 15:31:23 INFO  LoggingAspect:25 - Method : getAll
+2019-08-22 15:31:23 INFO  LoggingAspect:26 - With args : []
+2019-08-22 15:31:36 INFO  LoggingAspect:25 - Method : deleteGenreById
+2019-08-22 15:31:36 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 15:31:36 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 15:31:36 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 15:31:36 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 15:31:36 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 15:31:36 ERROR GenreDaoImpl:69 - No entity found for query
+com.spring.homework2.spring_course2.exceptions.CommentException: Comment not found from getById 123
+2019-08-22 15:36:18 INFO  LoggingAspect:25 - Method : deleteGenreById
+2019-08-22 15:36:18 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 15:36:18 INFO  LoggingAspect:25 - Method : delete
+2019-08-22 15:36:18 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 15:36:18 INFO  LoggingAspect:25 - Method : delete
+2019-08-22 15:36:18 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 15:38:26 INFO  LoggingAspect:25 - Method : deleteGenreById
+2019-08-22 15:38:26 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 15:38:26 INFO  LoggingAspect:25 - Method : delete
+2019-08-22 15:38:26 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 15:38:26 INFO  LoggingAspect:25 - Method : delete
+2019-08-22 15:38:26 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 15:39:20 INFO  LoggingAspect:25 - Method : updateGenreById
+2019-08-22 15:39:20 INFO  LoggingAspect:26 - With args : [123, aaa]
+2019-08-22 15:39:20 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 15:39:20 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 15:39:20 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 15:39:20 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 15:39:20 ERROR GenreDaoImpl:69 - No entity found for query
+com.spring.homework2.spring_course2.exceptions.CommentException: Comment not found from getById 123
+2019-08-22 15:42:36 INFO  LoggingAspect:25 - Method : updateGenreById
+2019-08-22 15:42:36 INFO  LoggingAspect:26 - With args : [123, aaa]
+2019-08-22 15:42:36 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 15:42:36 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 15:42:36 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 15:42:36 INFO  LoggingAspect:26 - With args : [123]
+2019-08-22 15:42:36 ERROR GenreDaoImpl:69 - No entity found for query
+com.spring.homework2.spring_course2.exceptions.CommentException: Comment not found from getById 123
+2019-08-22 15:43:23 INFO  LoggingAspect:25 - Method : deleteGenreById
+2019-08-22 15:43:23 INFO  LoggingAspect:26 - With args : [12452345]
+2019-08-22 15:43:23 INFO  LoggingAspect:25 - Method : delete
+2019-08-22 15:43:23 INFO  LoggingAspect:26 - With args : [12452345]
+2019-08-22 15:43:23 INFO  LoggingAspect:25 - Method : delete
+2019-08-22 15:43:23 INFO  LoggingAspect:26 - With args : [12452345]
+2019-08-22 16:35:30 INFO  LoggingAspect:25 - Method : deleteGenreById
+2019-08-22 16:35:30 INFO  LoggingAspect:26 - With args : [1]
+2019-08-22 16:35:30 INFO  LoggingAspect:25 - Method : delete
+2019-08-22 16:35:30 INFO  LoggingAspect:26 - With args : [1]
+2019-08-22 16:35:30 INFO  LoggingAspect:25 - Method : delete
+2019-08-22 16:35:30 INFO  LoggingAspect:26 - With args : [1]
+2019-08-22 16:36:19 INFO  LoggingAspect:25 - Method : addNewBook
+2019-08-22 16:36:19 INFO  LoggingAspect:26 - With args : [aa, aa, aa, aa]
+2019-08-22 16:36:19 INFO  LoggingAspect:25 - Method : create
+2019-08-22 16:36:19 INFO  LoggingAspect:26 - With args : [Book(bookId=0, bookName=aa, bookAuthor=Author(authorId=0, authorName=aa, authorLastName=aa), bookGenre=Genre(genreId=0, genreName=aa))]
+2019-08-22 16:36:19 INFO  LoggingAspect:25 - Method : create
+2019-08-22 16:36:19 INFO  LoggingAspect:26 - With args : [Book(bookId=0, bookName=aa, bookAuthor=Author(authorId=0, authorName=aa, authorLastName=aa), bookGenre=Genre(genreId=0, genreName=aa))]
+2019-08-22 16:36:26 INFO  LoggingAspect:25 - Method : deleteGenreById
+2019-08-22 16:36:26 INFO  LoggingAspect:26 - With args : [1]
+2019-08-22 16:36:26 INFO  LoggingAspect:25 - Method : delete
+2019-08-22 16:36:26 INFO  LoggingAspect:26 - With args : [1]
+2019-08-22 16:36:26 INFO  LoggingAspect:25 - Method : delete
+2019-08-22 16:36:26 INFO  LoggingAspect:26 - With args : [1]
+2019-08-22 16:43:46 INFO  LoggingAspect:25 - Method : deleteGenreById
+2019-08-22 16:43:46 INFO  LoggingAspect:26 - With args : [1]
+2019-08-22 16:43:46 INFO  LoggingAspect:25 - Method : delete
+2019-08-22 16:43:46 INFO  LoggingAspect:26 - With args : [1]
+2019-08-22 16:43:46 INFO  LoggingAspect:25 - Method : delete
+2019-08-22 16:43:46 INFO  LoggingAspect:26 - With args : [1]
+2019-08-22 16:43:59 INFO  LoggingAspect:25 - Method : addNewBook
+2019-08-22 16:43:59 INFO  LoggingAspect:26 - With args : [aa, aaa, aa, aa]
+2019-08-22 16:43:59 INFO  LoggingAspect:25 - Method : create
+2019-08-22 16:43:59 INFO  LoggingAspect:26 - With args : [Book(bookId=0, bookName=aaa, bookAuthor=Author(authorId=0, authorName=aa, authorLastName=aa), bookGenre=Genre(genreId=0, genreName=aa))]
+2019-08-22 16:43:59 INFO  LoggingAspect:25 - Method : create
+2019-08-22 16:43:59 INFO  LoggingAspect:26 - With args : [Book(bookId=0, bookName=aaa, bookAuthor=Author(authorId=0, authorName=aa, authorLastName=aa), bookGenre=Genre(genreId=0, genreName=aa))]
+2019-08-22 16:44:13 INFO  LoggingAspect:25 - Method : deleteGenreById
+2019-08-22 16:44:13 INFO  LoggingAspect:26 - With args : [1]
+2019-08-22 16:44:13 INFO  LoggingAspect:25 - Method : delete
+2019-08-22 16:44:13 INFO  LoggingAspect:26 - With args : [1]
+2019-08-22 16:44:13 INFO  LoggingAspect:25 - Method : delete
+2019-08-22 16:44:13 INFO  LoggingAspect:26 - With args : [1]
+2019-08-22 16:44:13 ERROR GenreDaoImpl:95 - org.hibernate.exception.ConstraintViolationException: could not execute statement
+com.spring.homework2.spring_course2.exceptions.CommentException: Comment not found from delete 1
+2019-08-22 16:44:40 INFO  LoggingAspect:25 - Method : getAllBooksNames
+2019-08-22 16:44:40 INFO  LoggingAspect:26 - With args : []
+2019-08-22 16:44:40 INFO  LoggingAspect:25 - Method : getAll
+2019-08-22 16:44:40 INFO  LoggingAspect:26 - With args : []
+2019-08-22 16:44:40 INFO  LoggingAspect:25 - Method : getAll
+2019-08-22 16:44:40 INFO  LoggingAspect:26 - With args : []
+2019-08-22 16:46:55 INFO  LoggingAspect:25 - Method : deleteBookById
+2019-08-22 16:46:55 INFO  LoggingAspect:26 - With args : [1]
+2019-08-22 16:46:55 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 16:46:55 INFO  LoggingAspect:26 - With args : [1]
+2019-08-22 16:46:55 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 16:46:55 INFO  LoggingAspect:26 - With args : [1]
+2019-08-22 16:46:55 INFO  LoggingAspect:25 - Method : delete
+2019-08-22 16:46:55 INFO  LoggingAspect:26 - With args : [1]
+2019-08-22 16:46:55 INFO  LoggingAspect:25 - Method : delete
+2019-08-22 16:46:55 INFO  LoggingAspect:26 - With args : [1]
+2019-08-22 16:48:24 INFO  LoggingAspect:25 - Method : addNewBook
+2019-08-22 16:48:24 INFO  LoggingAspect:26 - With args : [aa, aa, aa, aa]
+2019-08-22 16:48:24 INFO  LoggingAspect:25 - Method : create
+2019-08-22 16:48:24 INFO  LoggingAspect:26 - With args : [Book(bookId=0, bookName=aa, bookAuthor=Author(authorId=0, authorName=aa, authorLastName=aa), bookGenre=Genre(genreId=0, genreName=aa))]
+2019-08-22 16:48:24 INFO  LoggingAspect:25 - Method : create
+2019-08-22 16:48:24 INFO  LoggingAspect:26 - With args : [Book(bookId=0, bookName=aa, bookAuthor=Author(authorId=0, authorName=aa, authorLastName=aa), bookGenre=Genre(genreId=0, genreName=aa))]
+2019-08-22 16:48:33 INFO  LoggingAspect:25 - Method : updateGenreById
+2019-08-22 16:48:33 INFO  LoggingAspect:26 - With args : [1, bb]
+2019-08-22 16:48:33 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 16:48:33 INFO  LoggingAspect:26 - With args : [1]
+2019-08-22 16:48:33 INFO  LoggingAspect:25 - Method : getById
+2019-08-22 16:48:33 INFO  LoggingAspect:26 - With args : [1]
+2019-08-22 16:48:33 INFO  LoggingAspect:25 - Method : update
+2019-08-22 16:48:33 INFO  LoggingAspect:26 - With args : [Genre(genreId=1, genreName=bb)]
+2019-08-22 16:48:33 INFO  LoggingAspect:25 - Method : update
+2019-08-22 16:48:33 INFO  LoggingAspect:26 - With args : [Genre(genreId=1, genreName=bb)]
+2019-08-22 16:48:44 INFO  LoggingAspect:25 - Method : getAllGenres
+2019-08-22 16:48:44 INFO  LoggingAspect:26 - With args : []
+2019-08-22 16:48:44 INFO  LoggingAspect:25 - Method : getAll
+2019-08-22 16:48:44 INFO  LoggingAspect:26 - With args : []
+2019-08-22 16:48:44 INFO  LoggingAspect:25 - Method : getAll
+2019-08-22 16:48:44 INFO  LoggingAspect:26 - With args : []
+2019-08-22 16:48:50 INFO  LoggingAspect:25 - Method : getAllBooksNames
+2019-08-22 16:48:50 INFO  LoggingAspect:26 - With args : []
+2019-08-22 16:48:50 INFO  LoggingAspect:25 - Method : getAll
+2019-08-22 16:48:50 INFO  LoggingAspect:26 - With args : []
+2019-08-22 16:48:50 INFO  LoggingAspect:25 - Method : getAll
+2019-08-22 16:48:50 INFO  LoggingAspect:26 - With args : []
+2019-08-22 17:09:56 INFO  LoggingAspect:29 - Method : deleteAuthorById
+2019-08-22 17:09:56 INFO  LoggingAspect:30 - With args : [1]
+2019-08-22 17:09:56 INFO  LoggingAspect:29 - Method : delete
+2019-08-22 17:09:56 INFO  LoggingAspect:30 - With args : [1]
+2019-08-22 17:09:56 INFO  LoggingAspect:29 - Method : delete
+2019-08-22 17:09:56 INFO  LoggingAspect:30 - With args : [1]
+2019-08-22 17:10:58 INFO  LoggingAspect:29 - Method : deleteAuthorById
+2019-08-22 17:10:58 INFO  LoggingAspect:30 - With args : [1]
+2019-08-22 17:10:58 INFO  LoggingAspect:29 - Method : delete
+2019-08-22 17:10:58 INFO  LoggingAspect:30 - With args : [1]
+2019-08-22 17:10:58 INFO  LoggingAspect:29 - Method : delete
+2019-08-22 17:10:58 INFO  LoggingAspect:30 - With args : [1]
+2019-08-22 17:12:44 INFO  LoggingAspect:29 - Method : deleteAuthorById
+2019-08-22 17:12:44 INFO  LoggingAspect:30 - With args : [1]
+2019-08-22 17:12:44 INFO  LoggingAspect:29 - Method : delete
+2019-08-22 17:12:44 INFO  LoggingAspect:30 - With args : [1]
+2019-08-22 17:12:44 INFO  LoggingAspect:29 - Method : delete
+2019-08-22 17:12:44 INFO  LoggingAspect:30 - With args : [1]
+2019-08-22 17:15:16 INFO  LoggingAspect:29 - Method : deleteComment
+2019-08-22 17:15:16 INFO  LoggingAspect:30 - With args : [1]
+2019-08-22 17:15:16 INFO  LoggingAspect:29 - Method : delete
+2019-08-22 17:15:16 INFO  LoggingAspect:30 - With args : [1]
+2019-08-22 17:15:16 INFO  LoggingAspect:29 - Method : delete
+2019-08-22 17:15:16 INFO  LoggingAspect:30 - With args : [1]
+2019-08-22 17:15:35 INFO  LoggingAspect:29 - Method : addNewBook
+2019-08-22 17:15:35 INFO  LoggingAspect:30 - With args : [aa, aa, aa, aa]
+2019-08-22 17:15:35 INFO  LoggingAspect:29 - Method : create
+2019-08-22 17:15:35 INFO  LoggingAspect:30 - With args : [Book(bookId=0, bookName=aa, bookAuthor=Author(authorId=0, authorName=aa, authorLastName=aa), bookGenre=Genre(genreId=0, genreName=aa))]
+2019-08-22 17:15:35 INFO  LoggingAspect:29 - Method : create
+2019-08-22 17:15:35 INFO  LoggingAspect:30 - With args : [Book(bookId=0, bookName=aa, bookAuthor=Author(authorId=0, authorName=aa, authorLastName=aa), bookGenre=Genre(genreId=0, genreName=aa))]
+2019-08-22 17:15:42 INFO  LoggingAspect:29 - Method : addNewComment
+2019-08-22 17:15:42 INFO  LoggingAspect:30 - With args : [1, aa]
+2019-08-22 17:15:42 INFO  LoggingAspect:29 - Method : create
+2019-08-22 17:15:42 INFO  LoggingAspect:30 - With args : [Comment(commentId=0, commentText=aa, book=Book(bookId=0, bookName=null, bookAuthor=null, bookGenre=null))]
+2019-08-22 17:15:42 INFO  LoggingAspect:29 - Method : create
+2019-08-22 17:15:42 INFO  LoggingAspect:30 - With args : [Comment(commentId=0, commentText=aa, book=Book(bookId=0, bookName=null, bookAuthor=null, bookGenre=null))]
+2019-08-22 17:16:24 INFO  LoggingAspect:29 - Method : getComments
+2019-08-22 17:16:24 INFO  LoggingAspect:30 - With args : [1]
+2019-08-22 17:16:24 INFO  LoggingAspect:29 - Method : getByBookId
+2019-08-22 17:16:24 INFO  LoggingAspect:30 - With args : [1]
+2019-08-22 17:16:24 INFO  LoggingAspect:29 - Method : getCommentsByBookId
+2019-08-22 17:16:24 INFO  LoggingAspect:30 - With args : [1]
+2019-08-22 17:18:21 INFO  LoggingAspect:29 - Method : addNewComment
+2019-08-22 17:18:21 INFO  LoggingAspect:30 - With args : [1, aa]
+2019-08-22 17:18:21 INFO  LoggingAspect:29 - Method : create
+2019-08-22 17:18:21 INFO  LoggingAspect:30 - With args : [Comment(commentId=0, commentText=aa, book=Book(bookId=0, bookName=null, bookAuthor=null, bookGenre=null))]
+2019-08-22 17:18:21 INFO  LoggingAspect:29 - Method : create
+2019-08-22 17:18:21 INFO  LoggingAspect:30 - With args : [Comment(commentId=0, commentText=aa, book=Book(bookId=0, bookName=null, bookAuthor=null, bookGenre=null))]
+2019-08-22 17:19:33 INFO  LoggingAspect:29 - Method : getComments
+2019-08-22 17:19:33 INFO  LoggingAspect:30 - With args : [1]
+2019-08-22 17:19:33 INFO  LoggingAspect:29 - Method : getByBookId
+2019-08-22 17:19:33 INFO  LoggingAspect:30 - With args : [1]
+2019-08-22 17:19:33 INFO  LoggingAspect:29 - Method : getCommentsByBookId
+2019-08-22 17:19:33 INFO  LoggingAspect:30 - With args : [1]
+2019-08-22 17:20:44 INFO  LoggingAspect:29 - Method : addNewComment
+2019-08-22 17:20:44 INFO  LoggingAspect:30 - With args : [123, aaa]
+2019-08-22 17:20:44 INFO  LoggingAspect:29 - Method : create
+2019-08-22 17:20:44 INFO  LoggingAspect:30 - With args : [Comment(commentId=0, commentText=aaa, book=Book(bookId=0, bookName=null, bookAuthor=null, bookGenre=null))]
+2019-08-22 17:20:44 INFO  LoggingAspect:29 - Method : create
+2019-08-22 17:20:44 INFO  LoggingAspect:30 - With args : [Comment(commentId=0, commentText=aaa, book=Book(bookId=0, bookName=null, bookAuthor=null, bookGenre=null))]
+2019-08-22 17:21:10 INFO  LoggingAspect:29 - Method : getAllBooksNames
+2019-08-22 17:21:10 INFO  LoggingAspect:30 - With args : []
+2019-08-22 17:21:10 INFO  LoggingAspect:29 - Method : getAll
+2019-08-22 17:21:10 INFO  LoggingAspect:30 - With args : []
+2019-08-22 17:21:10 INFO  LoggingAspect:29 - Method : getAll
+2019-08-22 17:21:10 INFO  LoggingAspect:30 - With args : []
+2019-08-22 18:14:40 INFO  LoggingAspect:29 - Method : deleteAuthorById
+2019-08-22 18:14:40 INFO  LoggingAspect:30 - With args : [1]
+2019-08-22 18:14:40 INFO  LoggingAspect:29 - Method : delete
+2019-08-22 18:14:40 INFO  LoggingAspect:30 - With args : [1]
+2019-08-22 18:14:40 INFO  LoggingAspect:29 - Method : delete
+2019-08-22 18:14:40 INFO  LoggingAspect:30 - With args : [1]

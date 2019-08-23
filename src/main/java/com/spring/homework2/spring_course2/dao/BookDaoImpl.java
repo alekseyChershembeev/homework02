@@ -81,8 +81,8 @@ public class BookDaoImpl implements BookDAO {
         Query query = em.createQuery("DELETE FROM Book WHERE bookId = :id");
         query.setParameter("id", id);
         try {
-            query.executeUpdate();
-            return true;
+            int i = query.executeUpdate();
+            return i>0;
         } catch (RuntimeException e) {
             LOGGER.error(e.getMessage() + "\n" + new BookException("delete ")+ id);
             return false;

@@ -64,17 +64,15 @@ public class CommentDaoImpl implements CommentDAO {
     @Override
     public boolean delete(long id) {
 
+        Query query = em.createQuery("DELETE FROM Comment WHERE commentId = :id");
+        query.setParameter("id", id);
         try {
-            Comment comment = em.find(Comment.class, id);
-            if (comment != null) {
-                em.remove(comment);
-                return true;
-            }
-        } catch (RuntimeException ex) {
-            LOGGER.error(ex.getMessage() + "\n" + new CommentException("delete ") + id);
+            int i = query.executeUpdate();
+            return i>0;
+        } catch (RuntimeException e) {
+            LOGGER.error(e.getMessage() + "\n" + new CommentException("delete ")+ id);
             return false;
         }
-        return false;
 
     }
 }

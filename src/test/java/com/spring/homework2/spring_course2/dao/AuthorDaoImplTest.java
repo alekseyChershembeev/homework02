@@ -7,6 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.annotation.DirtiesContext;
@@ -20,6 +21,7 @@ import static org.junit.Assert.assertEquals;
 //        "spring.datasource.data=testdata.sql"
 //})
 @DataJpaTest
+//@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 @DirtiesContext
 @Import(AuthorDaoImpl.class)
 public class AuthorDaoImplTest {
@@ -53,7 +55,9 @@ public class AuthorDaoImplTest {
     public void update() {
 
         authorDAO.create(author);
-        authorDAO.update(new Author(2l,"Boriska","Elzin"));
+        author.setAuthorName("Boriska");
+        author.setAuthorLastName("Elzin");
+        authorDAO.update(author);
         assertThat(author)
                 .hasFieldOrPropertyWithValue("authorName", "Boriska")
                 .hasFieldOrPropertyWithValue("authorLastName", "Elzin");

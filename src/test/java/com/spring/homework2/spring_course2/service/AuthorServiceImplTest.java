@@ -1,6 +1,6 @@
 package com.spring.homework2.spring_course2.service;
 
-import com.spring.homework2.spring_course2.dao.AuthorDAO;
+import com.spring.homework2.spring_course2.repository.AuthorRepository;
 import com.spring.homework2.spring_course2.entity.Author;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -14,13 +14,16 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @ExtendWith({SpringExtension.class, MockitoExtension.class})
 @Import(AuthorServiceImpl.class)
+//@AutoConfigureTestDatabase(connection = EmbeddedDatabaseConnection.H2)
+//@RunWith(SpringRunner.class)
+//@SpringBootTest
 public class AuthorServiceImplTest {
 
     @Autowired
     AuthorService authorService;
 
     @MockBean
-    private AuthorDAO authorDAO;
+    private AuthorRepository authorRepository;
 
     private Author author;
 
@@ -34,33 +37,33 @@ public class AuthorServiceImplTest {
 
     @Test
     void create() {
-        authorService.create(author);
+        authorService.save(author);
     }
 
     @Test
     void update() {
-        authorService.create(author);
+        authorService.save(author);
         author.setAuthorName("Name2");
-        authorService.update(author);
+        authorService.save(author);
 
     }
 
     @Test
     void getById() {
-        authorService.create(author);
+        authorService.save(author);
         authorService.getById(1L);
     }
 
     @Test
     void getAll() {
-        authorService.create(author);
-        authorService.getAll();
+        authorService.save(author);
+        authorService.findAll();
     }
 
-    @Test
-    void delete() {
-        authorService.create(author);
-        authorService.delete(1L);
-
-    }
+//    @Test
+//    void delete() {
+////        authorService.save(author);
+////        authorService.delete(1L);
+//
+//    }
 }

@@ -1,6 +1,6 @@
 package com.spring.homework2.spring_course2.service;
 
-import com.spring.homework2.spring_course2.dao.BookDAO;
+import com.spring.homework2.spring_course2.repository.BookRepository;
 import com.spring.homework2.spring_course2.entity.Author;
 import com.spring.homework2.spring_course2.entity.Book;
 import com.spring.homework2.spring_course2.entity.Genre;
@@ -25,7 +25,7 @@ public class BookServiceImplTest {
     BookService bookService;
 
     @MockBean
-    private BookDAO bookDAO;
+    private BookRepository bookRepository;
 
     private Book book;
     private Author author;

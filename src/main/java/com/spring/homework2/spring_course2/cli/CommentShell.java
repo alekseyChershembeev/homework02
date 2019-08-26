@@ -26,15 +26,6 @@ public class CommentShell {
         this.commentService = commentService;
     }
 
-    //    private CommentDAO commentDAO;
-//
-//    private BookDAO bookDAO;
-//
-//    @Autowired
-//    public CommentShell(CommentDAO commentDAO, BookDAO bookDAO) {
-//        this.commentDAO = commentDAO;
-//        this.bookDAO = bookDAO;
-//    }
 
     /**
      * Add new comment.
@@ -50,7 +41,7 @@ public class CommentShell {
         if (bookId.matches("\\d+")) {
             id = Long.parseLong(bookId);
 
-            if (commentService.create(new Comment(comment, id)))
+            if (commentService.create(comment,id))
             return "Comment was add successfully";
         }
             return "Comment doesn't exist";

@@ -140,3 +140,22 @@
 1566483644287:add-comment 123 aaa
 1566483670647:all-books
 1566486880169:delete-author 1
+1566812409211:add-author aa aa
+1566820020938:add-book aa aa aa aa
+1566820032209:update-book 1 bb bb bb bb
+1566820042742:all-books
+1566820058399:delete-book 1
+1566820075495:book-add ww ww ww ww
+1566820085972:add-book ww www ww ww
+1566820102262:all-books
+1566820115285:add-comment 2 qwerty
+1566820125791:show-comments 2
+1566820201786:all-books
+1566820521959:add-book ww ww ww ww
+1566820589575:add-comment 1 aaa
+1566820599593:show-comments 1
+1566820819712:add-book aa aa aa aa
+1566820830218:add-comment 1 bb
+1566821989767:add-book aa aa aa aa
+1566821998647:add-comment 1 ww
+1566822010825:show-comments 1

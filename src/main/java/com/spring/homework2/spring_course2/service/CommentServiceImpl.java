@@ -1,6 +1,8 @@
 package com.spring.homework2.spring_course2.service;
 
-import com.spring.homework2.spring_course2.dao.CommentDAO;
+import com.spring.homework2.spring_course2.repository.BookRepository;
+import com.spring.homework2.spring_course2.repository.CommentRepository;
+import com.spring.homework2.spring_course2.entity.Book;
 import com.spring.homework2.spring_course2.entity.Comment;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,36 +15,38 @@ import org.springframework.transaction.annotation.Transactional;
  * Time: 15:41.
  */
 @Service
-@Transactional(readOnly=true)
+@Transactional(readOnly = true)
 public class CommentServiceImpl implements CommentService {
 
-    private CommentDAO commentDAO;
+    private CommentRepository commentRepository;
+    private BookRepository bookRepository;
 
 
-    /**
-     * Instantiates a new Comment service.
-     *
-     * @param commentDAO the comment dao
-     */
     @Autowired
-    public CommentServiceImpl(CommentDAO commentDAO) {
-        this.commentDAO = commentDAO;
+    public CommentServiceImpl(CommentRepository commentRepository, BookRepository bookRepository) {
+        this.commentRepository = commentRepository;
+        this.bookRepository = bookRepository;
     }
 
     @Transactional()
     @Override
-    public boolean create(Comment comment) {
-        return commentDAO.create(comment);
+    public boolean create(String text, long bookId) {
+        Comment comment = new Comment();
+        Book book = bookRepository.findById(bookId).orElse(new Book());
+        book.setBookId(bookId);
+        comment.setBook(book);
+        comment.setCommentText(text);
+        return commentRepository.save(comment).getCommentId() > 0;
     }
 
     @Override
     public List<Comment> getByBookId(long id) {
-        return commentDAO.getCommentsByBookId(id);
+        return commentRepository.findByBookBookIdIs(id);
     }
 
     @Transactional()
     @Override
     public boolean delete(long id) {
-        return commentDAO.delete(id);
+        return commentRepository.deleteCommentByCommentId(id) > 0;
     }
 }

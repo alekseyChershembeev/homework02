@@ -42,15 +42,6 @@ public class BookShell {
     }
 
 
-//    @ShellMethod(value = "show all books by Author name", key = "all-books-name")
-//    public String getBooksByAuthorsName
-//            (@ShellOption(help = "author name") String name,
-//             @ShellOption(help = "author lastName") String lastName) {
-//
-//        return bookService.getBooksByAuthorsName(new Author(name, lastName)).toString();
-//    }
-
-
     /**
      * Add new book string.
      *

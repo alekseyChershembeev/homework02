@@ -46,10 +46,10 @@ public class Comment {
      * Instantiates a new Comment.
      *
      * @param commentText the comment text
-     * @param id          the id
+     * @param book          the book
      */
-    public Comment(String commentText, long id) {
+    public Comment(String commentText, Book book) {
         this.commentText = commentText;
-        this.book = new Book();
+        this.book = book;
     }
 }

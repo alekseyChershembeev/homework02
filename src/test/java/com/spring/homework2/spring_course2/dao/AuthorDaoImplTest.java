@@ -21,7 +21,7 @@ import static org.junit.Assert.assertEquals;
 //        "spring.datasource.data=testdata.sql"
 //})
 @DataJpaTest
-//@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
+//@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.AUTO_CONFIGURED)
 @DirtiesContext
 @Import(AuthorDaoImpl.class)
 public class AuthorDaoImplTest {

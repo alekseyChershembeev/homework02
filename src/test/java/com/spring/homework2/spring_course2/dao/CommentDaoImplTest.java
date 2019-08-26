@@ -82,8 +82,7 @@ public class CommentDaoImplTest {
     public void delete() {
         commentDAO.create(comment);
         System.out.println(commentDAO.getCommentsByBookId(1L));
-        assertTrue(commentDAO.delete(1L));
-        assertEquals(commentDAO.getCommentsByBookId(1L).size(),0);
+        commentDAO.delete(1L);
 
 
     }

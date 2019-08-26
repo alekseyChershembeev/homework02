@@ -9,13 +9,8 @@ import java.util.List;
  * Time: 15:39.
  */
 public interface CommentService {
-    /**
-     * Create boolean.
-     *
-     * @param comment the comment
-     * @return the boolean
-     */
-    boolean create(Comment comment);
+
+    boolean create(String comment, long bookId);
 
     /**
      * Gets by book id.

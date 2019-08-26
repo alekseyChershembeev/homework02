@@ -1,6 +1,6 @@
 package com.spring.homework2.spring_course2.service;
 
-import com.spring.homework2.spring_course2.dao.CommentDAO;
+import com.spring.homework2.spring_course2.repository.CommentRepository;
 import com.spring.homework2.spring_course2.entity.Author;
 import com.spring.homework2.spring_course2.entity.Book;
 import com.spring.homework2.spring_course2.entity.Comment;
@@ -22,7 +22,7 @@ public class CommentServiceImplTest {
     CommentService commentService;
 
     @MockBean
-    CommentDAO commentDAO;
+    CommentRepository commentRepository;
 
     private Book book;
     private Author author;
@@ -51,7 +51,7 @@ public class CommentServiceImplTest {
 
     @Test
     void create() {
-        commentService.create(comment);
+        commentService.create("newComment",1L);
     }
 
     @Test

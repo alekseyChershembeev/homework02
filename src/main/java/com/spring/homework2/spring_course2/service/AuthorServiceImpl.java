@@ -1,8 +1,9 @@
 package com.spring.homework2.spring_course2.service;
 
-import com.spring.homework2.spring_course2.dao.AuthorDAO;
+import com.spring.homework2.spring_course2.repository.AuthorRepository;
 import com.spring.homework2.spring_course2.entity.Author;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,43 +17,45 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional(readOnly=true)
 public class AuthorServiceImpl implements AuthorService {
 
-    private AuthorDAO authorDAO;
+    private AuthorRepository authorRepository;
 
     /**
      * Instantiates a new Author service.
      *
-     * @param authorDAO the author dao
+     * @param authorRepository the author dao
      */
     @Autowired
-    public AuthorServiceImpl(AuthorDAO authorDAO) {
-        this.authorDAO = authorDAO;
+    public AuthorServiceImpl(AuthorRepository authorRepository) {
+        this.authorRepository = authorRepository;
     }
 
     @Transactional()
     @Override
-    public long create(Author author) {
-        return authorDAO.create(author);
+    public Long save(Author author) {
+//        return authorDAO.create(author);
+        return authorRepository.save(author).getAuthorId();
+    }
+
+//    @Transactional()
+//    @Override
+//    public boolean update(Author author) {
+////        return authorDAO.update(author);
+//        return authorDAO.
+//    }
+
+    @Override
+    public Optional<Author> getById(Long id) {
+        return authorRepository.findById(id);
+    }
+
+    @Override
+    public List<Author> findAll() {
+        return (List<Author>) authorRepository.findAll();
     }
 
     @Transactional()
     @Override
-    public boolean update(Author author) {
-        return authorDAO.update(author);
-    }
-
-    @Override
-    public Author getById(long id) {
-        return authorDAO.getById(id);
-    }
-
-    @Override
-    public List<Author> getAll() {
-        return authorDAO.getAll();
-    }
-
-    @Transactional()
-    @Override
-    public boolean delete(long id) {
-       return authorDAO.delete(id);
+    public boolean deleteAuthorById(Long id) {
+       return authorRepository.deleteAuthorByAuthorId(id)>0;
     }
 }

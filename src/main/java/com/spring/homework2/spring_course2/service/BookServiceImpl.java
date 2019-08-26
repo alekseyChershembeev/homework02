@@ -1,11 +1,8 @@
 package com.spring.homework2.spring_course2.service;
 
-import com.spring.homework2.spring_course2.dao.BookDAO;
-import com.spring.homework2.spring_course2.entity.Author;
+import com.spring.homework2.spring_course2.repository.BookRepository;
 import com.spring.homework2.spring_course2.entity.Book;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,45 +16,41 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional(readOnly = true)
 public class BookServiceImpl implements BookService {
 
-    private BookDAO bookDAO;
+    private BookRepository bookRepository;
 
-    /**
-     * Instantiates a new Book service.
-     *
-     * @param bookDAO the book dao
-     */
+
     @Autowired
-    public BookServiceImpl(BookDAO bookDAO) {
-        this.bookDAO = bookDAO;
+    public BookServiceImpl(BookRepository bookRepository) {
+        this.bookRepository = bookRepository;
     }
 
     @Transactional()
     @Override
     public long create(Book book) {
-        return bookDAO.create(book);
+        return bookRepository.save(book).getBookId();
     }
 
     @Transactional()
     @Override
     public boolean update(Book book) {
-        return bookDAO.update(book);
+        return bookRepository.save(book).getBookId()>0;
     }
 
     @Override
     public Book getById(long id) {
-        return bookDAO.getById(id);
+        return bookRepository.findById(id).orElse(null);
     }
 
     @Override
     public List<Book> getAll() {
-        return bookDAO.getAll();
+        return (List<Book>) bookRepository.findAll();
     }
 
     @Transactional()
     @Override
     public boolean delete(long id) {
 
-        return bookDAO.delete(id);
+        return bookRepository.deleteBookByBookId(id)>0;
 
 
 //    @Override

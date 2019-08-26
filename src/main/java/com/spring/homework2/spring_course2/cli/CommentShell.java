@@ -26,15 +26,6 @@ public class CommentShell {
         this.commentService = commentService;
     }
 
-    //    private CommentDAO commentDAO;
-//
-//    private BookDAO bookDAO;
-//
-//    @Autowired
-//    public CommentShell(CommentDAO commentDAO, BookDAO bookDAO) {
-//        this.commentDAO = commentDAO;
-//        this.bookDAO = bookDAO;
-//    }
 
     /**
      * Add new comment.
@@ -43,16 +34,17 @@ public class CommentShell {
      * @param comment the comment
      */
     @ShellMethod(value = "add new Comment", key = "add-comment")
-    public void addNewComment(
+    public String addNewComment(
             @ShellOption(help = "bookId") String bookId,
             @ShellOption(help = "comment") String comment) {
         long id;
         if (bookId.matches("\\d+")) {
             id = Long.parseLong(bookId);
 
-            commentService
-                    .create(new Comment(comment, id));
+            if (commentService.create(comment,id))
+            return "Comment was add successfully";
         }
+            return "Comment doesn't exist";
 
     }
 

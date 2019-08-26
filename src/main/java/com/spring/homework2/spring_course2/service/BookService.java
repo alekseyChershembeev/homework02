@@ -1,6 +1,5 @@
 package com.spring.homework2.spring_course2.service;
 
-import com.spring.homework2.spring_course2.entity.Author;
 import com.spring.homework2.spring_course2.entity.Book;
 import java.util.List;
 

@@ -21,17 +21,10 @@ public interface GenreService {
     /**
      * Update boolean.
      *
-     * @param genre the genre
+     * @param id the genre
      * @return the boolean
      */
-    boolean update(Genre genre);
 
-    /**
-     * Gets by id.
-     *
-     * @param id the id
-     * @return the by id
-     */
     Genre getById(long id);
 
     /**

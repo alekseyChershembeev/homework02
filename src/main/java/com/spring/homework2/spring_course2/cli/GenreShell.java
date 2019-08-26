@@ -76,7 +76,7 @@ public class GenreShell {
         Genre genre = genreService.getById(longId);
         if (genre != null) {
             genreService
-                    .update(new Genre(longId, genreName));
+                    .create(new Genre(longId, genreName));
 
             return "Genre was update successfully";
         } else

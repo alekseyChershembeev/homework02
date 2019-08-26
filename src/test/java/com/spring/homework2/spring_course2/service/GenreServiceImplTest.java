@@ -1,7 +1,6 @@
 package com.spring.homework2.spring_course2.service;
 
-import com.spring.homework2.spring_course2.dao.CommentDAO;
-import com.spring.homework2.spring_course2.dao.GenreDAO;
+import com.spring.homework2.spring_course2.repository.GenreRepository;
 import com.spring.homework2.spring_course2.entity.Genre;
 import org.junit.Before;
 import org.junit.jupiter.api.Test;
@@ -22,13 +21,13 @@ public class GenreServiceImplTest {
     private GenreService genreService;
 
     @MockBean
-    GenreDAO genreDAO;
+    GenreRepository genreRepository;
 
 
     private Genre genre;
 
     @Before
-    void setUp() throws Exception {
+    public void setUp() {
         genre = new Genre();
         genre.setGenreName("Fantastic");
     }
@@ -40,7 +39,7 @@ public class GenreServiceImplTest {
 
     @Test
     void update() {
-        genreService.update(genre);
+        genreService.create(genre);
     }
 
     @Test

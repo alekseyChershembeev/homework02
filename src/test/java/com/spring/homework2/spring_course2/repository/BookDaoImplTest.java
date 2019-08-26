@@ -1,4 +1,4 @@
-package com.spring.homework2.spring_course2.dao;
+package com.spring.homework2.spring_course2.repository;
 
 import com.spring.homework2.spring_course2.entity.Author;
 import com.spring.homework2.spring_course2.entity.Book;
@@ -7,25 +7,28 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.jdbc.EmbeddedDatabaseConnection;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.context.annotation.Import;
-import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-import static org.junit.Assert.*;
+import java.util.*;
 
 @RunWith(SpringRunner.class)
+
 @DataJpaTest
-@DirtiesContext
-@Import(BookDaoImpl.class)
+@AutoConfigureTestDatabase(connection = EmbeddedDatabaseConnection.H2)
 @Transactional
 public class BookDaoImplTest {
 
 
     @Autowired
-    private BookDAO bookDAO;
+    private TestEntityManager entityManager;
+    @Autowired
+    private BookRepository bookRepository;
 
     private Book book;
     private Author author;
@@ -53,48 +56,50 @@ public class BookDaoImplTest {
     @Test
     public void create() {
         Book expected = new Book("book", author, genre);
-        long id = bookDAO.create(expected);
-        assertEquals(id, 1L);
+
+        assertThat(bookRepository.save(expected))
+                .hasFieldOrPropertyWithValue("bookName","book");
     }
 
     @Test
     public void update() {
-        bookDAO.create(new Book("book", author, genre));
+        bookRepository.save(new Book("book", author, genre));
         book.setBookName("book2");
         book.setBookGenre(genre);
         book.setBookAuthor(author);
-        bookDAO.update(book);
+        bookRepository.save(book);
 
 
     }
 
     @Test
     public void getById() {
-        long id = bookDAO.create(new Book("book", author, genre));
-        Book newBook = bookDAO.getById(id);
+        Book newBook = bookRepository.save(new Book("book", author, genre));
         assertThat(newBook)
-                .hasFieldOrPropertyWithValue("bookId", 1L)
+                .hasFieldOrPropertyWithValue("bookId", newBook.getBookId())
                 .hasFieldOrPropertyWithValue("bookName", "book")
-                .hasFieldOrPropertyWithValue("bookAuthor.authorId", 1L)
+                .hasFieldOrPropertyWithValue("bookAuthor.authorId", newBook.getBookAuthor().getAuthorId())
                 .hasFieldOrPropertyWithValue("bookAuthor.authorName", "Author")
                 .hasFieldOrPropertyWithValue("bookAuthor.authorLastName", "AuthorLastName")
-                .hasFieldOrPropertyWithValue("bookGenre.genreId", 1L)
+                .hasFieldOrPropertyWithValue("bookGenre.genreId", newBook.getBookGenre().getGenreId())
                 .hasFieldOrPropertyWithValue("bookGenre.genreName", "Genre");
     }
 
     @Test
     public void getAll() {
-        bookDAO.create(new Book("book", author, genre));
-        bookDAO.create(new Book("book2", author, genre));
+        bookRepository.save(new Book("book", author, genre));
+        bookRepository.save(new Book("book2", author, genre));
 
-        assertThat(bookDAO.getAll().size()).isEqualTo(2);
+        List<Book> all = (List<Book>) bookRepository.findAll();
+        assertThat(all.size()).isEqualTo(2);
 
     }
 
     @Test
     public void delete() {
-        bookDAO.create(new Book("book", author, genre));
-        bookDAO.delete(1L);
+        Book book2 = new Book("book", author, genre);
+        bookRepository.save(book2);
+        bookRepository.delete(book2);
 
 
 

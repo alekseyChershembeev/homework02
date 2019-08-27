@@ -10,6 +10,13 @@ import java.util.List;
  */
 public interface CommentService {
 
+    /**
+     * Create boolean.
+     *
+     * @param comment the comment
+     * @param bookId  the book id
+     * @return the boolean
+     */
     boolean create(String comment, long bookId);
 
     /**

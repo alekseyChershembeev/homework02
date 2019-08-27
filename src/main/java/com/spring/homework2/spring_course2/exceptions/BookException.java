@@ -13,7 +13,7 @@ public class BookException extends IllegalArgumentException {
      * @param message the message
      */
     public BookException(String message) {
-        super("Book not found from "+ message);
+        super("Book not found from " + message);
     }
 
 }

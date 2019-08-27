@@ -4,11 +4,11 @@ import com.spring.homework2.spring_course2.entity.Author;
 import com.spring.homework2.spring_course2.entity.Book;
 import com.spring.homework2.spring_course2.entity.Genre;
 import com.spring.homework2.spring_course2.service.BookService;
-import java.util.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
 import org.springframework.shell.standard.ShellOption;
+import java.util.List;
 
 /**
  * Created by Chershembeev_AE
@@ -25,7 +25,7 @@ public class BookShell {
      * @param bookService the book service
      */
     @Autowired
-    public BookShell(BookService bookService) {
+    public BookShell(final BookService bookService) {
         this.bookService = bookService;
     }
 
@@ -52,10 +52,11 @@ public class BookShell {
      * @return the string
      */
     @ShellMethod(value = "add new Book", key = "add-book")
-    public String addNewBook(@ShellOption(help = "genre") String genre,
-                             @ShellOption(help = "title") String name,
-                             @ShellOption(help = "authorName") String authorName,
-                             @ShellOption(help = "authorLastName") String authorLastName) {
+    public String addNewBook(
+            final @ShellOption(help = "genre") String genre,
+            final @ShellOption(help = "title") String name,
+            final @ShellOption(help = "authorName") String authorName,
+            final @ShellOption(help = "authorLastName") String authorLastName) {
         final long isAddBook = bookService
                 .create(new Book(
                         name,
@@ -63,10 +64,11 @@ public class BookShell {
                         new Genre(genre)
                 ));
 
-        if (isAddBook > 0)
+        if (isAddBook > 0) {
             return "New Book was added successfully";
-        else
+        } else {
             return "Book already exist ";
+        }
     }
 
     /**
@@ -80,20 +82,22 @@ public class BookShell {
      * @return the string
      */
     @ShellMethod(value = "update Book", key = "update-book")
-    public String updateBookById(@ShellOption(help = "id") String id,
-                                 @ShellOption(help = "title") String nameBook,
-                                 @ShellOption(help = "authorName") String authorName,
-                                 @ShellOption(help = "authorLastName") String authorLastName,
-                                 @ShellOption(help = "genre") String genre) {
+    public String updateBookById(
+            final @ShellOption(help = "id") String id,
+            final @ShellOption(help = "title") String nameBook,
+            final @ShellOption(help = "authorName") String authorName,
+            final @ShellOption(help = "authorLastName") String authorLastName,
+            final @ShellOption(help = "genre") String genre) {
         long longId = 0;
-        if (id.matches("\\d+"))
+        if (id.matches("\\d+")) {
             longId = Long.parseLong(id);
+        }
 
         Book book = bookService.getById(longId);
-        boolean isDelete;
-        isDelete = (book != null && book.getBookId() == longId);
+        boolean isUpdate;
+        isUpdate = (book != null && book.getBookId() == longId);
 
-        if (isDelete && longId != 0) {
+        if (isUpdate && longId != 0) {
 
             book.setBookAuthor(new Author(authorName, authorLastName));
             book.setBookGenre(new Genre(genre));
@@ -101,8 +105,9 @@ public class BookShell {
             bookService
                     .update(book);
             return "Book was update successfully";
-        } else
+        } else {
             return "Book doesn't exist";
+        }
     }
 
     /**
@@ -112,14 +117,16 @@ public class BookShell {
      * @return the string
      */
     @ShellMethod(value = "delete Book by id", key = "delete-book")
-    public String deleteBookById(@ShellOption(help = "id") String id) {
+    public String deleteBookById(final @ShellOption(help = "id") String id) {
 
         long longId = 0;
-        if (id.matches("\\d+"))
+        boolean isDelete;
+        if (id.matches("\\d+")) {
             longId = Long.parseLong(id);
+        }
 
         Book book = bookService.getById(longId);
-        boolean isDelete;
+
         isDelete = (book != null && book.getBookId() == longId);
 
         if (isDelete) {
@@ -127,9 +134,9 @@ public class BookShell {
                     .delete(Long.parseLong(id));
 
             return "Book was delete successfully";
-        }
-        else
+        } else {
             return "Book doesn't exist";
+        }
     }
 
 

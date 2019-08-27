@@ -12,6 +12,6 @@ public class CommentException extends IllegalArgumentException {
      * @param s the s
      */
     public CommentException(String s) {
-        super("Comment not found from "+s);
+        super("Comment not found from " + s);
     }
 }

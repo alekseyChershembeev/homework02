@@ -22,7 +22,7 @@ public class CommentShell {
      *
      * @param commentService the comment service
      */
-    public CommentShell(CommentService commentService) {
+    public CommentShell(final CommentService commentService) {
         this.commentService = commentService;
     }
 
@@ -32,19 +32,23 @@ public class CommentShell {
      *
      * @param bookId  the book id
      * @param comment the comment
+     * @return the comments
      */
     @ShellMethod(value = "add new Comment", key = "add-comment")
     public String addNewComment(
-            @ShellOption(help = "bookId") String bookId,
-            @ShellOption(help = "comment") String comment) {
+            final @ShellOption(help = "bookId") String bookId,
+            final @ShellOption(help = "comment") String comment) {
         long id;
         if (bookId.matches("\\d+")) {
             id = Long.parseLong(bookId);
 
-            if (commentService.create(comment,id))
-            return "Comment was add successfully";
+            if (commentService.create(comment, id)) {
+                return "Comment was add successfully";
+            }
         }
-            return "Comment doesn't exist";
+
+        return "Comment doesn't exist";
+
 
     }
 
@@ -55,7 +59,7 @@ public class CommentShell {
      * @return the comments
      */
     @ShellMethod(value = "show comments to Book", key = "show-comments")
-    public String getComments(@ShellOption(help = "id book") int id) {
+    public String getComments(final @ShellOption(help = "id book") int id) {
         List<Comment> comments = commentService.getByBookId(id);
         return comments.toString();
     }
@@ -67,15 +71,17 @@ public class CommentShell {
      * @return the string
      */
     @ShellMethod(value = "delete Comment by id", key = "delete-comment")
-    public String deleteComment(@ShellOption(help = "id comment") String id) {
+    public String deleteComment(
+            final @ShellOption(help = "id comment") String id) {
         final long longId = Long.parseLong(id);
         boolean isDelete = id.matches("\\d+");
 
         if (commentService
                 .delete(longId)) {
             return "Comment was delete successfully";
-        } else
+        } else {
             return "Comment doesn't exist";
+        }
     }
 
 

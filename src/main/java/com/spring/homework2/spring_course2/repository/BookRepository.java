@@ -12,7 +12,13 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Repository
 @Transactional
-public interface BookRepository extends CrudRepository<Book,Long> {
+public interface BookRepository extends CrudRepository<Book, Long> {
 
+    /**
+     * Delete book by book id int.
+     *
+     * @param id the id
+     * @return the int
+     */
     int deleteBookByBookId(Long id);
 }

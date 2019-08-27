@@ -10,7 +10,13 @@ import org.springframework.stereotype.Repository;
  * Time: 17:44.
  */
 @Repository
-public interface AuthorRepository extends CrudRepository<Author,Long> {
+public interface AuthorRepository extends CrudRepository<Author, Long> {
 
+   /**
+    * Delete author by author id int.
+    *
+    * @param id the id
+    * @return the int
+    */
    int deleteAuthorByAuthorId(Long id);
 }

@@ -4,7 +4,6 @@ import com.spring.homework2.spring_course2.repository.AuthorRepository;
 import com.spring.homework2.spring_course2.entity.Author;
 import java.util.List;
 import java.util.Optional;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -14,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
  * Time: 15:41.
  */
 @Service
-@Transactional(readOnly=true)
+@Transactional(readOnly = true)
 public class AuthorServiceImpl implements AuthorService {
 
     private AuthorRepository authorRepository;
@@ -24,27 +23,18 @@ public class AuthorServiceImpl implements AuthorService {
      *
      * @param authorRepository the author dao
      */
-    @Autowired
-    public AuthorServiceImpl(AuthorRepository authorRepository) {
+    public AuthorServiceImpl(final AuthorRepository authorRepository) {
         this.authorRepository = authorRepository;
     }
 
-    @Transactional()
+    @Transactional
     @Override
     public Long save(Author author) {
-//        return authorDAO.create(author);
         return authorRepository.save(author).getAuthorId();
     }
 
-//    @Transactional()
-//    @Override
-//    public boolean update(Author author) {
-////        return authorDAO.update(author);
-//        return authorDAO.
-//    }
-
     @Override
-    public Optional<Author> getById(Long id) {
+    public Optional<Author> getById(final Long id) {
         return authorRepository.findById(id);
     }
 
@@ -53,9 +43,9 @@ public class AuthorServiceImpl implements AuthorService {
         return (List<Author>) authorRepository.findAll();
     }
 
-    @Transactional()
+    @Transactional
     @Override
-    public boolean deleteAuthorById(Long id) {
-       return authorRepository.deleteAuthorByAuthorId(id)>0;
+    public boolean deleteAuthorById(final Long id) {
+        return authorRepository.deleteAuthorByAuthorId(id) > 0;
     }
 }

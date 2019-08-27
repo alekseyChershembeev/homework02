@@ -19,25 +19,30 @@ public class BookServiceImpl implements BookService {
     private BookRepository bookRepository;
 
 
+    /**
+     * Instantiates a new Book service.
+     *
+     * @param bookRepository the book repository
+     */
     @Autowired
-    public BookServiceImpl(BookRepository bookRepository) {
+    public BookServiceImpl(final BookRepository bookRepository) {
         this.bookRepository = bookRepository;
     }
 
-    @Transactional()
+    @Transactional
     @Override
     public long create(Book book) {
         return bookRepository.save(book).getBookId();
     }
 
-    @Transactional()
+    @Transactional
     @Override
     public boolean update(Book book) {
-        return bookRepository.save(book).getBookId()>0;
+        return bookRepository.save(book).getBookId() > 0;
     }
 
     @Override
-    public Book getById(long id) {
+    public Book getById(final long id) {
         return bookRepository.findById(id).orElse(null);
     }
 
@@ -46,24 +51,11 @@ public class BookServiceImpl implements BookService {
         return (List<Book>) bookRepository.findAll();
     }
 
-    @Transactional()
+    @Transactional
     @Override
-    public boolean delete(long id) {
+    public boolean delete(final long id) {
 
-        return bookRepository.deleteBookByBookId(id)>0;
+        return bookRepository.deleteBookByBookId(id) > 0;
 
-
-//    @Override
-//    public List<Book> getBooksByAuthorsName(Author author) {
-//
-//        return bookDAO.getAll().stream()
-//                .flatMap(Stream::ofNullable)
-//                .filter((s) -> s.getBookAuthor() != null)
-//                .filter((s) -> s.getBookAuthor().getAuthorName() != null)
-//                .filter(s2 -> s2.getBookAuthor().getAuthorName().equals(author.getAuthorName()))
-//                .filter((s) -> s.getBookAuthor().getAuthorLastName() != null)
-//                .filter(s2 -> s2.getBookAuthor().getAuthorLastName().equals(author.getAuthorLastName()))
-//                .collect(Collectors.toList());
-//    }
     }
 }

@@ -25,7 +25,7 @@ public class GenreShell {
      * @param genreService the genre service
      */
     @Autowired
-    public GenreShell(GenreService genreService) {
+    public GenreShell(final GenreService genreService) {
         this.genreService = genreService;
     }
 
@@ -48,12 +48,13 @@ public class GenreShell {
      */
     @Transactional
     @ShellMethod(value = "delete Genre by id", key = "delete-genre")
-    public String deleteGenreById(@ShellOption(help = "id") String id) {
+    public String deleteGenreById(final @ShellOption(help = "id") String id) {
 
         if (id.matches("\\d+")) {
             if (genreService
-                    .delete(Long.parseLong(id)))
+                    .delete(Long.parseLong(id))) {
                 return "Genre was delete successfully";
+            }
         }
         return "Genre doesn't exist";
     }
@@ -67,21 +68,19 @@ public class GenreShell {
      */
     @Transactional
     @ShellMethod(value = "update Genre", key = "update-genre")
-    public String updateGenreById(@ShellOption(help = "id") String id,
-                                  @ShellOption(help = "genre") String genreName) {
+    public String updateGenreById(
+            final @ShellOption(help = "id") String id,
+            final @ShellOption(help = "genre") String genreName) {
         long longId = 0;
-        if (id.matches("\\d+"))
+        if (id.matches("\\d+")) {
             longId = Long.parseLong(id);
-
-        Genre genre = genreService.getById(longId);
-        if (genre != null) {
-            genreService
-                    .create(new Genre(longId, genreName));
-
+        }
+        if (genreService
+                .create(new Genre(longId, genreName)) > 0) {
             return "Genre was update successfully";
-        } else
+        } else {
             return "Genre doesn't exist";
-
+        }
     }
 
 }

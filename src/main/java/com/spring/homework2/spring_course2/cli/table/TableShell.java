@@ -15,9 +15,14 @@ import static org.springframework.shell.table.CellMatchers.table;
  * Date: 20.08.2019
  * Time: 16:43.
  */
-
 public class TableShell {
 
+    /**
+     * Gets table from list.
+     *
+     * @param books the books
+     * @return the table from list
+     */
     public String getTableFromList(List<Book> books) {
         TableModelBuilder<String> modelBuilder = new TableModelBuilder<>();
         modelBuilder.addRow()

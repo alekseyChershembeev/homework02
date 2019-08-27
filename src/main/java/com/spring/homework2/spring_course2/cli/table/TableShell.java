@@ -23,6 +23,7 @@ public class TableShell {
      * @param books the books
      * @return the table from list
      */
+    //тест
     public String getTableFromList(List<Book> books) {
         TableModelBuilder<String> modelBuilder = new TableModelBuilder<>();
         modelBuilder.addRow()

@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @Entity
-@Table(name ="books")
+@Table(name = "books")
 public class Book {
 
     @Id
@@ -30,11 +30,11 @@ public class Book {
     @Column(name = "bookName")
     private String bookName;
 
-    @OneToOne(cascade= CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "authorId")
     private Author bookAuthor;
 
-    @OneToOne(cascade= CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "genreId")
     private Genre bookGenre;
 
@@ -51,7 +51,6 @@ public class Book {
         this.bookAuthor = bookAuthor;
         this.bookGenre = bookGenre;
     }
-
 
 
 }

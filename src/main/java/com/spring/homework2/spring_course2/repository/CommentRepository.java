@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Repository
 @Transactional
-public interface CommentRepository extends CrudRepository<Comment,Long> {
+public interface CommentRepository extends CrudRepository<Comment, Long> {
 
     /**
      * Find by book book id is list.
@@ -21,7 +21,13 @@ public interface CommentRepository extends CrudRepository<Comment,Long> {
      * @param id the id
      * @return the list
      */
-    List<Comment>findByBookBookIdIs(Long id);
+    List<Comment> findByBookBookIdIs(Long id);
 
+    /**
+     * Delete comment by comment id int.
+     *
+     * @param id the id
+     * @return the int
+     */
     int deleteCommentByCommentId(Long id);
 }

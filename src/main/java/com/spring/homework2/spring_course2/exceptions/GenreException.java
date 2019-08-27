@@ -11,7 +11,7 @@ public class GenreException extends IllegalArgumentException {
      *
      * @param message the message
      */
-    public GenreException(String message) {
+    public GenreException(final String message) {
         super("Author not found froms " + message);
     }
 }

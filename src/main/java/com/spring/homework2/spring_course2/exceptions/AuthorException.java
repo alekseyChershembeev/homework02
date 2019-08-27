@@ -12,6 +12,6 @@ public class AuthorException extends IllegalArgumentException {
      * @param message the message
      */
     public AuthorException(String message) {
-        super("Author not found from "+ message);
+        super("Author not found from " + message);
     }
 }

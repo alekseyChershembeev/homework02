@@ -36,8 +36,8 @@ public class Comment {
     @Column(name = "commentText")
     private String commentText;
 
-    @ManyToOne(cascade= CascadeType.ALL)
-    @JoinColumn(name = "bookId",nullable = false)
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "bookId", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Book book;
 
@@ -46,7 +46,7 @@ public class Comment {
      * Instantiates a new Comment.
      *
      * @param commentText the comment text
-     * @param book          the book
+     * @param book        the book
      */
     public Comment(String commentText, Book book) {
         this.commentText = commentText;

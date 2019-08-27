@@ -24,7 +24,7 @@ public class AuthorShell {
      * @param authorService the author service
      */
     @Autowired
-    public AuthorShell(AuthorService authorService) {
+    public AuthorShell(final AuthorService authorService) {
         this.authorService = authorService;
     }
 
@@ -48,13 +48,16 @@ public class AuthorShell {
      * @return the string
      */
     @ShellMethod(value = "add new Author", key = "add-author")
-    public String addNewAuthor(@ShellOption(help = "author name") String authorName,
-                               @ShellOption(help = "author last name") String authorLastName) {
+    public String addNewAuthor(final @ShellOption(help = "author name")
+                                       String authorName,
+                               final @ShellOption(help = "author last name")
+                                       String authorLastName) {
         if (authorService
-                .save(new Author(authorName, authorLastName)) > 0)
+                .save(new Author(authorName, authorLastName)) > 0) {
             return "New Author was added successfully";
-        else
+        } else {
             return "Author already exist ";
+        }
     }
 
     /**
@@ -65,14 +68,15 @@ public class AuthorShell {
      */
     @Transactional
     @ShellMethod(value = "delete Author by id", key = "delete-author")
-    public String deleteAuthorById(@ShellOption(help = "id") String id) {
+    public String deleteAuthorById(final @ShellOption(help = "id") String id) {
 
         long idLong;
         if (id.matches("\\d+")) {
             idLong = (Long.parseLong(id));
             if (authorService
-                    .deleteAuthorById(idLong))
+                    .deleteAuthorById(idLong)) {
                 return "Author was delete successfully";
+            }
         }
         return "Author doesn't exist";
     }
@@ -87,19 +91,22 @@ public class AuthorShell {
      */
     @ShellMethod(value = "update Author by id", key = "update-author")
 
-    public String updateAuthorById(@ShellOption(help = "id") String id,
-                                   @ShellOption(help = "name") String name,
-                                   @ShellOption(help = "lastName") String lastName) {
+    public String updateAuthorById(
+            @ShellOption(help = "id") final String id,
+            @ShellOption(help = "name") final String name,
+            @ShellOption(help = "lastName") final String lastName) {
         boolean b = false;
         long longId = 0;
-        if (id.matches("\\d+"))
+        if (id.matches("\\d+")) {
             longId = Long.parseLong(id);
+        }
 
         if (authorService
-                .save(new Author(longId, name, lastName)) > 0)
+                .save(new Author(longId, name, lastName)) > 0) {
             return "Author was update successfully";
-        else
+        } else {
             return "Author doesn't exist";
+        }
     }
 
 
@@ -110,7 +117,7 @@ public class AuthorShell {
      * @return the author by id
      */
     @ShellMethod(value = "get Author by id", key = "get-author")
-    public String getAuthorById(@ShellOption(help = "id") String id) {
+    public String getAuthorById(final @ShellOption(help = "id") String id) {
 
         long longId;
 

@@ -24,24 +24,18 @@ public class GenreServiceImpl implements GenreService {
      * @param genreRepository the genre dao
      */
     @Autowired
-    public GenreServiceImpl(GenreRepository genreRepository) {
+    public GenreServiceImpl(final GenreRepository genreRepository) {
         this.genreRepository = genreRepository;
     }
 
-    @Transactional()
+    @Transactional
     @Override
     public long create(Genre genre) {
         return genreRepository.save(genre).getGenreId();
     }
 
-//    @Transactional()
-//    @Override
-//    public boolean update(Genre genre) {
-//        return genreDAO.save(genre.ge);
-//    }
-
     @Override
-    public Genre getById(long id) {
+    public Genre getById(final long id) {
         return genreRepository.findById(id).orElse(null);
     }
 
@@ -50,10 +44,10 @@ public class GenreServiceImpl implements GenreService {
         return (List<Genre>) genreRepository.findAll();
     }
 
-    @Transactional()
+    @Transactional
     @Override
-    public boolean delete(long id) {
-        return genreRepository.deleteGenreByGenreId(id)>0;
+    public boolean delete(final long id) {
+        return genreRepository.deleteGenreByGenreId(id) > 0;
     }
 
 }

@@ -5,7 +5,6 @@ import com.spring.homework2.spring_course2.repository.CommentRepository;
 import com.spring.homework2.spring_course2.entity.Book;
 import com.spring.homework2.spring_course2.entity.Comment;
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -22,15 +21,21 @@ public class CommentServiceImpl implements CommentService {
     private BookRepository bookRepository;
 
 
-    @Autowired
-    public CommentServiceImpl(CommentRepository commentRepository, BookRepository bookRepository) {
+    /**
+     * Instantiates a new Comment service.
+     *
+     * @param commentRepository the comment repository
+     * @param bookRepository    the book repository
+     */
+    public CommentServiceImpl(CommentRepository commentRepository
+            , BookRepository bookRepository) {
         this.commentRepository = commentRepository;
         this.bookRepository = bookRepository;
     }
 
-    @Transactional()
+    @Transactional
     @Override
-    public boolean create(String text, long bookId) {
+    public boolean create(final String text, final long bookId) {
         Comment comment = new Comment();
         Book book = bookRepository.findById(bookId).orElse(new Book());
         book.setBookId(bookId);
@@ -40,13 +45,13 @@ public class CommentServiceImpl implements CommentService {
     }
 
     @Override
-    public List<Comment> getByBookId(long id) {
+    public List<Comment> getByBookId(final long id) {
         return commentRepository.findByBookBookIdIs(id);
     }
 
-    @Transactional()
+    @Transactional
     @Override
-    public boolean delete(long id) {
+    public boolean delete(final long id) {
         return commentRepository.deleteCommentByCommentId(id) > 0;
     }
 }

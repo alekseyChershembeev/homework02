@@ -24,7 +24,6 @@ public interface GenreService {
      * @param id the genre
      * @return the boolean
      */
-
     Genre getById(long id);
 
     /**

@@ -6,6 +6,7 @@ import com.spring.homework2.spring_course2.repository.BookRepository;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,6 +16,7 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
+
 public class BookServiceImpl implements BookService {
 
     public BookServiceImpl(BookRepository bookRepository) {

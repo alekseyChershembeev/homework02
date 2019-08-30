@@ -14,7 +14,6 @@ import java.util.List;
  * Time: 15:38.
  */
 @ShellComponent
-
 public class BookShell {
 
     /**
@@ -81,8 +80,9 @@ public class BookShell {
 
         if ((bookService
                 .addBook(new Book(id, nameBook, authorName, genre
-                ))))
+                )))) {
             return "Book was update successfully";
+        }
         else {
             return "Book doesn't exist";
         }

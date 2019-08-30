@@ -1,55 +1,22 @@
 package com.spring.homework2.spring_course2.entity;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  * Created by Chershembeev_AE
- * Date: 19.08.2019
- * Time: 18:53.
+ * Date: 30.08.2019
+ * Time: 14:49.
  */
-@Entity
-@Table(name = "comments")
+
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
+@Document(collection = "comments")
 public class Comment {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "commentId")
-    private long commentId;
-    @Column(name = "commentText")
-    private String commentText;
+    private String comment;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "bookId", nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
-    private Book book;
-
-
-    /**
-     * Instantiates a new Comment.
-     *
-     * @param commentText the comment text
-     * @param book        the book
-     */
-    public Comment(String commentText, Book book) {
-        this.commentText = commentText;
-        this.book = book;
-    }
 }

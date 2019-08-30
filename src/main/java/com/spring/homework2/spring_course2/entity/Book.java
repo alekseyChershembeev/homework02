@@ -1,56 +1,42 @@
 package com.spring.homework2.spring_course2.entity;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+
+import java.util.List;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  * Created by Chershembeev_AE
- * Date: 19.08.2019
- * Time: 17:43.
+ * Date: 30.08.2019
+ * Time: 14:49.
  */
+
 @Data
+@AllArgsConstructor
 @NoArgsConstructor
-@Entity
-@Table(name = "books")
+@Document(collection = "books")
 public class Book {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "bookId")
-    private long bookId;
-    @Column(name = "bookName")
-    private String bookName;
+    private String id;
+    private String title;
+    private String author;
+    private String genre;
+    private List<Comment>comments;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "authorId")
-    private Author bookAuthor;
-
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "genreId")
-    private Genre bookGenre;
-
-
-    /**
-     * Instantiates a new Book.
-     *
-     * @param bookName   the book name
-     * @param bookAuthor the book author
-     * @param bookGenre  the book genre
-     */
-    public Book(String bookName, Author bookAuthor, Genre bookGenre) {
-        this.bookName = bookName;
-        this.bookAuthor = bookAuthor;
-        this.bookGenre = bookGenre;
+    public Book(String title, String author, String genre) {
+        this.title = title;
+        this.author = author;
+        this.genre = genre;
     }
 
-
+    public Book(String id, String title, String author, String genre) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.genre = genre;
+    }
 }

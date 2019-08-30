@@ -1,53 +1,36 @@
 package com.spring.homework2.spring_course2.service;
 
 import com.spring.homework2.spring_course2.entity.Book;
+import com.spring.homework2.spring_course2.entity.Comment;
 import java.util.List;
 
 /**
  * Created by Chershembeev_AE
- * Date: 20.08.2019
- * Time: 15:39.
+ * Date: 30.08.2019
+ * Time: 14:50.
  */
+
 public interface BookService {
 
-    /**
-     * Create long.
-     *
-     * @param book the book
-     * @return the long
-     */
-    long create(Book book);
+    List<Book> getAllBooks();
 
-    /**
-     * Update boolean.
-     *
-     * @param book the book
-     * @return the boolean
-     */
-    boolean update(Book book);
+    List<String> getAllAuthorsNames();
 
-    /**
-     * Gets by id.
-     *
-     * @param id the id
-     * @return the by id
-     */
-    Book getById(long id);
+    List<String> getAllGenres();
 
-    /**
-     * Gets all.
-     *
-     * @return the all
-     */
-    List<Book> getAll();
+    List<Book> getBooksByAuthorsName(String name);
 
-    /**
-     * Delete boolean.
-     *
-     * @param id the id
-     * @return the boolean
-     */
-    boolean delete(long id);
+    List<List<Comment>> getAllComments(String bookId);
 
-//    List<Book> getBooksByAuthorsName(Author author);
+    boolean addBook(Book book);
+
+    boolean addComment(String bookId, String comment);
+
+    boolean updateBookTitleById(String id, String newTitle);
+
+    boolean deleteBookById(String bookId);
+
+    boolean deleteCommentById(String bookId);
+
+    void deleteAll();
 }

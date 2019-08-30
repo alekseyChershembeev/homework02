@@ -503,3 +503,15 @@ com.spring.homework2.spring_course2.exceptions.CommentException: Comment not fou
 2019-08-22 18:14:40 INFO  LoggingAspect:30 - With args : [1]
 2019-08-22 18:14:40 INFO  LoggingAspect:29 - Method : delete
 2019-08-22 18:14:40 INFO  LoggingAspect:30 - With args : [1]
+2019-08-30 11:43:22 INFO  LoggingAspect:29 - Method : getAllBooksNames
+2019-08-30 11:43:22 INFO  LoggingAspect:30 - With args : []
+2019-08-30 11:43:22 INFO  LoggingAspect:29 - Method : getAll
+2019-08-30 11:43:22 INFO  LoggingAspect:30 - With args : []
+2019-08-30 16:00:47 INFO  LoggingAspect:29 - Method : addNewBook
+2019-08-30 16:00:47 INFO  LoggingAspect:30 - With args : [aa, aa, aa]
+2019-08-30 16:00:47 INFO  LoggingAspect:29 - Method : addBook
+2019-08-30 16:00:47 INFO  LoggingAspect:30 - With args : [Book(id=null, title=aa, author=aa, genre=aa, comments=null)]
+2019-08-30 16:00:58 INFO  LoggingAspect:29 - Method : getAllBooksNames
+2019-08-30 16:00:58 INFO  LoggingAspect:30 - With args : []
+2019-08-30 16:00:58 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-08-30 16:00:59 INFO  LoggingAspect:30 - With args : []

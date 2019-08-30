@@ -2,11 +2,13 @@ package com.spring.homework2.spring_course2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 /**
  * The type Spring course 2 application.
  */
 @SpringBootApplication
+@EnableMongoRepositories
 public class SpringCourse2Application {
 
     /**

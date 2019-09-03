@@ -31,6 +31,8 @@ Hibernate только в качестве JPA
 Покрыть DAO тестами используя H2 базу данных и
 соответствующий H2 Hibernate диалект.
 
+(https://github.com/alekseyChershembeev/spring_course_2/tree/change_to_jpa "Изменения в ветке")
+
 Домашнее задание 02.03
 =============================
 
@@ -39,6 +41,8 @@ Hibernate только в качестве JPA
 
 Реализовать весь функционал работы с БД в приложении
 книг с использованием spring data jpa репозиториев.
+
+(https://github.com/alekseyChershembeev/spring_course_2/tree/migrate-to-spring-data-jpa "Изменения в ветке")
 
 Домашнее задание 02.04
 =============================
@@ -49,4 +53,8 @@ MogoDB и spring data для хранения
 Тесты можно реализовать с помощью
 spring boot strter
 embedded mongodb.
+
+(https://github.com/alekseyChershembeev/spring_course_2/tree/migrate-to-mongodb "Изменения в ветке")
+
+
 

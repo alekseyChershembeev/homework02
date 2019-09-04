@@ -15,7 +15,7 @@ Spring JDBC и реляционную базу.
 Предусмотреть таблицы авторов, книг и жанров.
 Покрыть тестами, насколько это возможно.
 
-(https://github.com/alekseyChershembeev/spring_course_2/tree/Spring-JDBC/ "Изменения в ветке")
+[Изменения в ветке 1](https://github.com/alekseyChershembeev/spring_course_2/tree/Spring-JDBC/)
 
 Домашнее задание 02.02
 =============================
@@ -31,7 +31,7 @@ Hibernate только в качестве JPA
 Покрыть DAO тестами используя H2 базу данных и
 соответствующий H2 Hibernate диалект.
 
-(https://github.com/alekseyChershembeev/spring_course_2/tree/change_to_jpa "Изменения в ветке")
+[Изменения в ветке 2](https://github.com/alekseyChershembeev/spring_course_2/tree/change_to_jpa)
 
 Домашнее задание 02.03
 =============================
@@ -42,7 +42,7 @@ Hibernate только в качестве JPA
 Реализовать весь функционал работы с БД в приложении
 книг с использованием spring data jpa репозиториев.
 
-(https://github.com/alekseyChershembeev/spring_course_2/tree/migrate-to-spring-data-jpa "Изменения в ветке")
+[Изменения в ветке 3](https://github.com/alekseyChershembeev/spring_course_2/tree/migrate-to-spring-data-jpa)
 
 Домашнее задание 02.04
 =============================
@@ -54,7 +54,8 @@ MogoDB и spring data для хранения
 spring boot strter
 embedded mongodb.
 
-(https://github.com/alekseyChershembeev/spring_course_2/tree/migrate-to-mongodb "Изменения в ветке")
+[Изменения в ветке 4](https://github.com/alekseyChershembeev/spring_course_2/tree/migrate-to-mongodb)
+
 
 
 

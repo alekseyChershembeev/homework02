@@ -35,18 +35,5 @@ public class BookController {
         return "edit";
     }
 
-//    @PostMapping("/add")
-//    public String addNewBook(@RequestParam(name = "author") String authors,
-//                             @RequestParam(name = "title") String title,
-//                             @RequestParam(name = "genre") String genre,
-//                             Model model) {
-//
-//        if (bookService.addBook(new Book(title, authors, genre))) {
-//            model.addAttribute("addResult");
-//        }
-//        return "edit";
-//    }
-
-
 
 }

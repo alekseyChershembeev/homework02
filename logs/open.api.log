@@ -515,3 +515,190 @@ com.spring.homework2.spring_course2.exceptions.CommentException: Comment not fou
 2019-08-30 16:00:58 INFO  LoggingAspect:30 - With args : []
 2019-08-30 16:00:58 INFO  LoggingAspect:29 - Method : getAllBooks
 2019-08-30 16:00:59 INFO  LoggingAspect:30 - With args : []
+2019-09-05 13:05:27 INFO  LoggingAspect:29 - Method : listPage
+2019-09-05 13:05:27 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-05 13:05:27 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-05 13:05:27 INFO  LoggingAspect:30 - With args : []
+2019-09-05 13:05:28 INFO  LoggingAspect:29 - Method : listPage
+2019-09-05 13:05:28 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-05 13:05:28 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-05 13:05:28 INFO  LoggingAspect:30 - With args : []
+2019-09-05 13:05:54 INFO  LoggingAspect:29 - Method : listPage
+2019-09-05 13:05:54 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-05 13:05:54 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-05 13:05:54 INFO  LoggingAspect:30 - With args : []
+2019-09-05 13:25:25 INFO  LoggingAspect:29 - Method : getAllBooksNames
+2019-09-05 13:25:25 INFO  LoggingAspect:30 - With args : []
+2019-09-05 13:25:25 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-05 13:25:25 INFO  LoggingAspect:30 - With args : []
+2019-09-05 13:25:54 INFO  LoggingAspect:29 - Method : listPage
+2019-09-05 13:25:54 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-05 13:25:54 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-05 13:25:54 INFO  LoggingAspect:30 - With args : []
+2019-09-05 13:26:49 INFO  LoggingAspect:29 - Method : listPage
+2019-09-05 13:26:49 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-05 13:26:49 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-05 13:26:49 INFO  LoggingAspect:30 - With args : []
+2019-09-05 13:28:17 INFO  LoggingAspect:29 - Method : listPage
+2019-09-05 13:28:17 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-05 13:28:46 INFO  LoggingAspect:29 - Method : listPage
+2019-09-05 13:28:46 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-05 13:32:31 INFO  LoggingAspect:29 - Method : listPage
+2019-09-05 13:32:31 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-05 13:32:31 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-05 13:32:31 INFO  LoggingAspect:30 - With args : []
+2019-09-05 13:33:25 INFO  LoggingAspect:29 - Method : listPage
+2019-09-05 13:33:25 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-05 13:33:25 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-05 13:33:25 INFO  LoggingAspect:30 - With args : []
+2019-09-05 13:35:56 INFO  LoggingAspect:29 - Method : listPage
+2019-09-05 13:35:56 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-05 13:35:56 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-05 13:35:56 INFO  LoggingAspect:30 - With args : []
+2019-09-05 13:35:59 INFO  LoggingAspect:29 - Method : listPage
+2019-09-05 13:35:59 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-05 13:35:59 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-05 13:35:59 INFO  LoggingAspect:30 - With args : []
+2019-09-05 13:40:08 INFO  LoggingAspect:29 - Method : listPage
+2019-09-05 13:40:08 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-05 13:40:08 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-05 13:40:08 INFO  LoggingAspect:30 - With args : []
+2019-09-05 13:40:10 INFO  LoggingAspect:29 - Method : listPage
+2019-09-05 13:40:10 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-05 13:40:10 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-05 13:40:10 INFO  LoggingAspect:30 - With args : []
+2019-09-05 13:44:25 INFO  LoggingAspect:29 - Method : listPage
+2019-09-05 13:44:25 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-05 13:44:25 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-05 13:44:25 INFO  LoggingAspect:30 - With args : []
+2019-09-05 13:45:32 INFO  LoggingAspect:29 - Method : listPage
+2019-09-05 13:45:32 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-05 13:45:32 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-05 13:45:32 INFO  LoggingAspect:30 - With args : []
+2019-09-05 16:41:56 INFO  LoggingAspect:29 - Method : listPage
+2019-09-05 16:41:56 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-05 16:41:56 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-05 16:41:56 INFO  LoggingAspect:30 - With args : []
+2019-09-05 16:43:19 INFO  LoggingAspect:29 - Method : listPage
+2019-09-05 16:43:19 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-05 16:43:19 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-05 16:43:19 INFO  LoggingAspect:30 - With args : []
+2019-09-05 16:43:46 INFO  LoggingAspect:29 - Method : listPage
+2019-09-05 16:43:46 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-05 16:43:46 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-05 16:43:46 INFO  LoggingAspect:30 - With args : []
+2019-09-05 16:44:32 INFO  LoggingAspect:29 - Method : listPage
+2019-09-05 16:44:32 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-05 16:44:32 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-05 16:44:32 INFO  LoggingAspect:30 - With args : []
+2019-09-05 16:48:38 INFO  LoggingAspect:29 - Method : listPage
+2019-09-05 16:48:38 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-05 16:48:38 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-05 16:48:38 INFO  LoggingAspect:30 - With args : []
+2019-09-05 16:58:13 INFO  LoggingAspect:29 - Method : listPage
+2019-09-05 16:58:13 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-05 16:58:13 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-05 16:58:13 INFO  LoggingAspect:30 - With args : []
+2019-09-05 17:00:48 INFO  LoggingAspect:29 - Method : listPage
+2019-09-05 17:00:48 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-05 17:00:48 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-05 17:00:48 INFO  LoggingAspect:30 - With args : []
+2019-09-05 17:02:26 INFO  LoggingAspect:29 - Method : listPage
+2019-09-05 17:02:26 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-05 17:02:26 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-05 17:02:26 INFO  LoggingAspect:30 - With args : []
+2019-09-05 17:02:46 INFO  LoggingAspect:29 - Method : listPage
+2019-09-05 17:02:46 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-05 17:02:46 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-05 17:02:46 INFO  LoggingAspect:30 - With args : []
+2019-09-05 17:04:04 INFO  LoggingAspect:29 - Method : listPage
+2019-09-05 17:04:04 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-05 17:04:04 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-05 17:04:04 INFO  LoggingAspect:30 - With args : []
+2019-09-05 17:30:35 INFO  LoggingAspect:29 - Method : listPage
+2019-09-05 17:30:35 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-05 17:30:35 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-05 17:30:35 INFO  LoggingAspect:30 - With args : []
+2019-09-05 17:30:38 INFO  LoggingAspect:29 - Method : listPage
+2019-09-05 17:30:38 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-05 17:30:38 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-05 17:30:38 INFO  LoggingAspect:30 - With args : []
+2019-09-05 17:30:39 INFO  LoggingAspect:29 - Method : editPage
+2019-09-05 17:30:39 INFO  LoggingAspect:30 - With args : [5d691dff3ecf641ebcc24cf8, {}]
+2019-09-05 17:30:39 INFO  LoggingAspect:29 - Method : findBookById
+2019-09-05 17:30:39 INFO  LoggingAspect:30 - With args : [5d691dff3ecf641ebcc24cf8]
+2019-09-06 11:05:13 INFO  LoggingAspect:29 - Method : listPage
+2019-09-06 11:05:13 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-06 11:05:13 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-06 11:05:13 INFO  LoggingAspect:30 - With args : []
+2019-09-06 11:05:16 INFO  LoggingAspect:29 - Method : editPage
+2019-09-06 11:05:16 INFO  LoggingAspect:30 - With args : [5d691dff3ecf641ebcc24cf8, {}]
+2019-09-06 11:05:16 INFO  LoggingAspect:29 - Method : findBookById
+2019-09-06 11:05:16 INFO  LoggingAspect:30 - With args : [5d691dff3ecf641ebcc24cf8]
+2019-09-06 11:05:44 INFO  LoggingAspect:29 - Method : listPage
+2019-09-06 11:05:44 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-06 11:05:44 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-06 11:05:44 INFO  LoggingAspect:30 - With args : []
+2019-09-06 11:05:46 INFO  LoggingAspect:29 - Method : editPage
+2019-09-06 11:05:46 INFO  LoggingAspect:30 - With args : [5d691dff3ecf641ebcc24cf8, {}]
+2019-09-06 11:05:46 INFO  LoggingAspect:29 - Method : findBookById
+2019-09-06 11:05:46 INFO  LoggingAspect:30 - With args : [5d691dff3ecf641ebcc24cf8]
+2019-09-06 11:06:42 INFO  LoggingAspect:29 - Method : editPage
+2019-09-06 11:06:42 INFO  LoggingAspect:30 - With args : [5d691dff3ecf641ebcc24cf8, {}]
+2019-09-06 11:06:42 INFO  LoggingAspect:29 - Method : findBookById
+2019-09-06 11:06:42 INFO  LoggingAspect:30 - With args : [5d691dff3ecf641ebcc24cf8]
+2019-09-06 11:09:15 INFO  LoggingAspect:29 - Method : listPage
+2019-09-06 11:09:15 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-06 11:09:15 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-06 11:09:15 INFO  LoggingAspect:30 - With args : []
+2019-09-06 11:09:18 INFO  LoggingAspect:29 - Method : editPage
+2019-09-06 11:09:18 INFO  LoggingAspect:30 - With args : [5d691dff3ecf641ebcc24cf8, {}]
+2019-09-06 11:09:18 INFO  LoggingAspect:29 - Method : findBookById
+2019-09-06 11:09:18 INFO  LoggingAspect:30 - With args : [5d691dff3ecf641ebcc24cf8]
+2019-09-06 11:10:30 INFO  LoggingAspect:29 - Method : editPage
+2019-09-06 11:10:30 INFO  LoggingAspect:30 - With args : [5d691dff3ecf641ebcc24cf8, {}]
+2019-09-06 11:10:30 INFO  LoggingAspect:29 - Method : findBookById
+2019-09-06 11:10:30 INFO  LoggingAspect:30 - With args : [5d691dff3ecf641ebcc24cf8]
+2019-09-06 11:10:54 INFO  LoggingAspect:29 - Method : editPage
+2019-09-06 11:10:54 INFO  LoggingAspect:30 - With args : [5d691dff3ecf641ebcc24cf8, {}]
+2019-09-06 11:10:54 INFO  LoggingAspect:29 - Method : findBookById
+2019-09-06 11:10:54 INFO  LoggingAspect:30 - With args : [5d691dff3ecf641ebcc24cf8]
+2019-09-06 11:21:05 INFO  LoggingAspect:29 - Method : listPage
+2019-09-06 11:21:05 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-06 11:21:05 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-06 11:21:05 INFO  LoggingAspect:30 - With args : []
+2019-09-06 11:21:14 INFO  LoggingAspect:29 - Method : editPage
+2019-09-06 11:21:14 INFO  LoggingAspect:30 - With args : [, {}]
+2019-09-06 11:21:14 INFO  LoggingAspect:29 - Method : findBookById
+2019-09-06 11:21:14 INFO  LoggingAspect:30 - With args : []
+2019-09-06 11:21:14 ERROR LoggingAspect:36 - Exception from class org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint
+2019-09-06 11:21:14 ERROR LoggingAspect:37 - Method call : editPage
+2019-09-06 11:21:14 ERROR LoggingAspect:38 - With args : [, {}]
+2019-09-06 11:29:48 INFO  LoggingAspect:29 - Method : listPage
+2019-09-06 11:29:48 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-06 11:29:48 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-06 11:29:48 INFO  LoggingAspect:30 - With args : []
+2019-09-06 11:29:49 INFO  LoggingAspect:29 - Method : editPage
+2019-09-06 11:29:49 INFO  LoggingAspect:30 - With args : [5d691dff3ecf641ebcc24cf8, {}]
+2019-09-06 11:29:49 INFO  LoggingAspect:29 - Method : findBookById
+2019-09-06 11:29:49 INFO  LoggingAspect:30 - With args : [5d691dff3ecf641ebcc24cf8]
+2019-09-06 12:02:29 INFO  LoggingAspect:29 - Method : listPage
+2019-09-06 12:02:29 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-06 12:02:29 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-06 12:02:29 INFO  LoggingAspect:30 - With args : []
+2019-09-06 12:02:32 INFO  LoggingAspect:29 - Method : editPage
+2019-09-06 12:02:32 INFO  LoggingAspect:30 - With args : [5d691dff3ecf641ebcc24cf8, {}]
+2019-09-06 12:02:32 INFO  LoggingAspect:29 - Method : findBookById
+2019-09-06 12:02:32 INFO  LoggingAspect:30 - With args : [5d691dff3ecf641ebcc24cf8]
+2019-09-06 12:02:33 INFO  LoggingAspect:29 - Method : listPage
+2019-09-06 12:02:33 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-06 12:02:33 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-06 12:02:33 INFO  LoggingAspect:30 - With args : []
+2019-09-06 12:02:34 INFO  LoggingAspect:29 - Method : editPage
+2019-09-06 12:02:34 INFO  LoggingAspect:30 - With args : [5d691dff3ecf641ebcc24cf8, {}]
+2019-09-06 12:02:34 INFO  LoggingAspect:29 - Method : findBookById
+2019-09-06 12:02:34 INFO  LoggingAspect:30 - With args : [5d691dff3ecf641ebcc24cf8]
+2019-09-06 12:02:35 INFO  LoggingAspect:29 - Method : listPage
+2019-09-06 12:02:35 INFO  LoggingAspect:30 - With args : [{}]
+2019-09-06 12:02:35 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-09-06 12:02:35 INFO  LoggingAspect:30 - With args : []

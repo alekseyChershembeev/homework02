@@ -3,6 +3,7 @@ package com.spring.homework2.spring_course2.service;
 import com.spring.homework2.spring_course2.entity.Book;
 import com.spring.homework2.spring_course2.entity.Comment;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Created by Chershembeev_AE
@@ -19,6 +20,8 @@ public interface BookService {
     List<String> getAllGenres();
 
     List<Book> getBooksByAuthorsName(String name);
+
+    Optional<Book> findBookById(String bookId);
 
     List<List<Comment>> getAllComments(String bookId);
 

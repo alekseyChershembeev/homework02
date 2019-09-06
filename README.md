@@ -56,6 +56,25 @@ embedded mongodb.
 
 [Изменения в ветке: migrate-to-mongodb](https://github.com/alekseyChershembeev/spring_course_2/tree/migrate-to-mongodb)
 
+Домашнее задание 03.01
+=============================
+
+Домашнее задание
+CRUD приложение с
+Web UI и хранением данных в БД.
+
+Создайте приложение с хранением сущностей в БД (можно
+взять DAOs из прошлых занятий).
+
+Использовать классический
+View , предусмотреть страницу
+отображения всех сущностей и создания/редактирования.
+
+View
+на Thymeleaf , classic Controllers
+
+[Изменения в ветке: ](https://github.com/alekseyChershembeev/spring_course_2/view-thymeleaf-classic-controllers/)
+
 
 
 

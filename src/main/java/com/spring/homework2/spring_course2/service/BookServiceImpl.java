@@ -56,6 +56,11 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
+    public Optional<Book> findBookById(String bookId) {
+        return bookRepository.findById(bookId);
+    }
+
+    @Override
     public List<List<Comment>> getAllComments(String bookId) {
         return bookRepository.findAll()
                 .stream()

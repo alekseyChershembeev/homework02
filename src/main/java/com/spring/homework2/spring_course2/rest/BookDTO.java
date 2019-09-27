@@ -1,10 +1,23 @@
 package com.spring.homework2.spring_course2.rest;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 /**
  * Created by Chershembeev_AE
- * Date: 05.09.2019
- * Time: 17:05.
+ * Date: 17.09.2019
+ * Time: 16:51.
  */
 
+@Data
+@NoArgsConstructor
 public class BookDTO {
+
+    private String id;
+    private String authors;
+    private String title;
+    private String genre;
+    private String comments;
+
+
 }

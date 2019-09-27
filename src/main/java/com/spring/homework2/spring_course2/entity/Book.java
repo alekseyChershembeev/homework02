@@ -2,7 +2,6 @@ package com.spring.homework2.spring_course2.entity;
 
 
 import java.util.List;
-//import javax.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

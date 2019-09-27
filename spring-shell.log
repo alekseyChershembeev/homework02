@@ -165,3 +165,16 @@
 1567679097299:add-book aa aa aa aa
 1567679116046:add-book aaa aaa aaa aa aa
 1567679125551:all-books
+1568727641974:add-book qwer qwe qwe qw
+1568727652242:add-book www www www
+1569317494075:all-books
+1569501272558:delete-book 5d691dff3ecf641ebcc24cf8
+1569501319070:all-books
+1569501334029:delete-book 5d691dff3ecf641ebcc24cf8
+1569501342211:all-books
+1569510701356:add-book qwe qwe qwe
+1569510862818:all-books
+1569511038276:add-book qwe qwe qwerty
+1569511047083:all-books
+1569511455062:add-book title author genre
+1569583021773:all-books

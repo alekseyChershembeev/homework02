@@ -102,6 +102,21 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
+    public boolean updateBookById(String id, String newTitle,String newAuthor, String newGenre) {
+
+        Optional<Book> book = bookRepository.findById(id);
+
+        book.ifPresent(b -> {
+            book.get().setTitle(newTitle);
+            book.get().setAuthor(newAuthor);
+            book.get().setGenre(newGenre);
+            bookRepository.save(book.get());
+        });
+
+        return book.isPresent();
+    }
+
+    @Override
     public boolean deleteBookById(String bookId) {
 
         Optional<Book> book = bookRepository.findById(bookId);

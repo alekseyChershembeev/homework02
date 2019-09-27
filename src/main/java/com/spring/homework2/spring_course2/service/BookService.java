@@ -35,5 +35,7 @@ public interface BookService {
 
     boolean deleteCommentById(String bookId);
 
+    public boolean updateBookById(String id, String newTitle,String newAuthor, String newGenre);
+
     void deleteAll();
 }

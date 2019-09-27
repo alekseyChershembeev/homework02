@@ -79,8 +79,8 @@ public class BookShell {
             final @ShellOption(help = "genre") String genre) {
 
         if ((bookService
-                .addBook(new Book(id, nameBook, authorName, genre
-                )))) {
+                .updateBookById(id, nameBook, authorName, genre)
+                )) {
             return "Book was update successfully";
         }
         else {
@@ -98,7 +98,7 @@ public class BookShell {
     public String deleteBookById(final @ShellOption(help = "id") String id) {
 
 
-        if (id.matches("\\d+") && bookService
+        if (bookService
                 .deleteBookById(id)) {
             return "Book was delete successfully";
         } else {

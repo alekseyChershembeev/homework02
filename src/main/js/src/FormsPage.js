@@ -1,12 +1,18 @@
 import React from "react";
-import {MDBBtn, MDBCol, MDBRow} from "mdbreact";
+import {MDBCol, MDBRow} from "mdbreact";
 
 class FormsPage extends React.Component {
+
+
+    constructor(props) {
+        super(props);
+    }
+
     state = {
-        title: "TitleTest",
-        author: "AuthorTest",
-        genre: "GenreTest",
-        comments: "CommentsTest",
+        title: this.props.title,
+        authors: this.props.authors,
+        genre: this.props.genre,
+        comments: this.props.comments,
     };
 
     submitHandler = event => {
@@ -32,13 +38,13 @@ class FormsPage extends React.Component {
                         Title
                     </label>
                     <input
-                        value={state1.title}
+                        value={this.state.title}
                         onChange={changeHandler1}
                         type="text"
                         id="defaultFormRegisterPasswordEx1"
                         className="form-control"
                         name="title"
-                        placeholder="Comments"
+                        placeholder="Title"
                         required
                     />
                     <div className="invalid-feedback">
@@ -60,13 +66,13 @@ class FormsPage extends React.Component {
                         Author
                     </label>
                     <input
-                        value={this.state.author}
+                        value={this.state.authors}
                         onChange={this.changeHandler}
                         type="text"
                         id="defaultFormRegisterPasswordEx1"
                         className="form-control"
                         name="author"
-                        placeholder="Comments"
+                        placeholder="Author"
                         required
                     />
                     <div className="invalid-feedback">
@@ -94,7 +100,7 @@ class FormsPage extends React.Component {
                         id="defaultFormRegisterPasswordEx1"
                         className="form-control"
                         name="genre"
-                        placeholder="Comments"
+                        placeholder="Genre"
                         required
                     />
                     <div className="invalid-feedback">
@@ -146,13 +152,11 @@ class FormsPage extends React.Component {
                 >
 
                     {getTitle.call(this)}
-                    {getGenre.call(this)}
                     {getAuthor.call(this)}
+                    {getGenre.call(this)}
                     {getComments.call(this)}
 
-                    <MDBBtn color="primary" type="submit">
-                        Apply
-                    </MDBBtn>
+
                 </form>
             </div>
         );

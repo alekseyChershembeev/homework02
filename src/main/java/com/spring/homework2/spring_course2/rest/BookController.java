@@ -45,8 +45,8 @@ public class BookController {
         final Optional<Book> book = bookService
                 .findBookById(id);
 
-        return book.map(value -> new ResponseEntity<>(BookMapper.mapBookToDTO(value), HttpStatus.OK)).orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
-
+        return book.map(value -> new ResponseEntity<>(BookMapper.mapBookToDTO(value), HttpStatus.OK))
+                .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
 
     }
 
@@ -54,7 +54,7 @@ public class BookController {
     public ResponseEntity<Book> addNewBook(@RequestBody Book book) {
         return bookService
                 .addBook(book) ?
-                new ResponseEntity<>((book), HttpStatus.OK) :
+                new ResponseEntity<>((book), HttpStatus.CREATED) :
                 new ResponseEntity<>(HttpStatus.NOT_FOUND);
 
     }

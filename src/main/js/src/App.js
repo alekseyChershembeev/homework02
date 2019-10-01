@@ -1,8 +1,7 @@
 
 import React, {Component} from 'react';
 import SimpleTable from "./SimpleTable";
-import FormsPage from "./FormsPage";
-// import FormsPage from "./FormsPage";
+
 
 class App extends Component {
 
@@ -24,12 +23,6 @@ class App extends Component {
     return (
         <React.Fragment>
             <SimpleTable books ={this.state.books}> </SimpleTable>
-            <div>
-                <FormsPage>
-
-                </FormsPage>
-            </div>
-
         </React.Fragment>
     )
   }

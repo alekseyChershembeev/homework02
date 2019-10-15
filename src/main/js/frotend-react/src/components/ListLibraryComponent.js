@@ -10,7 +10,7 @@ class ListLibraryComponent extends Component {
             message: null
         };
         this.refreshBooks = this.refreshBooks.bind(this);
-        this.deleteBookClicked = this.deleteBookClicked(this);
+        this.deleteBookClicked = this.deleteBookClicked.bind(this);
         this.updateBookClicked = this.updateBookClicked.bind(this);
         this.addBookClicked = this.addBookClicked.bind(this);
 
@@ -21,7 +21,7 @@ class ListLibraryComponent extends Component {
     }
 
     refreshBooks() {
-        LibraryDataService.retrieveAllBooks()//HARDCODED
+        LibraryDataService.retrieveAllBooks()
             .then(
                 response => {
                     console.log(response);
@@ -41,7 +41,7 @@ class ListLibraryComponent extends Component {
     }
 
     updateBookClicked(id) {
-        console.log('update ' + id)
+        console.log('update ' + id);
         this.props.history.push(`/books/${id}`)
     }
 
@@ -81,7 +81,7 @@ class ListLibraryComponent extends Component {
                                         <td>{book.authors}</td>
                                         <td>{book.genre}</td>
                                         <td>{book.comment}</td>
-                                        <td><button className="btn btn-warning" onClick={() => this.updateBookClicked(book.id)}>Edit</button></td>
+                                        <td><button className="btn" onClick={() => this.updateBookClicked(book.id)}>Edit</button></td>
                                         <td><button className="btn btn-warning" onClick={() => this.deleteBookClicked(book.id)}>Delete</button></td>
                                     </tr>
                             )

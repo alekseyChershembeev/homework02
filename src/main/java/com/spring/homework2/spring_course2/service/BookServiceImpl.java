@@ -71,9 +71,9 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public boolean addBook(Book book) {
+    public Book addBook(Book book) {
         book = bookRepository.save(book);
-        return book.getId() != null;
+        return book;
     }
 
     @Override

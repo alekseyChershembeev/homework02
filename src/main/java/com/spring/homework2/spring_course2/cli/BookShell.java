@@ -49,13 +49,14 @@ public class BookShell {
      */
     @ShellMethod(value = "add new Book", key = "add-book")
     public String addNewBook(
-            final @ShellOption(help = "genre") String genre,
             final @ShellOption(help = "title") String name,
-            final @ShellOption(help = "authorName") String authorName) {
+            final @ShellOption(help = "authorName") String authorName,
+            final @ShellOption(help = "genre") String genre){
+
 
         if (bookService
                 .addBook(new Book(name, authorName, genre
-                ))) {
+                ))!=null) {
             return "New Book was added successfully";
         } else {
             return "Book already exist ";

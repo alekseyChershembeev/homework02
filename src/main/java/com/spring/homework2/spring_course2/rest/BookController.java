@@ -4,12 +4,14 @@ import com.spring.homework2.spring_course2.entity.Book;
 import com.spring.homework2.spring_course2.entity.Comment;
 import com.spring.homework2.spring_course2.service.BookService;
 import com.spring.homework2.spring_course2.util.BookMapper;
+import java.net.URI;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 /**
  * Created by Chershembeev_AE
@@ -30,15 +32,23 @@ public class BookController {
 
     @GetMapping("/books")
     public List<BookDTO> listPage() {
-        System.out.println(bookService.getAllBooks());
         return BookMapper.mapBookListToDTO(bookService.getAllBooks());
     }
 
     @PostMapping("/books")
     public ResponseEntity<Book> addNewBook(@RequestBody Book book) {
-        return bookService
-                .addBook(book) ?
-                new ResponseEntity<>((book), HttpStatus.CREATED) :
+//        Book createdBook = bookService.addBook(book);
+////        BookDTO createBook = BookMapper.mapBookToDTO(book);
+//
+//
+//        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(createdBook.getId())
+//                .toUri();
+//
+//        return ResponseEntity.created(uri).build();
+
+
+        return bookService.addBook(book) != null?
+                new ResponseEntity<>((book), HttpStatus.OK) :
                 new ResponseEntity<>(HttpStatus.NOT_FOUND);
 
     }

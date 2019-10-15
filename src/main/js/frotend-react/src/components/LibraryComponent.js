@@ -13,7 +13,7 @@ class LibraryComponent extends Component {
             title: '',
             authors: '',
             genre: '',
-            comment: ''
+            comments: ''
         };
         this.onSubmit = this.onSubmit.bind(this);
         this.validate = this.validate.bind(this);
@@ -34,7 +34,7 @@ class LibraryComponent extends Component {
                 title: response.data.title,
                 authors: response.data.authors,
                 genre: response.data.genre,
-                comment: response.data.comment,
+                comments: response.data.comments,
             }))
     }
 
@@ -45,7 +45,7 @@ class LibraryComponent extends Component {
             title: values.title,
             authors: values.authors,
             genre: values.genre,
-            comment: values.comment,
+            comments: values.comments,
         };
 
         if (this.state.id === -1) {
@@ -62,14 +62,14 @@ class LibraryComponent extends Component {
 
     render() {
 
-        let {id, title, authors, genre, comment } = this.state;
+        let {id, title, authors, genre, comments} = this.state;
 
         return (
             <div>
                 <h3>Book</h3>
                 <div className="container">
                     <Formik
-                        initialValues={{id, title, authors, genre, comment}}
+                        initialValues={{id, title, authors, genre, comments}}
                         onSubmit={this.onSubmit}
                         validateOnChange={false}
                         validateOnBlur={false}
@@ -79,8 +79,8 @@ class LibraryComponent extends Component {
                         {
                             (props) => (
                                 <Form>
-                                    <ErrorMessage name="description" component="div"
-                                                  className="alert alert-warning" />
+                                    <ErrorMessage name="title" component="div"
+                                                  className="alert alert-warning"/>
                                     <fieldset className="form-group">
                                         <label>Id</label>
                                         <Field className="form-control" type="text" name="id" disabled/>
@@ -98,8 +98,8 @@ class LibraryComponent extends Component {
                                         <Field className="form-control" type="text" name="genre"/>
                                     </fieldset>
                                     <fieldset className="form-group">
-                                        <label>comment</label>
-                                        <Field className="form-control" type="text" name="comment"/>
+                                        <label>comments</label>
+                                        <Field className="form-control" type="text" name="comments"/>
                                     </fieldset>
                                     <button className="btn btn-success" type="submit">Save</button>
                                 </Form>
@@ -113,7 +113,8 @@ class LibraryComponent extends Component {
     }
 
     validate(values) {
-        let errors = {}
+        let errors = {};
+
         if (!values.title) {
             errors.title = 'Enter a title'
         } else if (values.title.length < 5) {

@@ -130,16 +130,16 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public boolean deleteCommentById(String bookId) {
+    public Book deleteCommentById(String bookId) {
         Optional<Book> book = bookRepository.findById(bookId);
 
         if (book.isPresent()) {
             Book book1 = book.get();
             book1.setComments(null);
             bookRepository.save(book1);
-            return true;
+            return book1;
         }
-        return false;
+        return null;
     }
 
     @Override

@@ -161,7 +161,7 @@ public class BookShell {
             final @ShellOption(help = "id comment") String id) {
 
 
-        if (id.matches("\\d+") && bookService.deleteCommentById(id)) {
+        if (id.matches("\\d+")) {
             return "Comment was delete successfully";
         } else {
             return "Comment doesn't exist";

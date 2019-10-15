@@ -34,13 +34,17 @@ public class BookController {
         return BookMapper.mapBookListToDTO(bookService.getAllBooks());
     }
 
-    @GetMapping("/comment")
-    public List<List<Comment>> showCommentsForBookId(@RequestParam(name = "id") String id) {
-        return (bookService.getAllComments(id));
+    @PostMapping("/books")
+    public ResponseEntity<Book> addNewBook(@RequestBody Book book) {
+        return bookService
+                .addBook(book) ?
+                new ResponseEntity<>((book), HttpStatus.CREATED) :
+                new ResponseEntity<>(HttpStatus.NOT_FOUND);
+
     }
 
-    @PutMapping("/edit")
-    public ResponseEntity<BookDTO> showBookForEdit(@RequestParam(name = "id") String id) {
+    @PutMapping("/books{id}")
+    public ResponseEntity<BookDTO> showBookForEdit(@PathVariable(name = "id") String id) {
 
         final Optional<Book> book = bookService
                 .findBookById(id);
@@ -50,22 +54,25 @@ public class BookController {
 
     }
 
-    @PostMapping("/add")
-    public ResponseEntity<Book> addNewBook(@RequestBody Book book) {
-        return bookService
-                .addBook(book) ?
-                new ResponseEntity<>((book), HttpStatus.CREATED) :
-                new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    @DeleteMapping("/books/{id}")
+    public ResponseEntity<Void> deleteBook(@PathVariable(name = "id") String id) {
+        return bookService.deleteBookById(id)
+                ? ResponseEntity.noContent().build()
+                : ResponseEntity.notFound().build();
 
     }
 
-
-    @DeleteMapping("/delete")
-    public ResponseEntity deleteBook(@RequestParam(name = "id") String id) {
-        return bookService.deleteBookById(id) ?
-                new ResponseEntity(HttpStatus.OK) :
-                new ResponseEntity(HttpStatus.NOT_FOUND);
+    @GetMapping("/comments{id}")
+    public List<List<Comment>> showCommentsForBookId(@PathVariable(name = "id") String id) {
+        return (bookService.getAllComments(id));
     }
+
+
+
+
+
+
+
 
 
 }

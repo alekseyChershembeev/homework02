@@ -33,7 +33,7 @@ public interface BookService {
 
     boolean deleteBookById(String bookId);
 
-    boolean deleteCommentById(String bookId);
+    Book deleteCommentById(String bookId);
 
     public boolean updateBookById(String id, String newTitle,String newAuthor, String newGenre);
 

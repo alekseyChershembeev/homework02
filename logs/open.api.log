@@ -2992,3 +2992,865 @@ com.spring.homework2.spring_course2.exceptions.CommentException: Comment not fou
 2019-10-15 18:39:36 INFO  LoggingAspect:30 - With args : []
 2019-10-15 18:39:36 INFO  LoggingAspect:29 - Method : getAllBooks
 2019-10-15 18:39:36 INFO  LoggingAspect:30 - With args : []
+2019-10-16 10:26:46 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 10:26:46 INFO  LoggingAspect:30 - With args : []
+2019-10-16 10:26:46 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 10:26:46 INFO  LoggingAspect:30 - With args : []
+2019-10-16 10:31:56 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 10:31:56 INFO  LoggingAspect:30 - With args : []
+2019-10-16 10:31:56 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 10:31:56 INFO  LoggingAspect:30 - With args : []
+2019-10-16 10:32:02 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 10:32:02 INFO  LoggingAspect:30 - With args : []
+2019-10-16 10:32:02 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 10:32:02 INFO  LoggingAspect:30 - With args : []
+2019-10-16 10:32:05 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 10:32:05 INFO  LoggingAspect:30 - With args : []
+2019-10-16 10:32:05 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 10:32:05 INFO  LoggingAspect:30 - With args : []
+2019-10-16 13:06:19 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 13:06:19 INFO  LoggingAspect:30 - With args : []
+2019-10-16 13:06:19 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 13:06:19 INFO  LoggingAspect:30 - With args : []
+2019-10-16 13:07:53 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 13:07:53 INFO  LoggingAspect:30 - With args : []
+2019-10-16 13:07:53 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 13:07:53 INFO  LoggingAspect:30 - With args : []
+2019-10-16 13:22:11 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 13:22:11 INFO  LoggingAspect:30 - With args : []
+2019-10-16 13:22:11 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 13:22:11 INFO  LoggingAspect:30 - With args : []
+2019-10-16 14:14:01 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 14:14:01 INFO  LoggingAspect:30 - With args : []
+2019-10-16 14:14:01 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 14:14:01 INFO  LoggingAspect:30 - With args : []
+2019-10-16 14:15:17 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 14:15:17 INFO  LoggingAspect:30 - With args : []
+2019-10-16 14:15:17 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 14:15:17 INFO  LoggingAspect:30 - With args : []
+2019-10-16 14:17:21 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 14:17:21 INFO  LoggingAspect:30 - With args : []
+2019-10-16 14:17:21 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 14:17:21 INFO  LoggingAspect:30 - With args : []
+2019-10-16 14:17:31 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 14:17:31 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 14:17:31 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 14:17:31 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 14:17:40 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 14:17:40 INFO  LoggingAspect:30 - With args : []
+2019-10-16 14:17:40 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 14:17:40 INFO  LoggingAspect:30 - With args : []
+2019-10-16 14:17:42 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 14:17:42 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 14:17:42 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 14:17:42 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 14:17:48 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 14:17:48 INFO  LoggingAspect:30 - With args : []
+2019-10-16 14:17:48 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 14:17:48 INFO  LoggingAspect:30 - With args : []
+2019-10-16 14:17:49 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 14:17:49 INFO  LoggingAspect:30 - With args : [5da5ca943ecf6419540892ac]
+2019-10-16 14:17:49 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 14:17:49 INFO  LoggingAspect:30 - With args : [5da5ca943ecf6419540892ac]
+2019-10-16 14:17:51 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 14:17:51 INFO  LoggingAspect:30 - With args : []
+2019-10-16 14:17:51 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 14:17:51 INFO  LoggingAspect:30 - With args : []
+2019-10-16 14:21:06 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 14:21:06 INFO  LoggingAspect:30 - With args : [5d9364c53ecf641da0746f08]
+2019-10-16 14:21:06 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 14:21:06 INFO  LoggingAspect:30 - With args : [5d9364c53ecf641da0746f08]
+2019-10-16 14:21:08 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 14:21:08 INFO  LoggingAspect:30 - With args : []
+2019-10-16 14:21:08 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 14:21:08 INFO  LoggingAspect:30 - With args : []
+2019-10-16 14:21:10 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 14:21:10 INFO  LoggingAspect:30 - With args : [5d9364c53ecf641da0746f08]
+2019-10-16 14:21:10 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 14:21:10 INFO  LoggingAspect:30 - With args : [5d9364c53ecf641da0746f08]
+2019-10-16 14:21:12 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 14:21:12 INFO  LoggingAspect:30 - With args : []
+2019-10-16 14:21:12 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 14:21:12 INFO  LoggingAspect:30 - With args : []
+2019-10-16 14:21:16 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 14:21:16 INFO  LoggingAspect:30 - With args : [5d9364c53ecf641da0746f08]
+2019-10-16 14:21:16 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 14:21:16 INFO  LoggingAspect:30 - With args : [5d9364c53ecf641da0746f08]
+2019-10-16 14:21:21 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 14:21:21 INFO  LoggingAspect:30 - With args : []
+2019-10-16 14:21:21 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 14:21:21 INFO  LoggingAspect:30 - With args : []
+2019-10-16 14:34:18 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 14:34:18 INFO  LoggingAspect:30 - With args : [5d9364c53ecf641da0746f08]
+2019-10-16 14:34:18 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 14:34:18 INFO  LoggingAspect:30 - With args : [5d9364c53ecf641da0746f08]
+2019-10-16 14:44:05 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 14:44:05 INFO  LoggingAspect:30 - With args : []
+2019-10-16 14:44:05 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 14:44:05 INFO  LoggingAspect:30 - With args : []
+2019-10-16 14:45:21 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 14:45:21 INFO  LoggingAspect:30 - With args : [5d9364c53ecf641da0746f08]
+2019-10-16 14:45:21 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 14:45:21 INFO  LoggingAspect:30 - With args : [5d9364c53ecf641da0746f08]
+2019-10-16 15:01:36 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 15:01:36 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:01:36 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 15:01:36 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:04:30 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 15:04:30 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:04:30 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 15:04:30 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:08:53 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 15:08:53 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 15:08:53 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 15:08:53 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 15:08:59 INFO  LoggingAspect:29 - Method : showBookForEdit
+2019-10-16 15:08:59 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e, Book(id=5d8cd81f3ecf6422e42ee40e, title=author, author=null, genre=title, comments=null)]
+2019-10-16 15:08:59 INFO  LoggingAspect:29 - Method : updateBookById
+2019-10-16 15:08:59 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e, author, null, title]
+2019-10-16 15:08:59 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 15:08:59 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:08:59 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 15:08:59 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:09:03 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 15:09:03 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 15:09:03 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 15:09:03 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 15:09:13 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 15:09:13 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:09:13 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 15:09:13 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:09:15 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 15:09:15 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 15:09:15 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 15:09:15 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 15:09:19 INFO  LoggingAspect:29 - Method : showBookForEdit
+2019-10-16 15:09:19 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e, Book(id=5d8cd81f3ecf6422e42ee40e, title=author, author=null, genre=title, comments=null)]
+2019-10-16 15:09:19 INFO  LoggingAspect:29 - Method : updateBookById
+2019-10-16 15:09:19 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e, author, null, title]
+2019-10-16 15:09:19 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 15:09:19 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:09:19 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 15:09:19 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:09:22 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 15:09:22 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 15:09:22 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 15:09:22 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 15:09:24 INFO  LoggingAspect:29 - Method : showBookForEdit
+2019-10-16 15:09:24 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e, Book(id=5d8cd81f3ecf6422e42ee40e, title=author, author=null, genre=title, comments=null)]
+2019-10-16 15:09:24 INFO  LoggingAspect:29 - Method : updateBookById
+2019-10-16 15:09:24 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e, author, null, title]
+2019-10-16 15:09:24 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 15:09:24 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:09:24 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 15:09:24 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:09:37 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 15:09:37 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:09:37 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 15:09:37 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:33:40 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 15:33:40 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 15:33:40 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 15:33:40 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 15:33:45 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 15:33:45 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 15:33:45 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 15:33:45 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 15:33:53 INFO  LoggingAspect:29 - Method : showBookForEdit
+2019-10-16 15:33:53 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e, Book(id=5d8cd81f3ecf6422e42ee40e, title=title, author=null, genre=title, comments=null)]
+2019-10-16 15:33:53 INFO  LoggingAspect:29 - Method : updateBookById
+2019-10-16 15:33:53 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e, title, null, title]
+2019-10-16 15:33:53 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 15:33:53 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:33:53 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 15:33:53 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:33:55 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 15:33:55 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 15:33:55 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 15:33:55 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 15:33:59 INFO  LoggingAspect:29 - Method : showBookForEdit
+2019-10-16 15:33:59 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e, Book(id=5d8cd81f3ecf6422e42ee40e, title=title, author=null, genre=genre, comments=null)]
+2019-10-16 15:33:59 INFO  LoggingAspect:29 - Method : updateBookById
+2019-10-16 15:33:59 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e, title, null, genre]
+2019-10-16 15:33:59 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 15:33:59 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:33:59 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 15:33:59 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:34:01 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 15:34:01 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 15:34:01 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 15:34:01 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 15:34:04 INFO  LoggingAspect:29 - Method : showBookForEdit
+2019-10-16 15:34:04 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e, Book(id=5d8cd81f3ecf6422e42ee40e, title=title, author=null, genre=genre, comments=null)]
+2019-10-16 15:34:04 INFO  LoggingAspect:29 - Method : updateBookById
+2019-10-16 15:34:04 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e, title, null, genre]
+2019-10-16 15:34:05 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 15:34:05 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:34:05 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 15:34:05 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:34:20 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 15:34:20 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 15:34:20 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 15:34:20 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 15:34:21 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 15:34:21 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 15:34:21 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 15:34:21 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 15:34:23 INFO  LoggingAspect:29 - Method : showBookForEdit
+2019-10-16 15:34:23 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e, Book(id=5d8cd81f3ecf6422e42ee40e, title=title, author=null, genre=genre, comments=null)]
+2019-10-16 15:34:23 INFO  LoggingAspect:29 - Method : updateBookById
+2019-10-16 15:34:23 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e, title, null, genre]
+2019-10-16 15:34:23 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 15:34:23 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:34:23 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 15:34:23 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:34:25 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 15:34:25 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 15:34:25 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 15:34:25 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 15:34:27 INFO  LoggingAspect:29 - Method : showBookForEdit
+2019-10-16 15:34:27 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e, Book(id=5d8cd81f3ecf6422e42ee40e, title=title, author=null, genre=genre, comments=null)]
+2019-10-16 15:34:27 INFO  LoggingAspect:29 - Method : updateBookById
+2019-10-16 15:34:27 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e, title, null, genre]
+2019-10-16 15:34:27 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 15:34:27 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:34:27 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 15:34:27 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:34:32 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 15:34:32 INFO  LoggingAspect:30 - With args : [5da5ca943ecf6419540892az]
+2019-10-16 15:34:32 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 15:34:32 INFO  LoggingAspect:30 - With args : [5da5ca943ecf6419540892az]
+2019-10-16 15:34:34 INFO  LoggingAspect:29 - Method : showBookForEdit
+2019-10-16 15:34:34 INFO  LoggingAspect:30 - With args : [5da5ca943ecf6419540892az, Book(id=5da5ca943ecf6419540892az, title=qwert, author=null, genre=qwerty, comments=null)]
+2019-10-16 15:34:34 INFO  LoggingAspect:29 - Method : updateBookById
+2019-10-16 15:34:34 INFO  LoggingAspect:30 - With args : [5da5ca943ecf6419540892az, qwert, null, qwerty]
+2019-10-16 15:34:34 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 15:34:34 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:34:34 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 15:34:34 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:34:51 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 15:34:51 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:34:51 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 15:34:51 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:35:48 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 15:35:48 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 15:35:48 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 15:35:48 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 15:35:49 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 15:35:49 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 15:35:49 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 15:35:49 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 15:35:51 INFO  LoggingAspect:29 - Method : showBookForEdit
+2019-10-16 15:35:51 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e, Book(id=5d8cd81f3ecf6422e42ee40e, title=title, author=author, genre=genre, comments=null)]
+2019-10-16 15:35:51 INFO  LoggingAspect:29 - Method : updateBookById
+2019-10-16 15:35:51 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e, title, author, genre]
+2019-10-16 15:35:51 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 15:35:51 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:35:51 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 15:35:51 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:35:53 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 15:35:53 INFO  LoggingAspect:30 - With args : [5da5ca943ecf6419540892az]
+2019-10-16 15:35:53 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 15:35:53 INFO  LoggingAspect:30 - With args : [5da5ca943ecf6419540892az]
+2019-10-16 15:35:54 INFO  LoggingAspect:29 - Method : showBookForEdit
+2019-10-16 15:35:54 INFO  LoggingAspect:30 - With args : [5da5ca943ecf6419540892az, Book(id=5da5ca943ecf6419540892az, title=qwert, author=author, genre=qwerty, comments=null)]
+2019-10-16 15:35:54 INFO  LoggingAspect:29 - Method : updateBookById
+2019-10-16 15:35:54 INFO  LoggingAspect:30 - With args : [5da5ca943ecf6419540892az, qwert, author, qwerty]
+2019-10-16 15:35:54 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 15:35:54 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:35:54 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 15:35:54 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:36:06 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 15:36:06 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:36:06 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 15:36:06 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:43:31 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 15:43:31 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:43:31 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 15:43:31 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:43:33 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 15:43:33 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 15:43:33 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 15:43:33 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 15:43:35 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 15:43:35 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:43:35 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 15:43:35 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:43:36 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 15:43:36 INFO  LoggingAspect:30 - With args : [5da5ca943ecf6419540892ac]
+2019-10-16 15:43:36 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 15:43:36 INFO  LoggingAspect:30 - With args : [5da5ca943ecf6419540892ac]
+2019-10-16 15:43:38 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 15:43:38 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:43:38 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 15:43:38 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:43:40 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 15:43:40 INFO  LoggingAspect:30 - With args : [5da5ca943ecf6419540892az]
+2019-10-16 15:43:40 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 15:43:40 INFO  LoggingAspect:30 - With args : [5da5ca943ecf6419540892az]
+2019-10-16 15:43:41 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 15:43:41 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:43:41 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 15:43:41 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:44:23 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 15:44:23 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:44:23 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 15:44:23 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:44:47 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 15:44:47 INFO  LoggingAspect:30 - With args : [5d9364c53ecf641da0746f08]
+2019-10-16 15:44:47 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 15:44:47 INFO  LoggingAspect:30 - With args : [5d9364c53ecf641da0746f08]
+2019-10-16 15:44:48 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 15:44:48 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:44:48 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 15:44:48 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:44:50 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 15:44:50 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:44:50 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 15:44:50 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:44:52 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 15:44:52 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:44:52 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 15:44:52 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:47:03 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 15:47:03 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:47:03 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 15:47:03 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:47:08 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 15:47:08 INFO  LoggingAspect:30 - With args : [5d9364c53ecf641da0746f08]
+2019-10-16 15:47:08 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 15:47:08 INFO  LoggingAspect:30 - With args : [5d9364c53ecf641da0746f08]
+2019-10-16 15:47:11 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 15:47:11 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:47:11 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 15:47:11 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:52:15 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 15:52:15 INFO  LoggingAspect:30 - With args : []
+2019-10-16 15:52:15 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 15:52:15 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:06:33 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 16:06:33 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:06:33 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 16:06:33 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:06:43 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 16:06:43 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:06:43 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 16:06:43 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:06:44 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 16:06:44 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 16:06:44 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 16:06:44 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 16:06:48 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 16:06:48 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:06:48 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 16:06:48 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:06:50 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 16:06:50 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:06:50 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 16:06:50 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:07:35 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 16:07:35 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:07:35 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 16:07:35 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:07:37 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 16:07:37 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 16:07:37 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 16:07:37 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 16:07:40 INFO  LoggingAspect:29 - Method : showBookForEdit
+2019-10-16 16:07:40 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e, Book(id=5d8cd81f3ecf6422e42ee40e, title=title, author=author2, genre=genre, comments=null)]
+2019-10-16 16:07:40 INFO  LoggingAspect:29 - Method : updateBookById
+2019-10-16 16:07:40 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e, title, author2, genre]
+2019-10-16 16:07:40 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 16:07:40 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:07:40 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 16:07:40 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:20:18 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 16:20:18 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:20:18 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 16:20:18 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:20:21 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 16:20:21 INFO  LoggingAspect:30 - With args : [5d9364c53ecf641da0746f08]
+2019-10-16 16:20:21 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 16:20:21 INFO  LoggingAspect:30 - With args : [5d9364c53ecf641da0746f08]
+2019-10-16 16:20:23 INFO  LoggingAspect:29 - Method : showBookForEdit
+2019-10-16 16:20:23 INFO  LoggingAspect:30 - With args : [5d9364c53ecf641da0746f08, Book(id=5d9364c53ecf641da0746f08, title=titleTest, author=authorTest, genre=genreTest2, comments=null)]
+2019-10-16 16:20:23 INFO  LoggingAspect:29 - Method : updateBookById
+2019-10-16 16:20:23 INFO  LoggingAspect:30 - With args : [5d9364c53ecf641da0746f08, titleTest, authorTest, genreTest2]
+2019-10-16 16:20:23 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 16:20:23 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:20:23 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 16:20:23 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:22:54 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 16:22:54 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:22:54 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 16:22:54 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:35:09 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 16:35:09 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:35:09 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 16:35:09 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:37:13 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 16:37:13 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:37:13 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 16:37:13 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:37:15 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 16:37:15 INFO  LoggingAspect:30 - With args : [5d9364c53ecf641da0746f08]
+2019-10-16 16:37:15 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 16:37:15 INFO  LoggingAspect:30 - With args : [5d9364c53ecf641da0746f08]
+2019-10-16 16:37:18 INFO  LoggingAspect:29 - Method : showBookForEdit
+2019-10-16 16:37:18 INFO  LoggingAspect:30 - With args : [5d9364c53ecf641da0746f08, Book(id=5d9364c53ecf641da0746f08, title=titleTest, author=authorTest, genre=genreTest3, comments=null)]
+2019-10-16 16:37:18 INFO  LoggingAspect:29 - Method : updateBookById
+2019-10-16 16:37:18 INFO  LoggingAspect:30 - With args : [5d9364c53ecf641da0746f08, titleTest, authorTest, genreTest3]
+2019-10-16 16:37:18 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 16:37:18 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:37:18 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 16:37:18 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:39:09 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 16:39:09 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:39:09 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 16:39:09 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:45:00 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 16:45:00 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:45:00 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 16:45:00 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:45:03 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 16:45:03 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 16:45:03 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 16:45:03 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 16:45:46 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 16:45:46 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 16:45:46 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 16:45:46 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 16:45:48 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 16:45:48 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:45:48 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 16:45:48 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:45:53 INFO  LoggingAspect:29 - Method : showBookForEdit
+2019-10-16 16:45:53 INFO  LoggingAspect:30 - With args : [-1, Book(id=-1, title=qwerty, author=author, genre=genre, comments=null)]
+2019-10-16 16:45:53 INFO  LoggingAspect:29 - Method : updateBookById
+2019-10-16 16:45:53 INFO  LoggingAspect:30 - With args : [-1, qwerty, author, genre]
+2019-10-16 16:45:53 ERROR LoggingAspect:36 - Exception from class org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint
+2019-10-16 16:45:53 ERROR LoggingAspect:37 - Method call : showBookForEdit
+2019-10-16 16:45:53 ERROR LoggingAspect:38 - With args : [-1, Book(id=-1, title=qwerty, author=author, genre=genre, comments=null)]
+2019-10-16 16:47:03 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 16:47:03 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:47:03 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 16:47:03 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:47:08 INFO  LoggingAspect:29 - Method : showBookForEdit
+2019-10-16 16:47:08 INFO  LoggingAspect:30 - With args : [-1, Book(id=-1, title=qwerty, author=author, genre=genre)]
+2019-10-16 16:47:08 INFO  LoggingAspect:29 - Method : updateBookById
+2019-10-16 16:47:08 INFO  LoggingAspect:30 - With args : [-1, qwerty, author, genre]
+2019-10-16 16:47:08 ERROR LoggingAspect:36 - Exception from class org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint
+2019-10-16 16:47:08 ERROR LoggingAspect:37 - Method call : showBookForEdit
+2019-10-16 16:47:08 ERROR LoggingAspect:38 - With args : [-1, Book(id=-1, title=qwerty, author=author, genre=genre)]
+2019-10-16 16:49:54 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 16:49:54 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:49:54 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 16:49:54 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:49:59 INFO  LoggingAspect:29 - Method : showBookForEdit
+2019-10-16 16:49:59 INFO  LoggingAspect:30 - With args : [-1, Book(id=-1, title=qwerty, author=author, genre=genre)]
+2019-10-16 16:49:59 INFO  LoggingAspect:29 - Method : updateBookById
+2019-10-16 16:49:59 INFO  LoggingAspect:30 - With args : [-1, qwerty, author, genre]
+2019-10-16 16:49:59 ERROR LoggingAspect:36 - Exception from class org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint
+2019-10-16 16:49:59 ERROR LoggingAspect:37 - Method call : showBookForEdit
+2019-10-16 16:49:59 ERROR LoggingAspect:38 - With args : [-1, Book(id=-1, title=qwerty, author=author, genre=genre)]
+2019-10-16 16:50:06 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 16:50:06 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:50:06 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 16:50:06 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:50:08 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 16:50:08 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 16:50:08 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 16:50:08 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e]
+2019-10-16 16:50:11 INFO  LoggingAspect:29 - Method : showBookForEdit
+2019-10-16 16:50:11 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e, Book(id=5d8cd81f3ecf6422e42ee40e, title=title, author=author2, genre=genre3)]
+2019-10-16 16:50:11 INFO  LoggingAspect:29 - Method : updateBookById
+2019-10-16 16:50:11 INFO  LoggingAspect:30 - With args : [5d8cd81f3ecf6422e42ee40e, title, author2, genre3]
+2019-10-16 16:50:11 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 16:50:11 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:50:11 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 16:50:11 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:51:11 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 16:51:11 INFO  LoggingAspect:30 - With args : []
+2019-10-16 16:51:11 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 16:51:11 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:02:26 INFO  LoggingAspect:29 - Method : showBookForEdit
+2019-10-16 17:02:26 INFO  LoggingAspect:30 - With args : [-1, Book(id=-1, title=qwerty, author=author, genre=genre)]
+2019-10-16 17:02:26 INFO  LoggingAspect:29 - Method : updateBookById
+2019-10-16 17:02:26 INFO  LoggingAspect:30 - With args : [-1, qwerty, author, genre]
+2019-10-16 17:02:26 ERROR LoggingAspect:36 - Exception from class org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint
+2019-10-16 17:02:26 ERROR LoggingAspect:37 - Method call : showBookForEdit
+2019-10-16 17:02:26 ERROR LoggingAspect:38 - With args : [-1, Book(id=-1, title=qwerty, author=author, genre=genre)]
+2019-10-16 17:03:27 INFO  LoggingAspect:29 - Method : showBookForEdit
+2019-10-16 17:03:27 INFO  LoggingAspect:30 - With args : [-1, Book(id=-1, title=qwerty, author=author, genre=genre)]
+2019-10-16 17:03:27 INFO  LoggingAspect:29 - Method : updateBookById
+2019-10-16 17:03:27 INFO  LoggingAspect:30 - With args : [-1, qwerty, author, genre]
+2019-10-16 17:03:27 ERROR LoggingAspect:36 - Exception from class org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint
+2019-10-16 17:03:27 ERROR LoggingAspect:37 - Method call : showBookForEdit
+2019-10-16 17:03:27 ERROR LoggingAspect:38 - With args : [-1, Book(id=-1, title=qwerty, author=author, genre=genre)]
+2019-10-16 17:05:07 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 17:05:07 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:05:07 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 17:05:07 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:05:09 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 17:05:09 INFO  LoggingAspect:30 - With args : [5d9364c53ecf641da0746f08]
+2019-10-16 17:05:09 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 17:05:09 INFO  LoggingAspect:30 - With args : [5d9364c53ecf641da0746f08]
+2019-10-16 17:05:12 INFO  LoggingAspect:29 - Method : showBookForEdit
+2019-10-16 17:05:12 INFO  LoggingAspect:30 - With args : [5d9364c53ecf641da0746f08, Book(id=5d9364c53ecf641da0746f08, title=titleTest, author=authorTest, genre=genreTest4)]
+2019-10-16 17:05:12 INFO  LoggingAspect:29 - Method : updateBookById
+2019-10-16 17:05:12 INFO  LoggingAspect:30 - With args : [5d9364c53ecf641da0746f08, titleTest, authorTest, genreTest4]
+2019-10-16 17:05:12 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 17:05:12 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:05:12 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 17:05:12 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:05:47 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 17:05:47 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:05:47 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 17:05:47 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:06:22 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 17:06:22 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:06:22 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 17:06:22 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:06:29 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 17:06:29 INFO  LoggingAspect:30 - With args : [5d9364c53ecf641da0746f08]
+2019-10-16 17:06:29 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 17:06:29 INFO  LoggingAspect:30 - With args : [5d9364c53ecf641da0746f08]
+2019-10-16 17:06:30 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 17:06:30 INFO  LoggingAspect:30 - With args : [5d9364c53ecf641da0746f08]
+2019-10-16 17:06:30 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 17:06:30 INFO  LoggingAspect:30 - With args : [5d9364c53ecf641da0746f08]
+2019-10-16 17:06:32 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 17:06:32 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:06:32 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 17:06:32 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:06:52 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 17:06:52 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:06:52 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 17:06:52 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:07:23 INFO  LoggingAspect:29 - Method : addNewBook
+2019-10-16 17:07:23 INFO  LoggingAspect:30 - With args : [BookDTO(id=5da5ca943ecf6419540892ad, authors=null, title=qwert, genre=qwerty)]
+2019-10-16 17:07:23 INFO  LoggingAspect:29 - Method : addBook
+2019-10-16 17:07:23 INFO  LoggingAspect:30 - With args : [Book(id=null, title=qwert, author=null, genre=qwerty)]
+2019-10-16 17:07:28 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 17:07:28 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:07:28 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 17:07:28 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:08:23 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 17:08:23 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:08:23 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 17:08:23 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:10:34 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 17:10:34 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:10:34 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 17:10:34 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:10:38 INFO  LoggingAspect:29 - Method : showBookForEdit
+2019-10-16 17:10:38 INFO  LoggingAspect:30 - With args : [-1, Book(id=-1, title=qwerty, author=author, genre=genre)]
+2019-10-16 17:10:38 INFO  LoggingAspect:29 - Method : updateBookById
+2019-10-16 17:10:38 INFO  LoggingAspect:30 - With args : [-1, qwerty, author, genre]
+2019-10-16 17:10:38 ERROR LoggingAspect:36 - Exception from class org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint
+2019-10-16 17:10:38 ERROR LoggingAspect:37 - Method call : showBookForEdit
+2019-10-16 17:10:38 ERROR LoggingAspect:38 - With args : [-1, Book(id=-1, title=qwerty, author=author, genre=genre)]
+2019-10-16 17:13:22 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 17:13:22 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:13:22 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 17:13:22 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:13:27 INFO  LoggingAspect:29 - Method : showBookForEdit
+2019-10-16 17:13:27 INFO  LoggingAspect:30 - With args : [-1, Book(id=-1, title=qwerty, author=author, genre=genre)]
+2019-10-16 17:13:27 INFO  LoggingAspect:29 - Method : updateBookById
+2019-10-16 17:13:27 INFO  LoggingAspect:30 - With args : [-1, qwerty, author, genre]
+2019-10-16 17:13:27 ERROR LoggingAspect:36 - Exception from class org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint
+2019-10-16 17:13:27 ERROR LoggingAspect:37 - Method call : showBookForEdit
+2019-10-16 17:13:27 ERROR LoggingAspect:38 - With args : [-1, Book(id=-1, title=qwerty, author=author, genre=genre)]
+2019-10-16 17:15:54 INFO  LoggingAspect:29 - Method : showBookForEdit
+2019-10-16 17:15:54 INFO  LoggingAspect:30 - With args : [-1, Book(id=-1, title=qwerty, author=author, genre=genre)]
+2019-10-16 17:15:54 INFO  LoggingAspect:29 - Method : updateBookById
+2019-10-16 17:15:54 INFO  LoggingAspect:30 - With args : [-1, qwerty, author, genre]
+2019-10-16 17:15:54 ERROR LoggingAspect:36 - Exception from class org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint
+2019-10-16 17:15:54 ERROR LoggingAspect:37 - Method call : showBookForEdit
+2019-10-16 17:15:54 ERROR LoggingAspect:38 - With args : [-1, Book(id=-1, title=qwerty, author=author, genre=genre)]
+2019-10-16 17:15:59 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 17:15:59 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:15:59 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 17:15:59 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:16:02 INFO  LoggingAspect:29 - Method : deleteBook
+2019-10-16 17:16:02 INFO  LoggingAspect:30 - With args : [5da7241b3ecf641e84a3f6fb]
+2019-10-16 17:16:02 INFO  LoggingAspect:29 - Method : deleteBookById
+2019-10-16 17:16:02 INFO  LoggingAspect:30 - With args : [5da7241b3ecf641e84a3f6fb]
+2019-10-16 17:16:02 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 17:16:02 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:16:02 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 17:16:02 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:20:09 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 17:20:09 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:20:09 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 17:20:09 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:20:13 INFO  LoggingAspect:29 - Method : showBookForEdit
+2019-10-16 17:20:13 INFO  LoggingAspect:30 - With args : [-1, Book(id=-1, title=qwerty, author=author, genre=genre)]
+2019-10-16 17:20:13 INFO  LoggingAspect:29 - Method : updateBookById
+2019-10-16 17:20:13 INFO  LoggingAspect:30 - With args : [-1, qwerty, author, genre]
+2019-10-16 17:20:13 ERROR LoggingAspect:36 - Exception from class org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint
+2019-10-16 17:20:13 ERROR LoggingAspect:37 - Method call : showBookForEdit
+2019-10-16 17:20:13 ERROR LoggingAspect:38 - With args : [-1, Book(id=-1, title=qwerty, author=author, genre=genre)]
+2019-10-16 17:46:08 INFO  LoggingAspect:29 - Method : showBookForEdit
+2019-10-16 17:46:08 INFO  LoggingAspect:30 - With args : [-1, Book(id=-1, title=qwerty, author=author, genre=genre)]
+2019-10-16 17:46:08 INFO  LoggingAspect:29 - Method : updateBookById
+2019-10-16 17:46:08 INFO  LoggingAspect:30 - With args : [-1, qwerty, author, genre]
+2019-10-16 17:46:08 ERROR LoggingAspect:36 - Exception from class org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint
+2019-10-16 17:46:08 ERROR LoggingAspect:37 - Method call : showBookForEdit
+2019-10-16 17:46:08 ERROR LoggingAspect:38 - With args : [-1, Book(id=-1, title=qwerty, author=author, genre=genre)]
+2019-10-16 17:52:12 INFO  LoggingAspect:29 - Method : addNewBook
+2019-10-16 17:52:12 INFO  LoggingAspect:30 - With args : [Book(id=-1, title=qwerty, author=author, genre=genre)]
+2019-10-16 17:52:12 INFO  LoggingAspect:29 - Method : addBook
+2019-10-16 17:52:12 INFO  LoggingAspect:30 - With args : [Book(id=-1, title=qwerty, author=author, genre=genre)]
+2019-10-16 17:52:12 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 17:52:12 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:52:12 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 17:52:12 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:52:17 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 17:52:17 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:52:17 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 17:52:17 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:52:25 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 17:52:25 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:52:25 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 17:52:25 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:52:49 INFO  LoggingAspect:29 - Method : addNewBook
+2019-10-16 17:52:49 INFO  LoggingAspect:30 - With args : [Book(id=-1, title=qwerty6, author=author6, genre=genre6)]
+2019-10-16 17:52:49 INFO  LoggingAspect:29 - Method : addBook
+2019-10-16 17:52:49 INFO  LoggingAspect:30 - With args : [Book(id=-1, title=qwerty6, author=author6, genre=genre6)]
+2019-10-16 17:52:49 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 17:52:49 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:52:49 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 17:52:49 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:54:03 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 17:54:03 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:54:03 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 17:54:03 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:54:07 INFO  LoggingAspect:29 - Method : addNewBook
+2019-10-16 17:54:07 INFO  LoggingAspect:30 - With args : [Book(id=-1, title=qwerty, author=author, genre=qwerty)]
+2019-10-16 17:54:07 INFO  LoggingAspect:29 - Method : addBook
+2019-10-16 17:54:07 INFO  LoggingAspect:30 - With args : [Book(id=-1, title=qwerty, author=author, genre=qwerty)]
+2019-10-16 17:54:07 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 17:54:07 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:54:07 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 17:54:07 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:54:14 INFO  LoggingAspect:29 - Method : addNewBook
+2019-10-16 17:54:14 INFO  LoggingAspect:30 - With args : [Book(id=-1, title=cvjjgsgdsjgda, author=qwerty, genre=qwerty)]
+2019-10-16 17:54:14 INFO  LoggingAspect:29 - Method : addBook
+2019-10-16 17:54:14 INFO  LoggingAspect:30 - With args : [Book(id=-1, title=cvjjgsgdsjgda, author=qwerty, genre=qwerty)]
+2019-10-16 17:54:14 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 17:54:14 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:54:14 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 17:54:14 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:54:21 INFO  LoggingAspect:29 - Method : deleteBook
+2019-10-16 17:54:21 INFO  LoggingAspect:30 - With args : [-1]
+2019-10-16 17:54:21 INFO  LoggingAspect:29 - Method : deleteBookById
+2019-10-16 17:54:21 INFO  LoggingAspect:30 - With args : [-1]
+2019-10-16 17:54:21 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 17:54:21 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:54:21 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 17:54:21 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:54:27 INFO  LoggingAspect:29 - Method : addNewBook
+2019-10-16 17:54:27 INFO  LoggingAspect:30 - With args : [Book(id=-1, title=cvjjgsgdsjgda, author=qwerty, genre=genre)]
+2019-10-16 17:54:27 INFO  LoggingAspect:29 - Method : addBook
+2019-10-16 17:54:27 INFO  LoggingAspect:30 - With args : [Book(id=-1, title=cvjjgsgdsjgda, author=qwerty, genre=genre)]
+2019-10-16 17:54:27 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 17:54:27 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:54:27 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 17:54:27 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:54:44 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 17:54:44 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:54:44 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 17:54:44 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:54:46 INFO  LoggingAspect:29 - Method : deleteBook
+2019-10-16 17:54:46 INFO  LoggingAspect:30 - With args : [-1]
+2019-10-16 17:54:46 INFO  LoggingAspect:29 - Method : deleteBookById
+2019-10-16 17:54:46 INFO  LoggingAspect:30 - With args : [-1]
+2019-10-16 17:54:46 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 17:54:46 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:54:46 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 17:54:46 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:58:55 INFO  LoggingAspect:29 - Method : addNewBook
+2019-10-16 17:58:55 INFO  LoggingAspect:30 - With args : [Book(id=-1, title=title, author=author2, genre=qwerty)]
+2019-10-16 17:58:55 INFO  LoggingAspect:29 - Method : addBook
+2019-10-16 17:58:55 INFO  LoggingAspect:30 - With args : [Book(id=-1, title=title, author=author2, genre=qwerty)]
+2019-10-16 17:58:55 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 17:58:55 INFO  LoggingAspect:30 - With args : []
+2019-10-16 17:58:55 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 17:58:55 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:24:30 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 18:24:30 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:24:30 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 18:24:30 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:24:33 INFO  LoggingAspect:29 - Method : deleteBook
+2019-10-16 18:24:33 INFO  LoggingAspect:30 - With args : [-1]
+2019-10-16 18:24:33 INFO  LoggingAspect:29 - Method : deleteBookById
+2019-10-16 18:24:33 INFO  LoggingAspect:30 - With args : [-1]
+2019-10-16 18:24:33 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 18:24:33 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:24:33 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 18:24:33 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:24:38 INFO  LoggingAspect:29 - Method : addNewBook
+2019-10-16 18:24:38 INFO  LoggingAspect:30 - With args : [Book(id=-1, title=qwerty, author=qwerty, genre=qwerty)]
+2019-10-16 18:24:38 INFO  LoggingAspect:29 - Method : addBook
+2019-10-16 18:24:38 INFO  LoggingAspect:30 - With args : [Book(id=-1, title=qwerty, author=qwerty, genre=qwerty)]
+2019-10-16 18:24:38 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 18:24:38 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:24:38 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 18:24:38 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:24:43 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 18:24:43 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:24:43 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 18:24:43 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:28:48 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 18:28:48 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:28:48 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 18:28:48 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:28:49 INFO  LoggingAspect:29 - Method : deleteBook
+2019-10-16 18:28:49 INFO  LoggingAspect:30 - With args : [-1]
+2019-10-16 18:28:49 INFO  LoggingAspect:29 - Method : deleteBookById
+2019-10-16 18:28:49 INFO  LoggingAspect:30 - With args : [-1]
+2019-10-16 18:28:49 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 18:28:49 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:28:49 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 18:28:49 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:28:53 INFO  LoggingAspect:29 - Method : addNewBook
+2019-10-16 18:28:53 INFO  LoggingAspect:30 - With args : [Book(id=-1, title=qwerty, author=author, genre=genre)]
+2019-10-16 18:28:54 INFO  LoggingAspect:29 - Method : addBook
+2019-10-16 18:28:54 INFO  LoggingAspect:30 - With args : [Book(id=-1, title=qwerty, author=author, genre=genre)]
+2019-10-16 18:28:54 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 18:28:54 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:28:54 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 18:28:54 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:29:51 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 18:29:51 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:29:51 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 18:29:51 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:29:53 INFO  LoggingAspect:29 - Method : deleteBook
+2019-10-16 18:29:53 INFO  LoggingAspect:30 - With args : [-1]
+2019-10-16 18:29:53 INFO  LoggingAspect:29 - Method : deleteBookById
+2019-10-16 18:29:53 INFO  LoggingAspect:30 - With args : [-1]
+2019-10-16 18:29:53 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 18:29:53 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:29:53 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 18:29:53 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:29:57 INFO  LoggingAspect:29 - Method : addNewBook
+2019-10-16 18:29:57 INFO  LoggingAspect:30 - With args : [Book(id=-1, title=qwerty, author=qwerty, genre=qwerty)]
+2019-10-16 18:29:57 INFO  LoggingAspect:29 - Method : addBook
+2019-10-16 18:29:57 INFO  LoggingAspect:30 - With args : [Book(id=-1, title=qwerty, author=qwerty, genre=qwerty)]
+2019-10-16 18:29:57 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 18:29:57 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:29:57 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 18:29:57 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:30:14 INFO  LoggingAspect:29 - Method : addNewBook
+2019-10-16 18:30:14 INFO  LoggingAspect:30 - With args : [Book(id=-1, title=cvjjgsgdsjgda, author=cvjjgdsjgda, genre=cvjjgsgdsjgda)]
+2019-10-16 18:30:14 INFO  LoggingAspect:29 - Method : addBook
+2019-10-16 18:30:14 INFO  LoggingAspect:30 - With args : [Book(id=-1, title=cvjjgsgdsjgda, author=cvjjgdsjgda, genre=cvjjgsgdsjgda)]
+2019-10-16 18:30:14 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 18:30:14 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:30:14 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 18:30:14 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:30:21 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 18:30:22 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:30:22 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 18:30:22 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:31:08 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 18:31:08 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:31:08 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 18:31:08 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:34:43 INFO  LoggingAspect:29 - Method : addNewBook
+2019-10-16 18:34:43 INFO  LoggingAspect:30 - With args : [Book(id=null, title=demoData, author=demoData, genre=demoData)]
+2019-10-16 18:34:43 INFO  LoggingAspect:29 - Method : addBook
+2019-10-16 18:34:43 INFO  LoggingAspect:30 - With args : [Book(id=null, title=demoData, author=demoData, genre=demoData)]
+2019-10-16 18:34:49 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 18:34:49 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:34:49 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 18:34:49 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:34:59 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 18:34:59 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:34:59 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 18:34:59 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:35:24 INFO  LoggingAspect:29 - Method : addNewBook
+2019-10-16 18:35:24 INFO  LoggingAspect:30 - With args : [Book(id=, title=demoDatae, author=demoDatae, genre=demoDatae)]
+2019-10-16 18:35:24 INFO  LoggingAspect:29 - Method : addBook
+2019-10-16 18:35:24 INFO  LoggingAspect:30 - With args : [Book(id=, title=demoDatae, author=demoDatae, genre=demoDatae)]
+2019-10-16 18:35:29 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 18:35:29 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:35:29 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 18:35:29 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:35:34 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 18:35:34 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:35:34 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 18:35:34 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:35:59 INFO  LoggingAspect:29 - Method : deleteBook
+2019-10-16 18:35:59 INFO  LoggingAspect:30 - With args : ['']
+2019-10-16 18:35:59 INFO  LoggingAspect:29 - Method : deleteBookById
+2019-10-16 18:35:59 INFO  LoggingAspect:30 - With args : ['']
+2019-10-16 18:36:02 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 18:36:02 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:36:02 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 18:36:02 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:36:12 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 18:36:12 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:36:12 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 18:36:12 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:36:17 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 18:36:17 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:36:17 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 18:36:17 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:46:06 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 18:46:06 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:46:06 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 18:46:06 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:47:01 INFO  LoggingAspect:29 - Method : addNewBook
+2019-10-16 18:47:01 INFO  LoggingAspect:30 - With args : [Book(id=-1, title=qwerty123, author=qwerty123, genre=qwerty123)]
+2019-10-16 18:47:01 INFO  LoggingAspect:29 - Method : addBook
+2019-10-16 18:47:01 INFO  LoggingAspect:30 - With args : [Book(id=-1, title=qwerty123, author=qwerty123, genre=qwerty123)]
+2019-10-16 18:47:01 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 18:47:01 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:47:01 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 18:47:01 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:47:13 INFO  LoggingAspect:29 - Method : deleteBook
+2019-10-16 18:47:13 INFO  LoggingAspect:30 - With args : [-1]
+2019-10-16 18:47:13 INFO  LoggingAspect:29 - Method : deleteBookById
+2019-10-16 18:47:13 INFO  LoggingAspect:30 - With args : [-1]
+2019-10-16 18:47:14 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 18:47:14 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:47:14 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 18:47:14 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:52:11 INFO  LoggingAspect:29 - Method : addNewBook
+2019-10-16 18:52:11 INFO  LoggingAspect:30 - With args : [Book(id=null, title=titledavfadg, author=titledavfadg, genre=titledavfadg)]
+2019-10-16 18:52:11 INFO  LoggingAspect:29 - Method : addBook
+2019-10-16 18:52:11 INFO  LoggingAspect:30 - With args : [Book(id=null, title=titledavfadg, author=titledavfadg, genre=titledavfadg)]
+2019-10-16 18:52:11 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 18:52:11 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:52:11 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 18:52:11 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:52:19 INFO  LoggingAspect:29 - Method : addNewBook
+2019-10-16 18:52:19 INFO  LoggingAspect:30 - With args : [Book(id=null, title=cvjjgsgdsjgda, author=cvjjgsgdsjgda, genre=cvjjgsgdsjgda)]
+2019-10-16 18:52:19 INFO  LoggingAspect:29 - Method : addBook
+2019-10-16 18:52:19 INFO  LoggingAspect:30 - With args : [Book(id=null, title=cvjjgsgdsjgda, author=cvjjgsgdsjgda, genre=cvjjgsgdsjgda)]
+2019-10-16 18:52:19 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 18:52:19 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:52:19 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 18:52:19 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:52:23 INFO  LoggingAspect:29 - Method : deleteBook
+2019-10-16 18:52:23 INFO  LoggingAspect:30 - With args : [5da73cb33ecf6419e82e8c98]
+2019-10-16 18:52:23 INFO  LoggingAspect:29 - Method : deleteBookById
+2019-10-16 18:52:23 INFO  LoggingAspect:30 - With args : [5da73cb33ecf6419e82e8c98]
+2019-10-16 18:52:23 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 18:52:23 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:52:23 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 18:52:23 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:52:24 INFO  LoggingAspect:29 - Method : getBook
+2019-10-16 18:52:24 INFO  LoggingAspect:30 - With args : [5da73cab3ecf6419e82e8c97]
+2019-10-16 18:52:24 INFO  LoggingAspect:29 - Method : findBookById
+2019-10-16 18:52:24 INFO  LoggingAspect:30 - With args : [5da73cab3ecf6419e82e8c97]
+2019-10-16 18:52:28 INFO  LoggingAspect:29 - Method : showBookForEdit
+2019-10-16 18:52:28 INFO  LoggingAspect:30 - With args : [5da73cab3ecf6419e82e8c97, Book(id=null, title=titledavfadg123, author=titledavfadg123, genre=titledavfadg123)]
+2019-10-16 18:52:28 INFO  LoggingAspect:29 - Method : updateBookById
+2019-10-16 18:52:28 INFO  LoggingAspect:30 - With args : [5da73cab3ecf6419e82e8c97, titledavfadg123, titledavfadg123, titledavfadg123]
+2019-10-16 18:52:28 INFO  LoggingAspect:29 - Method : listPage
+2019-10-16 18:52:28 INFO  LoggingAspect:30 - With args : []
+2019-10-16 18:52:28 INFO  LoggingAspect:29 - Method : getAllBooks
+2019-10-16 18:52:28 INFO  LoggingAspect:30 - With args : []

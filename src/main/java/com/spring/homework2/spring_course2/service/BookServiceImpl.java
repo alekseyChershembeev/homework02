@@ -60,15 +60,15 @@ public class BookServiceImpl implements BookService {
         return bookRepository.findById(bookId);
     }
 
-    @Override
-    public List<List<Comment>> getAllComments(String bookId) {
-        return bookRepository.findAll()
-                .stream()
-                .filter(b -> b.getId().equals(bookId))
-                .map(Book::getComments)
-                .collect(Collectors.toList());
-
-    }
+//    @Override
+//    public List<List<Comment>> getAllComments(String bookId) {
+//        return bookRepository.findAll()
+//                .stream()
+//                .filter(b -> b.getId().equals(bookId))
+//                .map(Book::getComments)
+//                .collect(Collectors.toList());
+//
+//    }
 
     @Override
     public Book addBook(Book book) {
@@ -76,17 +76,17 @@ public class BookServiceImpl implements BookService {
         return book;
     }
 
-    @Override
-    public boolean addComment(String bookId, String comment) {
-        Optional<Book> book = bookRepository.findById(bookId);
-
-        if (book.isPresent()) {
-            book.get().getComments().add(new Comment(comment));
-            bookRepository.save(book.get());
-            return true;
-        }
-        return false;
-    }
+//    @Override
+//    public boolean addComment(String bookId, String comment) {
+//        Optional<Book> book = bookRepository.findById(bookId);
+//
+//        if (book.isPresent()) {
+//            book.get().getComments().add(new Comment(comment));
+//            bookRepository.save(book.get());
+//            return true;
+//        }
+//        return false;
+//    }
 
     @Override
     public boolean updateBookTitleById(String id, String newTitle) {
@@ -102,7 +102,7 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public boolean updateBookById(String id, String newTitle,String newAuthor, String newGenre) {
+    public Optional<Book> updateBookById(String id, String newTitle, String newAuthor, String newGenre) {
 
         Optional<Book> book = bookRepository.findById(id);
 
@@ -113,7 +113,7 @@ public class BookServiceImpl implements BookService {
             bookRepository.save(book.get());
         });
 
-        return book.isPresent();
+        return book;
     }
 
     @Override
@@ -129,18 +129,18 @@ public class BookServiceImpl implements BookService {
         return false;
     }
 
-    @Override
-    public Book deleteCommentById(String bookId) {
-        Optional<Book> book = bookRepository.findById(bookId);
-
-        if (book.isPresent()) {
-            Book book1 = book.get();
-            book1.setComments(null);
-            bookRepository.save(book1);
-            return book1;
-        }
-        return null;
-    }
+//    @Override
+//    public Book deleteCommentById(String bookId) {
+//        Optional<Book> book = bookRepository.findById(bookId);
+//
+//        if (book.isPresent()) {
+//            Book book1 = book.get();
+//            book1.setComments(null);
+//            bookRepository.save(book1);
+//            return book1;
+//        }
+//        return null;
+//    }
 
     @Override
     public void deleteAll() {

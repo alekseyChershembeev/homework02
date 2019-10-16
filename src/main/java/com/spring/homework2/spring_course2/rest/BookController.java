@@ -35,32 +35,42 @@ public class BookController {
         return BookMapper.mapBookListToDTO(bookService.getAllBooks());
     }
 
+    @GetMapping("/books/{id}")
+    public ResponseEntity<Book> getBook(@PathVariable(name = "id") String id) {
+
+        Optional<Book> book = bookService.findBookById(id);
+
+        return book.map(value -> new ResponseEntity<>(value, HttpStatus.OK))
+                .orElseGet(() -> new ResponseEntity<>(book.get(), HttpStatus.NOT_FOUND));
+    }
+
     @PostMapping("/books")
     public ResponseEntity<Book> addNewBook(@RequestBody Book book) {
-//        Book createdBook = bookService.addBook(book);
-////        BookDTO createBook = BookMapper.mapBookToDTO(book);
-//
-//
-//        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(createdBook.getId())
-//                .toUri();
-//
-//        return ResponseEntity.created(uri).build();
+
+//        Book book = bookService.addBook(BookMapper.(bookDto));
 
 
-        return bookService.addBook(book) != null?
-                new ResponseEntity<>((book), HttpStatus.OK) :
-                new ResponseEntity<>(HttpStatus.NOT_FOUND);
+
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(bookService.addBook(book))
+                .toUri();
+
+        return ResponseEntity.created(uri).build();
+
+//        Book book = BookMapper.bookDTOtoBook(bookDTO);
+//        return (bookService.addBook(book) != null)
+//                ? new ResponseEntity<>((book), HttpStatus.OK)
+//                : new ResponseEntity<>(HttpStatus.NOT_FOUND);
 
     }
 
-    @PutMapping("/books{id}")
-    public ResponseEntity<BookDTO> showBookForEdit(@PathVariable(name = "id") String id) {
+    @PutMapping("/books/{id}")
+    public ResponseEntity<Book> showBookForEdit(@PathVariable(name = "id") String id, @RequestBody Book book) {
 
-        final Optional<Book> book = bookService
-                .findBookById(id);
 
-        return book.map(value -> new ResponseEntity<>(BookMapper.mapBookToDTO(value), HttpStatus.OK))
-                .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
+        Optional<Book> newBook = bookService.updateBookById(id, book.getTitle(), book.getAuthor(), book.getGenre());
+
+        return newBook.map(value -> new ResponseEntity<>(value, HttpStatus.OK)).orElseGet(() -> new ResponseEntity<>(newBook.get(), HttpStatus.NOT_FOUND));
+
 
     }
 
@@ -71,18 +81,11 @@ public class BookController {
                 : ResponseEntity.notFound().build();
 
     }
-
-    @GetMapping("/comments{id}")
-    public List<List<Comment>> showCommentsForBookId(@PathVariable(name = "id") String id) {
-        return (bookService.getAllComments(id));
-    }
-
-
-
-
-
-
-
+//
+//    @GetMapping("/comments{id}")
+//    public List<List<Comment>> showCommentsForBookId(@PathVariable(name = "id") String id) {
+//        return (bookService.getAllComments(id));
+//    }
 
 
 }

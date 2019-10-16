@@ -11,9 +11,9 @@ class LibraryComponent extends Component {
         this.state = {
             id: this.props.match.params.id,
             title: '',
-            authors: '',
+            author: '',
             genre: '',
-            comments: ''
+            // comments: ''
         };
         this.onSubmit = this.onSubmit.bind(this);
         this.validate = this.validate.bind(this);
@@ -32,27 +32,29 @@ class LibraryComponent extends Component {
         LibraryDataService.retrieveBook(this.state.id)
             .then(response => this.setState({
                 title: response.data.title,
-                authors: response.data.authors,
+                author: response.data.author,
                 genre: response.data.genre,
-                comments: response.data.comments,
+                // comments: response.data.comments,
             }))
     }
 
     onSubmit(values) {
 
+        let ids= this.state.id;
         let book = {
-            id: this.state.id,
+            // id: this.state.id,
             title: values.title,
-            authors: values.authors,
+            author: values.author,
             genre: values.genre,
-            comments: values.comments,
+            // comments: values.comments,
         };
 
-        if (this.state.id === -1) {
+        if (ids === '-1') {
+
             LibraryDataService.createBook(book)
                 .then(() => this.props.history.push('/books'))
         } else {
-            LibraryDataService.updateBook(this.state.id, book)
+            LibraryDataService.updateBook(ids, book)
                 .then(() => this.props.history.push('/books'))
         }
 
@@ -62,14 +64,18 @@ class LibraryComponent extends Component {
 
     render() {
 
-        let {id, title, authors, genre, comments} = this.state;
+        let { title, author, genre
+            // , comments
+        } = this.state;
 
         return (
             <div>
                 <h3>Book</h3>
                 <div className="container">
                     <Formik
-                        initialValues={{id, title, authors, genre, comments}}
+                        initialValues={{ title, author, genre
+                            // , comments
+                        }}
                         onSubmit={this.onSubmit}
                         validateOnChange={false}
                         validateOnBlur={false}
@@ -90,17 +96,17 @@ class LibraryComponent extends Component {
                                         <Field className="form-control" type="text" name="title"/>
                                     </fieldset>
                                     <fieldset className="form-group">
-                                        <label>authors</label>
-                                        <Field className="form-control" type="text" name="authors"/>
+                                        <label>author</label>
+                                        <Field className="form-control" type="text" name="author"/>
                                     </fieldset>
                                     <fieldset className="form-group">
                                         <label>genre</label>
                                         <Field className="form-control" type="text" name="genre"/>
                                     </fieldset>
-                                    <fieldset className="form-group">
-                                        <label>comments</label>
-                                        <Field className="form-control" type="text" name="comments"/>
-                                    </fieldset>
+                                    {/*<fieldset className="form-group">*/}
+                                    {/*    <label>comments</label>*/}
+                                    {/*    <Field className="form-control" type="text" name="comments"/>*/}
+                                    {/*</fieldset>*/}
                                     <button className="btn btn-success" type="submit">Save</button>
                                 </Form>
                             )

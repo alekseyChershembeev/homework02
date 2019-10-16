@@ -2,6 +2,7 @@ package com.spring.homework2.spring_course2.service;
 
 import com.spring.homework2.spring_course2.entity.Book;
 import com.spring.homework2.spring_course2.entity.Comment;
+import com.spring.homework2.spring_course2.rest.BookDTO;
 import java.util.List;
 import java.util.Optional;
 
@@ -23,19 +24,19 @@ public interface BookService {
 
     Optional<Book> findBookById(String bookId);
 
-    List<List<Comment>> getAllComments(String bookId);
+//    List<List<Comment>> getAllComments(String bookId);
 
     Book addBook(Book book);
 
-    boolean addComment(String bookId, String comment);
+//    boolean addComment(String bookId, String comment);
 
     boolean updateBookTitleById(String id, String newTitle);
 
     boolean deleteBookById(String bookId);
 
-    Book deleteCommentById(String bookId);
+//    Book deleteCommentById(String bookId);
 
-    public boolean updateBookById(String id, String newTitle,String newAuthor, String newGenre);
+    public Optional<Book> updateBookById(String id, String newTitle,String newAuthor, String newGenre);
 
     void deleteAll();
 }

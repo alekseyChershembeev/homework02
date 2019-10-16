@@ -1,7 +1,6 @@
 package com.spring.homework2.spring_course2.rest;
 
-import com.spring.homework2.spring_course2.entity.Book;
-import java.util.List;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -13,13 +12,14 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class BookDTO {
 
     private String id;
     private String authors;
     private String title;
     private String genre;
-    private List<CommentDTO> comments;
+//    private String comments;
 
 
 }

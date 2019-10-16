@@ -49,11 +49,6 @@ class ListLibraryComponent extends Component {
         this.props.history.push(`/books/-1`)
     }
 
-
-
-
-
-
     render() {
         return (
             <div className="container">
@@ -67,7 +62,7 @@ class ListLibraryComponent extends Component {
                             <th>Title</th>
                             <th>Author</th>
                             <th>Genre</th>
-                            <th>Comments</th>
+                            {/*<th>Comments</th>*/}
                             <th>Edit</th>
                             <th>Delete</th>
                         </tr>
@@ -80,7 +75,7 @@ class ListLibraryComponent extends Component {
                                         <td>{book.title}</td>
                                         <td>{book.authors}</td>
                                         <td>{book.genre}</td>
-                                        <td>{book.comment}</td>
+                                        {/*<td>{book.comment}</td>*/}
                                         <td><button className="btn" onClick={() => this.updateBookClicked(book.id)}>Edit</button></td>
                                         <td><button className="btn btn-warning" onClick={() => this.deleteBookClicked(book.id)}>Delete</button></td>
                                     </tr>

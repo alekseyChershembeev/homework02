@@ -1,4 +1,4 @@
-package com.spring.homework2.spring_course2.rest;
+package com.spring.homework2.spring_course2.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,7 +19,7 @@ public class BookDTO {
     private String authors;
     private String title;
     private String genre;
-//    private String comments;
+    private Comment [] comments;
 
 
 }

@@ -1,13 +1,12 @@
 package com.spring.homework2.spring_course2.util;
 
 import com.spring.homework2.spring_course2.entity.Book;
-import com.spring.homework2.spring_course2.entity.Comment;
-import com.spring.homework2.spring_course2.rest.BookDTO;
+import com.spring.homework2.spring_course2.entity.BookDTO;
 //import com.spring.homework2.spring_course2.rest.CommentDTO;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
+import com.spring.homework2.spring_course2.entity.Comment;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
-import java.util.Locale;
 import java.util.stream.Collectors;
 
 /**
@@ -23,36 +22,29 @@ public class BookMapper {
         BookDTO bookDTO = new BookDTO();
         bookDTO.setId(book.getId());
         bookDTO.setTitle(book.getTitle());
-        bookDTO.setAuthors(book.getAuthor());
+        bookDTO.setAuthors(book.getAuthors());
         bookDTO.setGenre(book.getGenre());
-//        List<CommentDTO>listCommentDTO = new ArrayList<>();
-//        if (book.getComments() != null) {
-//            book.getComments().forEach(c->{
-//                CommentDTO commentDTO =new CommentDTO();
-//                commentDTO.setComment(c.getComment());
-//            });
 
-//            bookDTO.setComments("");
-//        }
-//        else {
-////            CommentDTO commentDTO = new CommentDTO();
-////            commentDTO.setComment("");
-////            listCommentDTO.add(commentDTO);
-//            bookDTO.setComments("");
-//        }
-
+        Comment[] commentsArr = null;
+        if (book.getComments() != null) {
+            commentsArr = book.getComments().stream().toArray(Comment[]::new);
+        }
+        bookDTO.setComments(commentsArr);
+        if (bookDTO.getComments() == null) {
+            bookDTO.setComments(new Comment[]{});
+        }
 
         return bookDTO;
     }
 
-    public static Book bookDTOtoBook(BookDTO bookDTO){
+    public static Book bookDTOtoBook(BookDTO bookDTO) {
 
         Book book = new Book();
         book.setTitle(bookDTO.getTitle());
-        book.setAuthor(bookDTO.getAuthors());
+        book.setAuthors(bookDTO.getAuthors());
         book.setGenre(bookDTO.getGenre());
 
-       return book;
+        return book;
     }
 
     public static List<BookDTO> mapBookListToDTO(List<Book> books) {
@@ -62,9 +54,5 @@ public class BookMapper {
                 .collect(Collectors.toList());
     }
 
-//    public static CommentDTO mapCommentToDTO(Comment comment) {
-//        CommentDTO result = new CommentDTO();
-//        result.setComment(comment.getComment());
-//        return result;
-//    }
+
 }

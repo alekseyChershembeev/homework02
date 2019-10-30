@@ -11,9 +11,9 @@ class LibraryComponent extends Component {
         this.state = {
             id: this.props.match.params.id,
             title: '',
-            author: '',
+            authors: '',
             genre: '',
-            // comments: ''
+            comments: []
         };
         this.onSubmit = this.onSubmit.bind(this);
         this.validate = this.validate.bind(this);
@@ -32,9 +32,9 @@ class LibraryComponent extends Component {
         LibraryDataService.retrieveBook(this.state.id)
             .then(response => this.setState({
                 title: response.data.title,
-                author: response.data.author,
+                authors: response.data.authors,
                 genre: response.data.genre,
-                // comments: response.data.comments,
+                comments: response.data.comments,
             }))
     }
 
@@ -44,9 +44,9 @@ class LibraryComponent extends Component {
         let book = {
             // id: this.state.id,
             title: values.title,
-            author: values.author,
+            authors: values.authors,
             genre: values.genre,
-            // comments: values.comments,
+            comments: values.comments,
         };
 
         if (ids === '-1') {
@@ -64,8 +64,8 @@ class LibraryComponent extends Component {
 
     render() {
 
-        let { title, author, genre
-            // , comments
+        let { title, authors, genre
+            , comments
         } = this.state;
 
         return (
@@ -73,8 +73,8 @@ class LibraryComponent extends Component {
                 <h3>Book</h3>
                 <div className="container">
                     <Formik
-                        initialValues={{ title, author, genre
-                            // , comments
+                        initialValues={{ title, authors, genre
+                            , comments
                         }}
                         onSubmit={this.onSubmit}
                         validateOnChange={false}
@@ -97,7 +97,7 @@ class LibraryComponent extends Component {
                                     </fieldset>
                                     <fieldset className="form-group">
                                         <label>author</label>
-                                        <Field className="form-control" type="text" name="author"/>
+                                        <Field className="form-control" type="text" name="authors"/>
                                     </fieldset>
                                     <fieldset className="form-group">
                                         <label>genre</label>

@@ -26,22 +26,21 @@ public class Book {
     @Id
     private String id;
     private String title;
-    private String author;
+    private String authors;
     private String genre;
-//    @JsonProperty("comments")
-//    private List<Comment>comments;
+    private List<Comment>comments;
 
-//    public Book(String title, String author, String genre) {
-//        this.title = title;
-//        this.author = author;
-//        this.genre = genre;
-//    }
-//
-//    public Book(String id, String title, String author, String genre) {
-//        this.id = id;
-//        this.title = title;
-//        this.author = author;
-//        this.genre = genre;
-//    }
+    public Book(String title, String author, String genre) {
+        this.title = title;
+        this.authors = author;
+        this.genre = genre;
+    }
+
+    public Book(String id, String title, String author, String genre) {
+        this.id = id;
+        this.title = title;
+        this.authors = author;
+        this.genre = genre;
+    }
 
 }

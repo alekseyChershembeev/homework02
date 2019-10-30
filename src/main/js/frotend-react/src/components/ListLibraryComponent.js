@@ -13,6 +13,7 @@ class ListLibraryComponent extends Component {
         this.deleteBookClicked = this.deleteBookClicked.bind(this);
         this.updateBookClicked = this.updateBookClicked.bind(this);
         this.addBookClicked = this.addBookClicked.bind(this);
+        // this.updateCommentsClicked = this.updateCommentsClicked(this);
 
     }
 
@@ -31,7 +32,7 @@ class ListLibraryComponent extends Component {
     }
 
     deleteBookClicked(id) {
-        LibraryDataService.deleteBook( id)
+        LibraryDataService.deleteBook(id)
             .then(
                 response => {
                     this.setState({message: `Delete of book ${id} Successful`})
@@ -44,6 +45,11 @@ class ListLibraryComponent extends Component {
         console.log('update ' + id);
         this.props.history.push(`/books/${id}`)
     }
+
+    // updateCommentsClicked(id) {
+    //     console.log('update ' + id);
+    //     this.props.history.push(`/comments/${id}`)
+    // }
 
     addBookClicked() {
         this.props.history.push(`/books/-1`)
@@ -62,7 +68,7 @@ class ListLibraryComponent extends Component {
                             <th>Title</th>
                             <th>Author</th>
                             <th>Genre</th>
-                            {/*<th>Comments</th>*/}
+                            <th>Comments</th>
                             <th>Edit</th>
                             <th>Delete</th>
                         </tr>
@@ -75,9 +81,21 @@ class ListLibraryComponent extends Component {
                                         <td>{book.title}</td>
                                         <td>{book.authors}</td>
                                         <td>{book.genre}</td>
-                                        {/*<td>{book.comment}</td>*/}
-                                        <td><button className="btn" onClick={() => this.updateBookClicked(book.id)}>Edit</button></td>
-                                        <td><button className="btn btn-warning" onClick={() => this.deleteBookClicked(book.id)}>Delete</button></td>
+
+                                        {/*<td>*/}
+                                        {/*    <button className="btn btn-warning"*/}
+                                        {/*            onClick={() => this.updateCommentsClicked(book.id)}/>*/}
+                                        {/*</td>*/}
+                                        <td>
+                                            <button className="btn"
+                                                    onClick={() => this.updateBookClicked(book.id)}>Edit
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <button className="btn btn-warning"
+                                                    onClick={() => this.deleteBookClicked(book.id)}>Delete
+                                            </button>
+                                        </td>
                                     </tr>
                             )
                         }

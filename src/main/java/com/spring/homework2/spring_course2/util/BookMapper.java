@@ -4,6 +4,7 @@ import com.spring.homework2.spring_course2.entity.Book;
 import com.spring.homework2.spring_course2.entity.BookDTO;
 //import com.spring.homework2.spring_course2.rest.CommentDTO;
 import com.spring.homework2.spring_course2.entity.Comment;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -43,6 +44,9 @@ public class BookMapper {
         book.setTitle(bookDTO.getTitle());
         book.setAuthors(bookDTO.getAuthors());
         book.setGenre(bookDTO.getGenre());
+
+        List<Comment> commentList = new ArrayList<>(Arrays.asList(bookDTO.getComments()));
+        book.setComments(commentList);
 
         return book;
     }

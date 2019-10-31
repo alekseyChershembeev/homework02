@@ -25,6 +25,8 @@ public interface BookService {
 
     List<List<Comment>> getAllComments(String bookId);
 
+    List<Comment>getCommentByBookId(String bookId);
+
     Book addBook(Book book);
 
     boolean addComment(String bookId, String comment);

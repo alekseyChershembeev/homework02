@@ -21,6 +21,10 @@ class LibraryDataService {
         return axios.put(`${LIBRARY_API_URL}/books/${id}`, book);
     }
 
+    updateCommentsClicked(id, book){
+        return axios.put(`${LIBRARY_API_URL}/comments/${id}`, book);
+    }
+
     createBook(book) {
         return axios.post(`${LIBRARY_API_URL}/books/`, book);
     }

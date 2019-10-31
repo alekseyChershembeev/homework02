@@ -13,7 +13,7 @@ class ListLibraryComponent extends Component {
         this.deleteBookClicked = this.deleteBookClicked.bind(this);
         this.updateBookClicked = this.updateBookClicked.bind(this);
         this.addBookClicked = this.addBookClicked.bind(this);
-        // this.updateCommentsClicked = this.updateCommentsClicked(this);
+        this.updateCommentsClicked = this.updateCommentsClicked(this);
 
     }
 
@@ -55,6 +55,11 @@ class ListLibraryComponent extends Component {
         this.props.history.push(`/books/-1`)
     }
 
+    updateCommentsClicked(id) {
+        console.log('update ' + id);
+        this.props.history.push(`/comments/${id}`)
+    }
+
     render() {
         return (
             <div className="container">
@@ -91,6 +96,11 @@ class ListLibraryComponent extends Component {
                                                     onClick={() => this.updateBookClicked(book.id)}>Edit
                                             </button>
                                         </td>
+                                        {/*<td>*/}
+                                        {/*    <button className="btn btn-warning"*/}
+                                        {/*            onClick={() =>this.updateCommentsClicked(book.id) }>Comments*/}
+                                        {/*    </button>*/}
+                                        {/*</td>*/}
                                         <td>
                                             <button className="btn btn-warning"
                                                     onClick={() => this.deleteBookClicked(book.id)}>Delete

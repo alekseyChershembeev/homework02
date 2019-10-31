@@ -71,6 +71,16 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
+    public List<Comment> getCommentByBookId(String bookId) {
+
+        Optional<Book>optionalBook = bookRepository.findById(bookId);
+
+        return optionalBook.map(Book::getComments).orElse(null);
+
+    }
+
+
+    @Override
     public Book addBook(Book book) {
         book = bookRepository.save(book);
         return book;

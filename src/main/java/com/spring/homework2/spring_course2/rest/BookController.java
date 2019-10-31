@@ -43,10 +43,10 @@ public class BookController {
                 .orElseGet(() -> new ResponseEntity<>(null, HttpStatus.NOT_FOUND));
     }
 
-//    @GetMapping("/comments")
-//    public List<List<Comment>> showCommentsForBookId(@PathVariable(name = "id") String id) {
-//        return (bookService.getAllComments(id));
-//    }
+    @GetMapping("/comments")
+    public List<List<Comment>> showCommentsForBookId(@PathVariable(name = "id") String id) {
+        return (bookService.getAllComments(id));
+    }
 
     @PostMapping("/books")
     public ResponseEntity<BookDTO> addNewBook(@RequestBody Book book) {

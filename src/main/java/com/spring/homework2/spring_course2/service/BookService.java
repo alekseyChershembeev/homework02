@@ -25,7 +25,9 @@ public interface BookService {
 
     List<List<Comment>> getAllComments(String bookId);
 
-    boolean addBook(Book book);
+    List<Comment>getCommentByBookId(String bookId);
+
+    Book addBook(Book book);
 
     boolean addComment(String bookId, String comment);
 
@@ -33,7 +35,9 @@ public interface BookService {
 
     boolean deleteBookById(String bookId);
 
-    boolean deleteCommentById(String bookId);
+    Book deleteCommentById(String bookId);
+
+    public Optional<Book> updateBookById(String id, String newTitle,String newAuthor, String newGenre);
 
     void deleteAll();
 }

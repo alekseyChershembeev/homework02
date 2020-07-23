@@ -1,5 +1,3 @@
-
-
 Домашнее задание 02.01
 =============================
 
@@ -15,7 +13,10 @@ Spring JDBC и реляционную базу.
 Предусмотреть таблицы авторов, книг и жанров.
 Покрыть тестами, насколько это возможно.
 
+
 [Изменения в ветке: Spring-JDBC](https://github.com/alekseyChershembeev/spring_course_2/tree/Spring-JDBC/)
+
+
 
 Домашнее задание 02.02
 =============================
@@ -31,7 +32,10 @@ Hibernate только в качестве JPA
 Покрыть DAO тестами используя H2 базу данных и
 соответствующий H2 Hibernate диалект.
 
+
 [Изменения в ветке: change_to_jpa](https://github.com/alekseyChershembeev/spring_course_2/tree/change_to_jpa)
+
+
 
 Домашнее задание 02.03
 =============================
@@ -42,17 +46,20 @@ Hibernate только в качестве JPA
 Реализовать весь функционал работы с БД в приложении
 книг с использованием spring data jpa репозиториев.
 
+
 [Изменения в ветке: migrate-to-spring-data-jpa](https://github.com/alekseyChershembeev/spring_course_2/tree/migrate-to-spring-data-jpa)
+
 
 Домашнее задание 02.04
 =============================
 Использовать
-MogoDB и spring data для хранения
+MongoDB и spring data для хранения
 информации о книгах.
 
 Тесты можно реализовать с помощью
-spring boot strter
+spring boot starter
 embedded mongodb.
+
 
 [Изменения в ветке: migrate-to-mongodb](https://github.com/alekseyChershembeev/spring_course_2/tree/migrate-to-mongodb)
 
@@ -76,5 +83,18 @@ View
 [Изменения в ветке: ](https://github.com/alekseyChershembeev/spring_course_2/view-thymeleaf-classic-controllers/)
 
 
-
-
+>Домашнее задание 03.02
+>=============================
+ Переписать приложение с использованием AJAX и
+ REST
+ контроллеров.
+ 
+ Переписать приложение с классических
+ View на AJAX
+ архитектуру и REST контроллеры.
+ 
+ Опционально: Сделать SPA приложение на любом из
+ Web
+ фреймоврков(Rest)
+ 
+ [Изменения в ветке 5](https://github.com/alekseyChershembeev/spring_course_2/tree/migrate-to-mongodb)

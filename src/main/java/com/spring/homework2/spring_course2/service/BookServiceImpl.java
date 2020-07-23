@@ -35,7 +35,7 @@ public class BookServiceImpl implements BookService {
     public List<String> getAllAuthorsNames() {
         return bookRepository.findAll()
                 .stream()
-                .map(Book::getAuthor)
+                .map(Book::getAuthors)
                 .collect(Collectors.toList());
     }
 
@@ -51,7 +51,7 @@ public class BookServiceImpl implements BookService {
     public List<Book> getBooksByAuthorsName(String name) {
         return bookRepository.findAll()
                 .stream()
-                .filter((b) -> b.getAuthor().equals(name))
+                .filter((b) -> b.getAuthors().equals(name))
                 .collect(Collectors.toList());
     }
 
@@ -71,9 +71,19 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public boolean addBook(Book book) {
+    public List<Comment> getCommentByBookId(String bookId) {
+
+        Optional<Book>optionalBook = bookRepository.findById(bookId);
+
+        return optionalBook.map(Book::getComments).orElse(null);
+
+    }
+
+
+    @Override
+    public Book addBook(Book book) {
         book = bookRepository.save(book);
-        return book.getId() != null;
+        return book;
     }
 
     @Override
@@ -102,6 +112,21 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
+    public Optional<Book> updateBookById(String id, String newTitle, String newAuthor, String newGenre) {
+
+        Optional<Book> book = bookRepository.findById(id);
+
+        book.ifPresent(b -> {
+            book.get().setTitle(newTitle);
+            book.get().setAuthors(newAuthor);
+            book.get().setGenre(newGenre);
+            bookRepository.save(book.get());
+        });
+
+        return book;
+    }
+
+    @Override
     public boolean deleteBookById(String bookId) {
 
         Optional<Book> book = bookRepository.findById(bookId);
@@ -115,16 +140,16 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public boolean deleteCommentById(String bookId) {
+    public Book deleteCommentById(String bookId) {
         Optional<Book> book = bookRepository.findById(bookId);
 
         if (book.isPresent()) {
             Book book1 = book.get();
             book1.setComments(null);
             bookRepository.save(book1);
-            return true;
+            return book1;
         }
-        return false;
+        return null;
     }
 
     @Override
